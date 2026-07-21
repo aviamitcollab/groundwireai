@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+em {
+  font-style: italic;
+  color: theme("colors.accent");
+  font-family: var(--font-head);
+}
+
+::selection {
+  background: rgba(51, 87, 232, 0.25);
+  color: #171a2b;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  body,
+  a,
+  button {
+    cursor: none;
+  }
+}
+
+.grid-overlay {
+  background-image: linear-gradient(rgba(23, 26, 43, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(23, 26, 43, 0.05) 1px, transparent 1px);
+  background-size: 64px 64px;
+  -webkit-mask-image: radial-gradient(70% 60% at 30% 30%, black, transparent 80%);
+  mask-image: radial-gradient(70% 60% at 30% 30%, black, transparent 80%);
+}
