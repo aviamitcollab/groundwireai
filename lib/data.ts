@@ -1,7 +1,7 @@
 export const contactEmail = "avi.amit.collab@gmail.com";
 
 export const brand = {
-  name: "Man & Machine",
+  name: "Groundwire",
   statement: "Build. Transform. Scale. Enterprise AI.",
 };
 

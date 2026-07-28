@@ -28,7 +28,7 @@ export default function Nav() {
           data-cursor="hover"
           className="font-head text-lg font-semibold tracking-tight"
         >
-          Man<span className="font-head italic text-accent">&amp;</span>Machine
+          Ground<span className="font-head italic text-accent">wire</span>
         </a>
 
         <nav className="hidden gap-7 lg:flex">
