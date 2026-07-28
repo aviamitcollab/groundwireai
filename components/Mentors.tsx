@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { Linkedin } from "lucide-react";
 import { founders } from "@/lib/data";
 import Reveal from "./Reveal";
@@ -27,12 +28,13 @@ export default function Mentors() {
           <Reveal key={founder.name} delay={i * 0.08}>
             <div className="flex h-full flex-col gap-4 rounded-card border border-line bg-bg-soft p-7">
               <div className="flex items-center gap-4">
-                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-ink font-head text-sm font-semibold text-bg">
-                  {founder.name
-                    .split(" ")
-                    .map((n) => n[0])
-                    .join("")}
-                </div>
+                <Image
+                  src={founder.photo}
+                  alt={founder.name}
+                  width={48}
+                  height={48}
+                  className="h-12 w-12 shrink-0 rounded-full object-cover"
+                />
                 <div>
                   <h3 className="font-head text-base font-semibold">{founder.name}</h3>
                   <p className="text-[0.82rem] text-ink-dim">{founder.title}</p>
