@@ -14,22 +14,22 @@ type Message = {
 
 const quickReplies: { id: string; label: string; response: string }[] = [
   {
-    id: "college",
-    label: "I run a college club",
+    id: "academy",
+    label: "I want to join the Academy",
     response:
-      "Great — we run 1–2 day hands-on workshops on prompt engineering, RAG and building agents for CS clubs and hackathons. Want me to connect you with a program lead?",
+      "Great — our Enterprise AI Academy is a live, cohort-based program covering production-first AI engineering, from Python and LLM fundamentals through agentic AI and deployment. Want me to connect you with a program lead?",
   },
   {
-    id: "enterprise",
-    label: "I lead an enterprise team",
+    id: "consulting",
+    label: "I need AI consulting",
     response:
-      "We design multi-week cohort programs tied to your team's real tools and workflows. I can have someone scope your cohort — want me to send an intro?",
+      "We help enterprises with AI strategy, architecture, implementation and governance. I can have someone scope your engagement — want me to send an intro?",
   },
   {
     id: "explore",
     label: "Just exploring",
     response:
-      "No rush! Feel free to browse our programs above, or ask me anything about how Mind & Machine training works.",
+      "No rush! Feel free to browse our Academy, Consulting and Products above, or ask me anything about how Man & Machine works.",
   },
 ];
 
@@ -66,7 +66,7 @@ export default function ChatBubble() {
     pushMessage({ role: "user", text: trimmed });
     setInput("");
     setTimeout(() => {
-      const subject = encodeURIComponent("Question for Mind & Machine");
+      const subject = encodeURIComponent("Question for Man & Machine");
       const body = encodeURIComponent(trimmed);
       pushMessage({
         role: "bot",
@@ -88,7 +88,7 @@ export default function ChatBubble() {
         whileHover={{ y: -3 }}
         className="fixed bottom-7 right-7 z-[90] flex items-center gap-2.5 rounded-full bg-ink px-5 py-3.5 text-[0.85rem] font-medium text-bg shadow-[0_10px_30px_rgba(0,0,0,0.35)] transition-colors hover:bg-accent hover:text-white"
       >
-        <span className="hidden sm:inline">Ada · always teaching</span>
+        <span className="hidden sm:inline">Ada · AI assistant</span>
         <span className="text-base">✦</span>
       </motion.button>
 

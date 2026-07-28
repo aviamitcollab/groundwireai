@@ -4,6 +4,8 @@ import Marquee from "@/components/Marquee";
 import Programs from "@/components/Programs";
 import Process from "@/components/Process";
 import ProgramFormats from "@/components/ProgramFormats";
+import WhyUs from "@/components/WhyUs";
+import TechStack from "@/components/TechStack";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -17,6 +19,8 @@ export default function Home() {
         <Programs />
         <Process />
         <ProgramFormats />
+        <WhyUs />
+        <TechStack />
         <Contact />
       </main>
       <Footer />

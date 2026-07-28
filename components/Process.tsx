@@ -10,14 +10,14 @@ export default function Process() {
     >
       <Reveal className="mb-16 max-w-[680px]">
         <p className="mb-4 text-sm font-medium uppercase tracking-[0.14em] text-accent">
-          02&nbsp;&nbsp;How we train
+          02&nbsp;&nbsp;How we work
         </p>
         <h2 className="mb-4 font-head text-[clamp(1.9rem,4vw,3rem)] font-semibold leading-[1.1] tracking-[-0.02em]">
-          From syllabus to <em>skillset</em>, in four steps.
+          From strategy to <em>shipped</em>, in four steps.
         </h2>
         <p className="max-w-[520px] text-ink-dim">
-          A tight, hands-on process. Participants always know what they&rsquo;re
-          building, why, and what&rsquo;s next.
+          A tight, production-first process — across academy cohorts, consulting
+          engagements, and product builds alike.
         </p>
       </Reveal>
 

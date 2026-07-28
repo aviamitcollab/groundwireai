@@ -2,6 +2,7 @@
 
 import { motion, useScroll, useTransform } from "framer-motion";
 import { useRef } from "react";
+import { hero } from "@/lib/data";
 
 const container = {
   hidden: {},
@@ -66,39 +67,61 @@ export default function Hero() {
       >
         <motion.p
           variants={item}
-          className="mb-5 text-sm uppercase tracking-[0.12em] text-ink-dim"
+          className="mb-5 inline-block rounded-full border border-line px-4 py-1.5 text-sm font-medium tracking-[0.02em] text-accent"
         >
-          AI training for the next generation of builders
+          {hero.eyebrow}
         </motion.p>
         <motion.h1
           variants={item}
           className="mb-6 font-head text-[clamp(2.6rem,6.4vw,5.2rem)] font-semibold leading-[1.03] tracking-[-0.03em]"
         >
-          We train the builders of <em>tomorrow</em>.
+          {hero.headlineBefore}
+          <em>{hero.headlineEm}</em>
+          {hero.headlineAfter}
         </motion.h1>
         <motion.p
           variants={item}
           className="mb-9 max-w-[560px] text-[clamp(1rem,1.6vw,1.2rem)] text-ink-dim"
         >
-          Mind &amp; Machine designs and delivers hands-on AI workshops for
-          colleges and enterprise AI cohorts — from first lecture to
-          production-ready skills.
+          {hero.sub}
         </motion.p>
-        <motion.div variants={item} className="mb-16 flex flex-wrap gap-4">
-          <a
-            href="#contact"
-            data-cursor="hover"
-            className="inline-flex items-center justify-center gap-2 rounded-full bg-ink px-6 py-3.5 text-sm font-medium text-bg transition-all hover:-translate-y-0.5 hover:bg-accent hover:text-white hover:shadow-[0_10px_30px_rgba(51,87,232,0.25)]"
-          >
-            Book a workshop
-          </a>
-          <a
-            href="#programs"
-            data-cursor="hover"
-            className="inline-flex items-center justify-center gap-2 rounded-full border border-line px-6 py-3.5 text-sm font-medium transition-all hover:-translate-y-0.5 hover:border-accent hover:text-accent"
-          >
-            See our programs
-          </a>
+        <motion.div variants={item} className="mb-16 flex flex-wrap items-center gap-4">
+          {hero.ctas.map((cta) => {
+            if (cta.variant === "primary") {
+              return (
+                <a
+                  key={cta.label}
+                  href={cta.href}
+                  data-cursor="hover"
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-ink px-6 py-3.5 text-sm font-medium text-bg transition-all hover:-translate-y-0.5 hover:bg-accent hover:text-white hover:shadow-[0_10px_30px_rgba(51,87,232,0.25)]"
+                >
+                  {cta.label}
+                </a>
+              );
+            }
+            if (cta.variant === "ghost") {
+              return (
+                <a
+                  key={cta.label}
+                  href={cta.href}
+                  data-cursor="hover"
+                  className="inline-flex items-center justify-center gap-2 rounded-full border border-line px-6 py-3.5 text-sm font-medium transition-all hover:-translate-y-0.5 hover:border-accent hover:text-accent"
+                >
+                  {cta.label}
+                </a>
+              );
+            }
+            return (
+              <a
+                key={cta.label}
+                href={cta.href}
+                data-cursor="hover"
+                className="inline-flex items-center gap-1.5 text-sm font-medium text-ink-dim transition-colors hover:text-accent"
+              >
+                {cta.label} <span aria-hidden>→</span>
+              </a>
+            );
+          })}
         </motion.div>
         <motion.div
           variants={item}

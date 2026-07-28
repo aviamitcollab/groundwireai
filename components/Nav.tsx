@@ -28,16 +28,16 @@ export default function Nav() {
           data-cursor="hover"
           className="font-head text-lg font-semibold tracking-tight"
         >
-          Mind<span className="font-head italic text-accent">&amp;</span>Machine
+          Man<span className="font-head italic text-accent">&amp;</span>Machine
         </a>
 
-        <nav className="hidden gap-8 md:flex">
+        <nav className="hidden gap-7 lg:flex">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
               data-cursor="hover"
-              className="text-[0.92rem] text-ink-dim transition-colors hover:text-ink"
+              className="whitespace-nowrap text-[0.92rem] text-ink-dim transition-colors hover:text-ink"
             >
               {link.label}
             </a>
@@ -47,15 +47,15 @@ export default function Nav() {
         <a
           href="#contact"
           data-cursor="hover"
-          className="hidden rounded-full px-5 py-2.5 text-sm font-medium text-ink transition-all hover:-translate-y-0.5 hover:bg-accent hover:text-white hover:shadow-[0_10px_30px_rgba(51,87,232,0.25)] md:inline-flex md:bg-ink md:text-bg"
+          className="hidden whitespace-nowrap rounded-full px-5 py-2.5 text-sm font-medium text-ink transition-all hover:-translate-y-0.5 hover:bg-accent hover:text-white hover:shadow-[0_10px_30px_rgba(51,87,232,0.25)] lg:inline-flex lg:bg-ink lg:text-bg"
         >
-          Start a program
+          Talk to an AI Expert
         </a>
 
         <button
           aria-label="Toggle menu"
           onClick={() => setMenuOpen((v) => !v)}
-          className="flex flex-col gap-[5px] p-1.5 md:hidden"
+          className="flex flex-col gap-[5px] p-1.5 lg:hidden"
         >
           {menuOpen ? (
             <X className="h-5 w-5 text-ink" />
@@ -72,7 +72,7 @@ export default function Nav() {
             animate={{ y: 0 }}
             exit={{ y: "-100%" }}
             transition={{ duration: 0.35, ease: [0.16, 1, 0.3, 1] }}
-            className="fixed inset-0 z-[99] flex flex-col items-center justify-center gap-7 bg-bg md:hidden"
+            className="fixed inset-0 z-[99] flex flex-col items-center justify-center gap-7 bg-bg lg:hidden"
           >
             {navLinks.map((link) => (
               <a
@@ -89,7 +89,7 @@ export default function Nav() {
               onClick={() => setMenuOpen(false)}
               className="rounded-full bg-ink px-6 py-3 font-body text-base font-medium text-bg"
             >
-              Start a program
+              Talk to an AI Expert
             </a>
           </motion.div>
         )}
