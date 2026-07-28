@@ -54,6 +54,15 @@ export default function Programs() {
                     View curriculum <span aria-hidden>→</span>
                   </a>
                 )}
+                {pillar.id === "consulting" && (
+                  <a
+                    href="/consulting"
+                    data-cursor="hover"
+                    className="inline-flex w-fit items-center gap-1.5 text-sm font-medium text-ink-dim transition-colors hover:text-ink"
+                  >
+                    View services <span aria-hidden>→</span>
+                  </a>
+                )}
               </div>
             </article>
           </Reveal>

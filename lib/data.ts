@@ -67,13 +67,14 @@ export const pillars = [
     num: "02",
     title: "AI Transformation Consulting",
     description:
-      "We help enterprises adopt AI responsibly — from strategy and architecture through to governed, production implementation.",
+      "We help enterprises adopt AI responsibly — from readiness and architecture through to governed, production deployment.",
     bullets: [
-      "AI Strategy",
-      "Architecture",
-      "Enterprise AI Adoption",
-      "Implementation",
+      "AI Readiness Assessment",
       "AI Governance",
+      "AI Architecture",
+      "AI Center of Excellence",
+      "Production Deployment",
+      "Managed AI Services",
     ],
     cta: { label: "Book AI Strategy Call", href: `mailto:${contactEmail}?subject=AI%20Strategy%20Call` },
   },
@@ -197,12 +198,66 @@ export const whyUs = [
 ];
 
 export const techStack = [
-  { category: "Cloud", tools: ["AWS", "Azure", "GCP"] },
-  { category: "Models", tools: ["OpenAI", "Claude", "Gemini", "Llama", "Qwen"] },
-  { category: "Frameworks", tools: ["LangGraph", "CrewAI", "AutoGen", "MCP"] },
-  { category: "Infrastructure", tools: ["FastAPI", "Kubernetes", "Docker", "Terraform"] },
-  { category: "Observability", tools: ["LangFuse", "OpenTelemetry", "MLflow"] },
-  { category: "Databases", tools: ["PostgreSQL", "Pinecone", "Neo4j", "Redis"] },
+  {
+    category: "Cloud",
+    tools: [
+      { name: "AWS" },
+      { name: "Azure" },
+      { name: "GCP", icon: "googlecloud" },
+    ],
+  },
+  {
+    category: "Models",
+    tools: [
+      { name: "OpenAI" },
+      { name: "Claude", icon: "anthropic" },
+      { name: "Gemini", icon: "googlegemini" },
+      { name: "Llama", icon: "meta" },
+      { name: "Qwen", icon: "qwen" },
+    ],
+  },
+  {
+    category: "Frameworks",
+    tools: [
+      { name: "LangGraph", icon: "langgraph" },
+      { name: "CrewAI", icon: "crewai" },
+      { name: "AutoGen" },
+      { name: "MCP", icon: "modelcontextprotocol" },
+    ],
+  },
+  {
+    category: "Infrastructure",
+    tools: [
+      { name: "FastAPI", icon: "fastapi" },
+      { name: "Kubernetes", icon: "kubernetes" },
+      { name: "Docker", icon: "docker" },
+      { name: "Terraform", icon: "terraform" },
+    ],
+  },
+  {
+    category: "Evaluation & Testing",
+    tools: [
+      { name: "Deepeval" },
+      { name: "Playwright" },
+    ],
+  },
+  {
+    category: "Observability",
+    tools: [
+      { name: "LangFuse" },
+      { name: "OpenTelemetry", icon: "opentelemetry" },
+      { name: "MLflow", icon: "mlflow" },
+    ],
+  },
+  {
+    category: "Databases",
+    tools: [
+      { name: "PostgreSQL", icon: "postgresql" },
+      { name: "Pinecone" },
+      { name: "Neo4j", icon: "neo4j" },
+      { name: "Redis", icon: "redis" },
+    ],
+  },
 ];
 
 export const academyFacts = [
@@ -314,9 +369,78 @@ export const academyCurriculum = [
   },
 ];
 
+export const consultingFacts = [
+  { label: "Engagement", value: "Advisory to full delivery" },
+  { label: "Typical phase", value: "4–12 weeks" },
+  { label: "Format", value: "Embedded team + workshops" },
+  { label: "Outcome", value: "Governed, production-ready AI" },
+];
+
+export const consultingServices = [
+  {
+    num: "01",
+    title: "AI Readiness Assessment",
+    description:
+      "We evaluate your data, infrastructure, and team readiness for AI adoption, then map the highest-value use cases before you commit budget to the wrong ones.",
+  },
+  {
+    num: "02",
+    title: "AI Governance",
+    description:
+      "Policies, guardrails, and compliance frameworks for responsible AI use — model risk management, data privacy, and audit trails built in, not bolted on.",
+  },
+  {
+    num: "03",
+    title: "AI Architecture",
+    description:
+      "Technical foundation design — model selection, RAG and agent architecture, and integration with your existing systems and data.",
+  },
+  {
+    num: "04",
+    title: "AI Center of Excellence",
+    description:
+      "Standing up an internal AI CoE — standards, playbooks, training, and a repeatable delivery model your teams can run without us.",
+  },
+  {
+    num: "05",
+    title: "Production Deployment",
+    description:
+      "Taking AI from pilot to production — CI/CD for prompts and models, observability, security review, and infrastructure that scales.",
+  },
+  {
+    num: "06",
+    title: "Managed AI Services",
+    description:
+      "Ongoing operation after launch — monitoring, model and prompt updates, cost optimization, and incident response so systems stay reliable.",
+  },
+];
+
+export const consultingEngagement = [
+  {
+    num: "01",
+    title: "Assess",
+    description: "Readiness assessment and use-case prioritization against your actual data and infrastructure.",
+  },
+  {
+    num: "02",
+    title: "Architect",
+    description: "Technical design and governance framework, scoped to the use case and your risk tolerance.",
+  },
+  {
+    num: "03",
+    title: "Deploy",
+    description: "Production rollout with CI/CD, observability, and security review built into the pipeline.",
+  },
+  {
+    num: "04",
+    title: "Operate",
+    description: "Managed operation, or a Center of Excellence handoff so your team can run it independently.",
+  },
+];
+
 export const navLinks = [
   { href: "/academy", label: "Academy" },
-  { href: "/#consulting", label: "Consulting" },
+  { href: "/consulting", label: "Consulting" },
   { href: "/#products", label: "Products" },
   { href: "/#why-us", label: "Why Us" },
   { href: "/#contact", label: "Contact" },

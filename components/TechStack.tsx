@@ -1,5 +1,6 @@
 import { techStack } from "@/lib/data";
 import Reveal from "./Reveal";
+import TechIcon from "./TechIcon";
 
 export default function TechStack() {
   return (
@@ -26,10 +27,11 @@ export default function TechStack() {
               <div className="flex flex-wrap gap-2">
                 {group.tools.map((tool) => (
                   <span
-                    key={tool}
-                    className="rounded-full border border-line bg-bg px-3 py-1.5 text-[0.8rem] text-ink"
+                    key={tool.name}
+                    className="flex items-center gap-1.5 rounded-full border border-line bg-bg px-3 py-1.5 text-[0.8rem] text-ink"
                   >
-                    {tool}
+                    {tool.icon && <TechIcon slug={tool.icon} className="h-3.5 w-3.5 shrink-0" />}
+                    {tool.name}
                   </span>
                 ))}
               </div>
