@@ -3,7 +3,7 @@ import { contactEmail, navLinks } from "@/lib/data";
 export default function Footer() {
   return (
     <footer className="flex flex-wrap items-center justify-between gap-5 border-t border-line px-5 py-10 text-[0.85rem] text-ink-dim sm:px-8 md:px-16">
-      <a href="#top" className="font-head text-lg font-semibold text-ink">
+      <a href="/" className="font-head text-lg font-semibold text-ink">
         Man<span className="italic text-accent">&amp;</span>Machine
       </a>
       <a href={`mailto:${contactEmail}`} data-cursor="hover" className="hover:text-ink">

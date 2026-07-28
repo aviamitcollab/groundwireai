@@ -37,13 +37,24 @@ export default function Programs() {
                   </li>
                 ))}
               </ul>
-              <a
-                href={pillar.cta.href}
-                data-cursor="hover"
-                className="mt-2 inline-flex w-fit items-center gap-1.5 text-sm font-medium text-accent transition-colors hover:text-ink"
-              >
-                {pillar.cta.label} <span aria-hidden>→</span>
-              </a>
+              <div className="mt-2 flex flex-wrap items-center gap-x-5 gap-y-2">
+                <a
+                  href={pillar.cta.href}
+                  data-cursor="hover"
+                  className="inline-flex w-fit items-center gap-1.5 text-sm font-medium text-accent transition-colors hover:text-ink"
+                >
+                  {pillar.cta.label} <span aria-hidden>→</span>
+                </a>
+                {pillar.id === "academy" && (
+                  <a
+                    href="/academy"
+                    data-cursor="hover"
+                    className="inline-flex w-fit items-center gap-1.5 text-sm font-medium text-ink-dim transition-colors hover:text-ink"
+                  >
+                    View curriculum <span aria-hidden>→</span>
+                  </a>
+                )}
+              </div>
             </article>
           </Reveal>
         ))}

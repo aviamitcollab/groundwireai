@@ -24,7 +24,7 @@ export default function Nav() {
         }`}
       >
         <a
-          href="#top"
+          href="/"
           data-cursor="hover"
           className="font-head text-lg font-semibold tracking-tight"
         >
@@ -45,7 +45,7 @@ export default function Nav() {
         </nav>
 
         <a
-          href="#contact"
+          href="/#contact"
           data-cursor="hover"
           className="hidden whitespace-nowrap rounded-full px-5 py-2.5 text-sm font-medium text-ink transition-all hover:-translate-y-0.5 hover:bg-accent hover:text-white hover:shadow-[0_10px_30px_rgba(51,87,232,0.25)] lg:inline-flex lg:bg-ink lg:text-bg"
         >
@@ -85,7 +85,7 @@ export default function Nav() {
               </a>
             ))}
             <a
-              href="#contact"
+              href="/#contact"
               onClick={() => setMenuOpen(false)}
               className="rounded-full bg-ink px-6 py-3 font-body text-base font-medium text-bg"
             >
