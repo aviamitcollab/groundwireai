@@ -1,0 +1,96 @@
+[
+  {
+    "phase": "Foundations",
+    "weeks": "Weeks 1–3",
+    "modules": [
+      {
+        "num": "01",
+        "title": "AI & LLM Fundamentals",
+        "description": "How large language models work — tokens, context windows, and the model landscape (OpenAI, Claude, Gemini, Llama, Qwen)."
+      },
+      {
+        "num": "02",
+        "title": "Prompt Engineering & Evaluation",
+        "description": "Structured prompting, few-shot techniques, and building evals — including LLM-as-judge patterns."
+      },
+      {
+        "num": "03",
+        "title": "Python for AI Engineers",
+        "description": "Async patterns, API design and FastAPI fundamentals for building AI-backed services."
+      }
+    ]
+  },
+  {
+    "phase": "Building with LLMs",
+    "weeks": "Weeks 4–6",
+    "modules": [
+      {
+        "num": "04",
+        "title": "Retrieval-Augmented Generation",
+        "description": "Embeddings, chunking strategies, and vector search with Pinecone."
+      },
+      {
+        "num": "05",
+        "title": "Knowledge Graphs & Structured Retrieval",
+        "description": "Hybrid retrieval patterns and graph-based context with Neo4j."
+      },
+      {
+        "num": "06",
+        "title": "Tool Use & Function Calling",
+        "description": "Structured outputs, tool schemas, and reliable function calling."
+      },
+      {
+        "num": "07",
+        "title": "Introduction to Agentic AI",
+        "description": "Agent loops, planning strategies, and memory fundamentals."
+      }
+    ]
+  },
+  {
+    "phase": "Agentic Systems",
+    "weeks": "Weeks 7–9",
+    "modules": [
+      {
+        "num": "08",
+        "title": "Building with LangGraph",
+        "description": "State machines and control flow for production agent systems."
+      },
+      {
+        "num": "09",
+        "title": "Multi-Agent Orchestration",
+        "description": "Coordinating specialized agents with CrewAI and AutoGen."
+      },
+      {
+        "num": "10",
+        "title": "Model Context Protocol (MCP)",
+        "description": "Building and connecting MCP servers to extend agent capabilities."
+      },
+      {
+        "num": "11",
+        "title": "Agent Memory & Context Management",
+        "description": "Persisting agent state and context with Redis and PostgreSQL."
+      }
+    ]
+  },
+  {
+    "phase": "Production & Governance",
+    "weeks": "Weeks 10–12",
+    "modules": [
+      {
+        "num": "12",
+        "title": "LLMOps & Observability",
+        "description": "Tracing, evals in CI, and monitoring with LangFuse, OpenTelemetry and MLflow."
+      },
+      {
+        "num": "13",
+        "title": "Deployment & Infrastructure",
+        "description": "Shipping to production with Docker, Kubernetes, Terraform and cloud infra."
+      },
+      {
+        "num": "14",
+        "title": "AI Governance, Security & Capstone",
+        "description": "Responsible AI, security and compliance — capped off with a capstone project presentation."
+      }
+    ]
+  }
+]

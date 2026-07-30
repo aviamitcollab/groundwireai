@@ -1,0 +1,38 @@
+[
+  {
+    "id": "academy",
+    "num": "01",
+    "title": "Enterprise AI Academy",
+    "description": "Live, cohort-based programs that teach production-first AI engineering — not just prompt engineering.",
+    "bullets": [
+      "Live Cohort Programs",
+      "Production-first learning",
+      "Certification",
+      "Career support"
+    ],
+    "cta": { "label": "Join Next Cohort", "subject": "Enterprise AI Academy" }
+  },
+  {
+    "id": "consulting",
+    "num": "02",
+    "title": "AI Transformation Consulting",
+    "description": "We help enterprises adopt AI responsibly — from readiness and architecture through to governed, production deployment.",
+    "bullets": [
+      "AI Readiness Assessment",
+      "AI Governance",
+      "AI Architecture",
+      "AI Center of Excellence",
+      "Production Deployment",
+      "Managed AI Services"
+    ],
+    "cta": { "label": "Book AI Strategy Call", "subject": "AI Strategy Call" }
+  },
+  {
+    "id": "products",
+    "num": "03",
+    "title": "AI Products",
+    "description": "AI SaaS products and agent platforms built with the same production standards we teach and consult on.",
+    "bullets": ["AI SaaS products", "Agent Platforms", "Enterprise AI Solutions"],
+    "cta": { "label": "Explore Products", "subject": "AI Products" }
+  }
+]

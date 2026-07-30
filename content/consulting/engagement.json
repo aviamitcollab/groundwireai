@@ -1,0 +1,22 @@
+[
+  {
+    "num": "01",
+    "title": "Assess",
+    "description": "Readiness assessment and use-case prioritization against your actual data and infrastructure."
+  },
+  {
+    "num": "02",
+    "title": "Architect",
+    "description": "Technical design and governance framework, scoped to the use case and your risk tolerance."
+  },
+  {
+    "num": "03",
+    "title": "Deploy",
+    "description": "Production rollout with CI/CD, observability, and security review built into the pipeline."
+  },
+  {
+    "num": "04",
+    "title": "Operate",
+    "description": "Managed operation, or a Center of Excellence handoff so your team can run it independently."
+  }
+]

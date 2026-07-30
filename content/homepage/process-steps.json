@@ -1,0 +1,22 @@
+[
+  {
+    "num": "01",
+    "title": "Assess",
+    "description": "We learn your organization's AI readiness, goals and constraints, then map the right path — academy, consulting, or product."
+  },
+  {
+    "num": "02",
+    "title": "Design",
+    "description": "Architecture, curriculum, or product scope — designed against production standards from day one, not just proof-of-concept."
+  },
+  {
+    "num": "03",
+    "title": "Build & Deploy",
+    "description": "Real systems shipped to real infrastructure — cloud deployment, observability and governance built in, not bolted on."
+  },
+  {
+    "num": "04",
+    "title": "Support & Scale",
+    "description": "We certify, monitor and iterate — whether that's a cohort's next module or a production system's next release."
+  }
+]

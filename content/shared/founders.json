@@ -1,0 +1,16 @@
+[
+  {
+    "name": "Amit Kayal",
+    "title": "Co-Founder",
+    "bio": "Technology leader focused on AI-first, cloud-native enterprise platforms — architecture, agentic AI, and AWS-native systems. Has deployed production AI agent fleets, cut AI operating cost 30% through model routing, and driven AI-based CPQ automation that cut quote turnaround time 30% while achieving SOC 2 certification for the platforms he's led.",
+    "linkedin": "https://www.linkedin.com/in/amit-kayal-ab8aa7/",
+    "photo": "/founders/amit.png"
+  },
+  {
+    "name": "Avishek Das",
+    "title": "Co-Founder",
+    "bio": "QA Architect with 13+ years building test architecture and automation at scale, now focused on quality engineering for LLM-powered products. Built the QA function and a Playwright-based evaluation framework for an AI-native SaaS platform from the ground up — golden datasets, LLM-as-judge scoring, prompt regression gates, and agent trajectory testing.",
+    "linkedin": "https://www.linkedin.com/in/dasavishek/",
+    "photo": "/founders/avishek.webp"
+  }
+]

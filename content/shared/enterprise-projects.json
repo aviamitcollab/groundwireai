@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Customer Support Agent",
+    "tag": "Agentic AI",
+    "meta": "Multi-turn support automation with human handoff"
+  },
+  {
+    "name": "HR Agent",
+    "tag": "Agentic AI",
+    "meta": "Policy Q&A, onboarding and internal HR workflows"
+  },
+  {
+    "name": "Sales Copilot",
+    "tag": "Agent Platform",
+    "meta": "Deal research, outreach drafting and CRM actions"
+  },
+  {
+    "name": "AI Knowledge Assistant",
+    "tag": "RAG",
+    "meta": "Enterprise knowledge base search and synthesis"
+  },
+  {
+    "name": "Contract Review Agent",
+    "tag": "Agentic AI",
+    "meta": "Clause extraction, risk flagging and redlines"
+  },
+  {
+    "name": "Multi-Agent Workflow",
+    "tag": "Multi-Agent Systems",
+    "meta": "Orchestrated agents across a multi-step business process"
+  },
+  {
+    "name": "AI Test Automation Agent",
+    "tag": "LLMOps",
+    "meta": "Autonomous test generation and regression coverage"
+  },
+  {
+    "name": "AI Coding Assistant",
+    "tag": "Agentic AI",
+    "meta": "Codebase-aware assistant for internal engineering teams"
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "num": "01",
+    "title": "AI Readiness Assessment",
+    "description": "We evaluate your data, infrastructure, and team readiness for AI adoption, then map the highest-value use cases before you commit budget to the wrong ones."
+  },
+  {
+    "num": "02",
+    "title": "AI Governance",
+    "description": "Policies, guardrails, and compliance frameworks for responsible AI use — model risk management, data privacy, and audit trails built in, not bolted on."
+  },
+  {
+    "num": "03",
+    "title": "AI Architecture",
+    "description": "Technical foundation design — model selection, RAG and agent architecture, and integration with your existing systems and data."
+  },
+  {
+    "num": "04",
+    "title": "AI Center of Excellence",
+    "description": "Standing up an internal AI CoE — standards, playbooks, training, and a repeatable delivery model your teams can run without us."
+  },
+  {
+    "num": "05",
+    "title": "Production Deployment",
+    "description": "Taking AI from pilot to production — CI/CD for prompts and models, observability, security review, and infrastructure that scales."
+  },
+  {
+    "num": "06",
+    "title": "Managed AI Services",
+    "description": "Ongoing operation after launch — monitoring, model and prompt updates, cost optimization, and incident response so systems stay reliable."
+  }
+]

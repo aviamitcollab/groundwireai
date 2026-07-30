@@ -1,0 +1,62 @@
+[
+  {
+    "category": "Cloud",
+    "tools": [
+      { "name": "AWS" },
+      { "name": "Azure" },
+      { "name": "GCP", "icon": "googlecloud" }
+    ]
+  },
+  {
+    "category": "Models",
+    "tools": [
+      { "name": "OpenAI" },
+      { "name": "Claude", "icon": "anthropic" },
+      { "name": "Gemini", "icon": "googlegemini" },
+      { "name": "Llama", "icon": "meta" },
+      { "name": "Qwen", "icon": "qwen" }
+    ]
+  },
+  {
+    "category": "Frameworks",
+    "tools": [
+      { "name": "LangGraph", "icon": "langgraph" },
+      { "name": "CrewAI", "icon": "crewai" },
+      { "name": "AutoGen" },
+      { "name": "MCP", "icon": "modelcontextprotocol" }
+    ]
+  },
+  {
+    "category": "Infrastructure",
+    "tools": [
+      { "name": "FastAPI", "icon": "fastapi" },
+      { "name": "Kubernetes", "icon": "kubernetes" },
+      { "name": "Docker", "icon": "docker" },
+      { "name": "Terraform", "icon": "terraform" }
+    ]
+  },
+  {
+    "category": "Evaluation & Testing",
+    "tools": [
+      { "name": "Deepeval" },
+      { "name": "Playwright" }
+    ]
+  },
+  {
+    "category": "Observability",
+    "tools": [
+      { "name": "LangFuse" },
+      { "name": "OpenTelemetry", "icon": "opentelemetry" },
+      { "name": "MLflow", "icon": "mlflow" }
+    ]
+  },
+  {
+    "category": "Databases",
+    "tools": [
+      { "name": "PostgreSQL", "icon": "postgresql" },
+      { "name": "Pinecone" },
+      { "name": "Neo4j", "icon": "neo4j" },
+      { "name": "Redis", "icon": "redis" }
+    ]
+  }
+]
