@@ -12,7 +12,7 @@ export default function WhyUs() {
           04&nbsp;&nbsp;Why choose us
         </p>
         <h2 className="font-head text-[clamp(1.9rem,4vw,3rem)] font-semibold leading-[1.1] tracking-[-0.02em]">
-          What sets <em>Groundwire</em> apart.
+          What sets <em>GroundwireAI</em> apart.
         </h2>
       </Reveal>
 

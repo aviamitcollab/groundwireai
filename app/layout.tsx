@@ -20,9 +20,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Groundwire — Build Production-Ready Enterprise AI Systems",
+  title: "GroundwireAI — Build Production-Ready Enterprise AI Systems",
   description:
-    "Groundwire is an Enterprise AI company. We help organizations adopt AI through our Enterprise AI Academy, AI Transformation Consulting, and AI Products.",
+    "GroundwireAI is an Enterprise AI company. We help organizations adopt AI through our Enterprise AI Academy, AI Transformation Consulting, and AI Products.",
 };
 
 export default function RootLayout({

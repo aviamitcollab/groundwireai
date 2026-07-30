@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="flex flex-wrap items-center justify-between gap-5 border-t border-line px-5 py-10 text-[0.85rem] text-ink-dim sm:px-8 md:px-16">
       <a href="/" className="font-head text-lg font-semibold text-ink">
-        Ground<span className="italic text-accent">wire</span>
+        Groundwire<span className="text-accent">AI</span>
       </a>
       <a href={`mailto:${contactEmail}`} data-cursor="hover" className="hover:text-ink">
         {contactEmail}
@@ -17,7 +17,7 @@ export default function Footer() {
         ))}
       </nav>
       <p className="w-full text-center text-[0.78rem] text-ink-dim">
-        © 2026 Groundwire. All rights reserved.
+        © 2026 GroundwireAI. All rights reserved.
       </p>
     </footer>
   );

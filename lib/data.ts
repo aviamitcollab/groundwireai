@@ -16,7 +16,7 @@ import consultingEngagementData from "@/content/consulting/engagement.json";
 export const contactEmail = contactData.email;
 
 export const brand = {
-  name: "Groundwire",
+  name: "GroundwireAI",
   statement: "Build. Transform. Scale. Enterprise AI.",
 };
 

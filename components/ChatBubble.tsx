@@ -29,7 +29,7 @@ const quickReplies: { id: string; label: string; response: string }[] = [
     id: "explore",
     label: "Just exploring",
     response:
-      "No rush! Feel free to browse our Academy, Consulting and Products above, or ask me anything about how Groundwire works.",
+      "No rush! Feel free to browse our Academy, Consulting and Products above, or ask me anything about how GroundwireAI works.",
   },
 ];
 
@@ -66,7 +66,7 @@ export default function ChatBubble() {
     pushMessage({ role: "user", text: trimmed });
     setInput("");
     setTimeout(() => {
-      const subject = encodeURIComponent("Question for Groundwire");
+      const subject = encodeURIComponent("Question for GroundwireAI");
       const body = encodeURIComponent(trimmed);
       pushMessage({
         role: "bot",

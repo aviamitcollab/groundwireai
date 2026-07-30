@@ -1,18 +1,16 @@
-# Groundwire
+# GroundwireAI
 
-Marketing site for **Groundwire**, an Enterprise AI company operating across three pillars: an **Academy** (cohort-based AI engineering training), **Consulting** (AI transformation, governance, and production deployment), and **Products** (AI SaaS and agent platforms).
+Marketing site for **GroundwireAI**, an Enterprise AI company operating across three pillars: an **Academy** (cohort-based AI engineering training), **Consulting** (AI transformation, governance, and production deployment), and **Products** (AI SaaS and agent platforms).
 
 Built with Next.js 14 (App Router) + TypeScript + Tailwind CSS + Framer Motion, deployed on Vercel.
-
-> **Naming note:** the brand is "Groundwire," but the GitHub repo and `package.json` still carry the name `mind-and-machine` / `man-and-machine` from earlier naming iterations. These weren't renamed to avoid disrupting the existing repo history and CI wiring — the live brand name is authoritative wherever it appears in actual page content.
 
 ---
 
 ## Live site
 
 - **Production:** https://groundwireai.vercel.app
-- **Vercel project:** `groundwire` (org: `avishekroni3-8180s-projects`)
-- **GitHub repo:** https://github.com/avishekroni/mind-and-machine
+- **Vercel project:** `groundwireai` (org: `avishekroni3-8180s-projects`)
+- **GitHub repo:** https://github.com/avishekroni/groundwireai
 
 ---
 
@@ -102,7 +100,7 @@ The project is connected to Vercel via GitHub — **any push to `main` triggers 
 ### Checking deployment status
 
 ```bash
-npx vercel ls groundwire          # recent deployments + status
+npx vercel ls groundwireai          # recent deployments + status
 npx vercel inspect <deployment-url>  # detailed status of one deployment
 ```
 
