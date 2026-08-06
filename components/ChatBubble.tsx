@@ -86,7 +86,7 @@ export default function ChatBubble() {
         data-cursor="hover"
         onClick={() => setOpen((v) => !v)}
         whileHover={{ y: -3 }}
-        className="fixed bottom-7 right-7 z-[90] flex items-center gap-2.5 rounded-full bg-ink px-5 py-3.5 text-[0.85rem] font-medium text-bg shadow-[0_10px_30px_rgba(0,0,0,0.35)] transition-colors hover:bg-accent hover:text-white"
+        className="fixed bottom-5 right-5 z-[90] flex h-12 w-12 items-center justify-center gap-2.5 rounded-full bg-ink text-[0.85rem] font-medium text-bg shadow-[0_10px_30px_rgba(0,0,0,0.35)] transition-colors hover:bg-accent hover:text-white sm:bottom-7 sm:right-7 sm:h-auto sm:w-auto sm:px-5 sm:py-3.5"
       >
         <span className="hidden sm:inline">Ada · AI assistant</span>
         <span className="text-base">✦</span>
@@ -100,7 +100,7 @@ export default function ChatBubble() {
             exit={{ opacity: 0, y: 16, scale: 0.97 }}
             transition={{ duration: 0.25, ease: [0.16, 1, 0.3, 1] }}
             style={{ transformOrigin: "bottom right" }}
-            className="fixed bottom-7 right-7 z-[95] flex max-h-[min(520px,calc(100vh-100px))] w-[min(360px,calc(100vw-40px))] flex-col overflow-hidden rounded-[20px] border border-line bg-bg-soft shadow-[0_30px_80px_rgba(0,0,0,0.5)]"
+            className="fixed bottom-5 right-5 z-[95] flex max-h-[min(520px,calc(100vh-100px))] w-[min(360px,calc(100vw-40px))] flex-col overflow-hidden rounded-[20px] border border-line bg-bg-soft shadow-[0_30px_80px_rgba(0,0,0,0.5)] sm:bottom-7 sm:right-7"
           >
             <div className="flex items-center justify-between border-b border-line px-5 py-4">
               <div>
