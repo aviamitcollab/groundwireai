@@ -13,6 +13,8 @@ import consultingFactsData from "@/content/consulting/facts.json";
 import consultingServicesData from "@/content/consulting/services.json";
 import consultingEngagementData from "@/content/consulting/engagement.json";
 
+export const siteUrl = "https://groundwireai.vercel.app";
+
 export const contactEmail = contactData.email;
 
 export const brand = {

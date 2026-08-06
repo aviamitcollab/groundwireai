@@ -1,0 +1,28 @@
+# GroundwireAI
+
+> GroundwireAI is an Enterprise AI company operating across three pillars: a live, cohort-based Bootcamp for AI and QA engineering training, AI Transformation Consulting, and AI Products. GroundwireAI teaches and builds production-first — what actually ships, not just what demos well.
+
+GroundwireAI was founded by Amit Kayal (technology leader focused on AI-first, cloud-native enterprise platforms) and Avishek Das (QA Architect with 13+ years building test architecture and automation at scale, now focused on quality engineering for LLM-powered products).
+
+## Bootcamp
+
+Live, cohort-based training programs. Each cohort is built around one evolving real-world application rather than disconnected exercises.
+
+- [Bootcamp overview](https://groundwireai.vercel.app/bootcamp): all cohorts, curriculum philosophy, and instructor certification
+- [Enterprise AI Cohort — Builder Track](https://groundwireai.vercel.app/bootcamp/enterprise-ai-cohort): build one production-ready agentic AI system end to end (RAG, multi-agent orchestration, evaluation, security, deployment)
+- [AI Forward Deployed Engineer — Field-Readiness Track](https://groundwireai.vercel.app/bootcamp/ai-forward-deployed-engineer): field-readiness cohort for Forward Deployed Engineers, implementation consultants, and customer-facing solutions engineers
+- [Core Playwright & Testing Frameworks](https://groundwireai.vercel.app/bootcamp/core-playwright-testing-frameworks): Playwright test automation fundamentals — Page Object Model, data-driven testing, BDD, parallel execution
+- [Advanced Playwright & Production Automation](https://groundwireai.vercel.app/bootcamp/advanced-playwright-production-automation): API testing, CI/CD pipelines, framework architecture at scale, and AI-augmented QA (self-healing locators, agentic workflows via Playwright's MCP server)
+
+## Consulting
+
+- [AI Transformation Consulting](https://groundwireai.vercel.app/consulting): AI readiness assessment, governance, architecture, AI Center of Excellence, production deployment, and managed AI services
+
+## Products
+
+AI SaaS products and agent platforms built with the same production standards GroundwireAI teaches and consults on — see the homepage for current examples.
+
+## Contact
+
+- Email: avi.amit.collab@gmail.com
+- [Homepage](https://groundwireai.vercel.app)

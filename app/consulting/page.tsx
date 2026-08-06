@@ -5,11 +5,27 @@ import ConsultingServices from "@/components/ConsultingServices";
 import EngagementModel from "@/components/EngagementModel";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import { siteUrl } from "@/lib/data";
+
+const title = "AI Transformation Consulting — GroundwireAI";
+const description =
+  "Enterprise AI consulting from readiness assessment through governance, architecture, production deployment, and managed AI services.";
 
 export const metadata: Metadata = {
-  title: "AI Transformation Consulting — GroundwireAI",
-  description:
-    "Enterprise AI consulting from readiness assessment through governance, architecture, production deployment, and managed AI services.",
+  title,
+  description,
+  alternates: { canonical: `${siteUrl}/consulting` },
+  openGraph: {
+    title,
+    description,
+    url: `${siteUrl}/consulting`,
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+  },
 };
 
 export default function ConsultingPage() {
