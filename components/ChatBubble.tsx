@@ -14,10 +14,10 @@ type Message = {
 
 const quickReplies: { id: string; label: string; response: string }[] = [
   {
-    id: "academy",
-    label: "I want to join the Academy",
+    id: "bootcamp",
+    label: "I want to join the Bootcamp",
     response:
-      "Great — our Enterprise AI Academy is a live, cohort-based program covering production-first AI engineering, from Python and LLM fundamentals through agentic AI and deployment. Want me to connect you with a program lead?",
+      "Great — our Enterprise AI Bootcamp is a live, cohort-based program covering production-first AI engineering, from Python and LLM fundamentals through agentic AI and deployment. Want me to connect you with a program lead?",
   },
   {
     id: "consulting",
@@ -29,7 +29,7 @@ const quickReplies: { id: string; label: string; response: string }[] = [
     id: "explore",
     label: "Just exploring",
     response:
-      "No rush! Feel free to browse our Academy, Consulting and Products above, or ask me anything about how GroundwireAI works.",
+      "No rush! Feel free to browse our Bootcamp, Consulting and Products above, or ask me anything about how GroundwireAI works.",
   },
 ];
 

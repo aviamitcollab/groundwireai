@@ -16,7 +16,7 @@ export default function ProgramFormats() {
           03&nbsp;&nbsp;Enterprise projects
         </p>
         <h2 className="font-head text-[clamp(1.9rem,4vw,3rem)] font-semibold leading-[1.1] tracking-[-0.02em]">
-          Real systems our academy and teams <em>build</em>.
+          Real systems our bootcamp and teams <em>build</em>.
         </h2>
       </Reveal>
 
@@ -24,7 +24,7 @@ export default function ProgramFormats() {
         {enterpriseProjects.map((project, i) => (
           <Reveal key={project.name} delay={i * 0.05}>
             <motion.a
-              href="#academy"
+              href="#bootcamp"
               data-cursor="hover"
               whileHover="hover"
               className="group flex items-center justify-between gap-6 border-b border-line py-6 transition-colors duration-200 hover:text-accent"

@@ -1,25 +1,25 @@
 import type { Metadata } from "next";
 import Nav from "@/components/Nav";
-import AcademyHero from "@/components/AcademyHero";
-import Curriculum from "@/components/Curriculum";
+import BootcampHero from "@/components/BootcampHero";
+import CohortList from "@/components/CohortList";
 import Capstone from "@/components/Capstone";
 import Mentors from "@/components/Mentors";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Enterprise AI Academy — GroundwireAI",
+  title: "Enterprise AI Bootcamp — GroundwireAI",
   description:
     "A 12-week, live cohort-based program teaching production-first AI engineering — from LLM fundamentals to agentic systems, LLMOps and deployment.",
 };
 
-export default function AcademyPage() {
+export default function BootcampPage() {
   return (
     <>
       <Nav />
       <main>
-        <AcademyHero />
-        <Curriculum />
+        <BootcampHero />
+        <CohortList />
         <Capstone />
         <Mentors />
         <Contact />

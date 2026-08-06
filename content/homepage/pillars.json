@@ -1,8 +1,8 @@
 [
   {
-    "id": "academy",
+    "id": "bootcamp",
     "num": "01",
-    "title": "Enterprise AI Academy",
+    "title": "Enterprise AI Bootcamp",
     "description": "Live, cohort-based programs that teach production-first AI engineering — not just prompt engineering.",
     "bullets": [
       "Live Cohort Programs",
@@ -10,7 +10,7 @@
       "Certification",
       "Career support"
     ],
-    "cta": { "label": "Join Next Cohort", "subject": "Enterprise AI Academy" }
+    "cta": { "label": "Join Next Cohort", "subject": "Enterprise AI Bootcamp" }
   },
   {
     "id": "consulting",

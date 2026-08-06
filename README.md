@@ -1,6 +1,6 @@
 # GroundwireAI
 
-Marketing site for **GroundwireAI**, an Enterprise AI company operating across three pillars: an **Academy** (cohort-based AI engineering training), **Consulting** (AI transformation, governance, and production deployment), and **Products** (AI SaaS and agent platforms).
+Marketing site for **GroundwireAI**, an Enterprise AI company operating across three pillars: a **Bootcamp** (cohort-based AI and QA engineering training), **Consulting** (AI transformation, governance, and production deployment), and **Products** (AI SaaS and agent platforms).
 
 Built with Next.js 14 (App Router) + TypeScript + Tailwind CSS + Framer Motion, deployed on Vercel.
 
@@ -19,7 +19,8 @@ Built with Next.js 14 (App Router) + TypeScript + Tailwind CSS + Framer Motion, 
 | Route | Purpose | Key sections |
 |---|---|---|
 | `/` | Homepage | Hero, Marquee ticker, Programs (3 pillars), Process ("How we work" + animated stats), Enterprise Projects showcase, Why Us, Technology Stack, Contact CTA |
-| `/academy` | Enterprise AI Academy detail page | Hero + quick facts, 14-module Curriculum (4 phases), Capstone projects, Certification & Instructors (founder cards), Contact CTA |
+| `/bootcamp` | Bootcamp anchor page | Hero + quick facts, dynamic Cohort list (cards linking to each cohort's page), Capstone projects, Certification & Instructors (founder cards), Contact CTA |
+| `/bootcamp/[slug]` | Individual cohort page (one per entry in `cohorts.json`) | Hero, stats, "What you'll build" + program arc, fit check, why-us, format + closing CTA, shared Contact CTA |
 | `/consulting` | AI Transformation Consulting detail page | Hero + quick facts, 6 Services, 4-step Engagement Model, Contact CTA |
 
 Global, present on every page: **Nav** (with mobile menu), **Footer**, and a floating **chat bubble** ("Ada") with canned quick-replies and a free-text input that drafts a `mailto:` to the team.
@@ -53,31 +54,31 @@ Most of the site's copy lives as JSON in **`/content`**, not hardcoded in compon
 
 ```
 content/
-├── academy/
-│   ├── curriculum.json        # the 14 course modules, grouped into 4 phases
-│   └── facts.json             # Academy hero's "at a glance" strip
+├── bootcamp/
+│   ├── cohorts.json           # one entry per cohort — hero copy, stats, program arc, fit check, why-us, format
+│   └── facts.json             # Bootcamp hero's "at a glance" strip
 ├── consulting/
 │   ├── services.json          # the 6 consulting offerings
 │   ├── engagement.json        # the 4-step engagement model
 │   └── facts.json             # Consulting hero's "at a glance" strip
 ├── homepage/
-│   ├── pillars.json           # the 3 homepage cards (Academy/Consulting/Products)
+│   ├── pillars.json           # the 3 homepage cards (Bootcamp/Consulting/Products)
 │   ├── process-steps.json     # "How we work" 4 steps
 │   ├── stats.json             # the animated counter bar (Engineers trained, etc.)
 │   └── why-us.json            # "Why Choose Us" 7 points
 └── shared/
     ├── contact.json           # the single source of truth for the contact email
-    ├── enterprise-projects.json  # 8 example projects — used on homepage AND Academy capstone
+    ├── enterprise-projects.json  # 8 example projects — used on homepage AND Bootcamp capstone
     ├── tech-stack.json           # tech logos/badges, grouped by category
     ├── founders.json             # founder bios, titles, LinkedIn URLs, photo paths
     └── marquee.json               # the looping ticker strip text
 ```
 
-**Example — adding a 15th Academy module:** open `content/academy/curriculum.json`, add a new module object to the appropriate phase's `modules` array (or a new phase), commit, push. That's it — the Academy page picks it up automatically.
+**Example — adding a new cohort:** open `content/bootcamp/cohorts.json`, add a new object to the array with a unique `slug` (see existing entries for the full field shape), commit, push. `generateStaticParams` in `app/bootcamp/[slug]/page.tsx` picks it up automatically — no component or route code needs to change, and it appears as a new card on `/bootcamp` and a new page at `/bootcamp/<slug>`.
 
 **What's *not* in `/content`, and why:** `hero`, `navLinks`, and `brand` stay in [`lib/data.ts`](lib/data.ts) because they encode behavior (routing, CTA variants/styling), not just words — moving them to JSON wouldn't make them meaningfully easier to edit and would separate config from the code that depends on it.
 
-`lib/data.ts` itself is a thin import/re-export layer over `/content` — it's what every component actually imports from (`import { academyCurriculum } from "@/lib/data"`), so component code never needs to change when content does.
+`lib/data.ts` itself is a thin import/re-export layer over `/content` — it's what every component actually imports from (`import { cohorts } from "@/lib/data"`), so component code never needs to change when content does.
 
 ### Updating the contact email
 

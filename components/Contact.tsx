@@ -16,7 +16,7 @@ export default function Contact() {
         </h2>
         <p className="mt-4 max-w-[520px] text-ink-dim">
           Tell us about your team or organization — we&rsquo;ll scope the right
-          path across Academy, Consulting or Products, and an AI expert follows
+          path across Bootcamp, Consulting or Products, and an AI expert follows
           up within one business day.
         </p>
         <div className="mt-9 flex flex-wrap justify-center gap-4">

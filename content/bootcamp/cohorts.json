@@ -1,0 +1,242 @@
+[
+  {
+    "slug": "enterprise-ai-cohort",
+    "trackLabel": "Builder Track",
+    "accent": "accent",
+    "eyebrow": "Cohorts opening soon · Builder Track",
+    "title": "Build one production-ready agentic AI system, end to end.",
+    "summary": "A cohort for engineers who ship AI inside their own company — not a prompting course.",
+    "description": "A cohort for engineers who ship AI inside their own company — not a prompting course. Design, secure, evaluate, deploy, and monitor a real agentic system, taught by a team that has done exactly that in production.",
+    "ctaSubject": "Enterprise AI Cohort - Early Access",
+    "crossLink": { "slug": "ai-forward-deployed-engineer", "label": "Forward Deployed Engineer track" },
+    "stats": [
+      { "value": "87%", "label": "of AI projects stall between proof-of-concept and production" },
+      { "value": "40%", "label": "of enterprise apps projected to embed agents by end of 2026" },
+      { "value": "340%", "label": "year-over-year rise in prompt injection attacks (OWASP, 2026)" },
+      { "value": "60%", "label": "of eng teams will run AI eval/observability platforms by 2028" }
+    ],
+    "buildHeading": "One real system. Every production concern.",
+    "buildDescription": "Every week adds one capability to a single shared enterprise use case — modeled in part on real deployments like IBM's AskHR assistant (94% containment rate, 75% ticket-volume reduction) — so you leave with a working system, not a folder of disconnected exercises.",
+    "pillars": [
+      { "icon": "R", "label": "Grounded, not hallucinating.", "description": "Retrieval-augmented generation over real documents." },
+      { "icon": "A", "label": "Acting, not just chatting.", "description": "Multi-agent orchestration with real tool calls." },
+      { "icon": "E", "label": "Measured, not guessed.", "description": "A real evaluation harness and observability, not \"it seemed fine.\"" },
+      { "icon": "S", "label": "Secured and deployed.", "description": "Red-teamed, gated CI/CD, live in the cloud, monitored." }
+    ],
+    "programArc": [
+      { "weeks": "Weeks 1–4 · Basic", "goal": "Ship a grounded assistant that can take a first real action." },
+      { "weeks": "Weeks 5–9 · Intermediate", "goal": "Make it robust: multi-agent, fine-tuned, evaluated, security-hardened.", "capstone": "Capstone 1" },
+      { "weeks": "Weeks 10–11 · Advanced", "goal": "Make it live: gated CI/CD deployment and production monitoring.", "capstone": "Capstone 2" }
+    ],
+    "whoFor": {
+      "yes": [
+        "A backend, platform, or ML engineer moving into GenAI work inside your own company",
+        "A data scientist ready to go from notebooks to a real, deployed, monitored system",
+        "Part of an internal AI/platform team being upskilled together",
+        "3–4+ years of general software engineering experience, no customer-facing background needed"
+      ],
+      "no": [
+        "Need discovery-call, proposal, or customer-facing skills — see our Forward Deployed Engineer track instead",
+        "Are looking for a theory-only or prompting-only course",
+        "Want a certificate without shipping a real, working system"
+      ]
+    },
+    "whyHeading": "We've built and deployed agentic AI in production — not just taught it.",
+    "whyDescription": "This curriculum comes from engineers and product leaders who have designed, shipped, secured, and operated real agentic AI systems for enterprise use — the same production discipline you'll apply to your own build.",
+    "whyUs": [
+      { "title": "Production-first curriculum", "description": "Every module is built around what actually breaks agentic systems at scale, not a curated happy path." },
+      { "title": "Architects as instructors", "description": "Learn from people who design these systems for a living, not just present slides about them." },
+      { "title": "Grounded in 2026 market reality", "description": "Sequencing is driven by current data on where AI projects actually fail, reviewed on an ongoing basis." },
+      { "title": "Graded like production", "description": "Every lab is scored against a production-readiness bar — tests, logging, security, cost — not \"does it run.\"" },
+      { "title": "Small, instructor-led cohorts", "description": "Live build-alongs and hands-on lab time with real instructor feedback, every week." },
+      { "title": "One real system, not a toy", "description": "You leave with a working, deployed, monitored build — yours to keep and extend." }
+    ],
+    "format": [
+      { "value": "11", "label": "weeks, one continuous build" },
+      { "value": "2 hrs", "label": "live session per week" },
+      { "value": "2", "label": "graded capstones" },
+      { "value": "1", "label": "production-grade system, yours to keep" }
+    ],
+    "closingHeadline": "Ready to build AI that actually ships?"
+  },
+  {
+    "slug": "ai-forward-deployed-engineer",
+    "trackLabel": "Field-Readiness Track",
+    "accent": "accent-2",
+    "eyebrow": "Cohorts opening soon · Field-Readiness Track",
+    "title": "Deploy agentic AI at a customer's door, not just your own.",
+    "summary": "A field-readiness cohort for Forward Deployed Engineers, implementation consultants, and customer-facing solutions engineers.",
+    "description": "A field-readiness cohort for Forward Deployed Engineers, implementation consultants, and customer-facing solutions engineers — taught by a team that has done this in the field, not just in a classroom.",
+    "ctaSubject": "FDE Cohort - Early Access",
+    "crossLink": { "slug": "enterprise-ai-cohort", "label": "Builder Track" },
+    "stats": [
+      { "value": "6+ yrs", "label": "typical experience bar for the target FDE role this program is benchmarked against" },
+      { "value": "340%", "label": "year-over-year rise in prompt injection attacks — the risk you'll inherit at a customer site" },
+      { "value": "2", "label": "capstones: a deployed, cost-optimized build, then a full engagement simulation" },
+      { "value": "#1", "label": "cited cause of stalled agent rollouts: governance gaps, not model quality" }
+    ],
+    "buildHeading": "The full engagement, not just the code.",
+    "buildDescription": "You'll build the same production-grade agentic system as our builder track — then take it further: scope it against a vague brief, deploy it into a deliberately corrupted, undocumented environment standing in for a real customer's stack, and defend it live under pressure.",
+    "pillars": [
+      { "icon": "D", "label": "Discover & propose.", "description": "Turn a vague brief into a scoped, approvable technical plan." },
+      { "icon": "I", "label": "Integrate for real.", "description": "Enterprise auth, messy systems, someone else's constraints." },
+      { "icon": "F", "label": "Field-harden it.", "description": "Build against a deliberately corrupted, undocumented environment." },
+      { "icon": "L", "label": "Debug live.", "description": "Own an incident with a stakeholder watching, then plan the adoption path." }
+    ],
+    "programArc": [
+      { "weeks": "Weeks 1–6 · Foundations → Discovery & Design", "goal": "Ship a grounded, tool-using assistant, then scope a real technical proposal." },
+      { "weeks": "Weeks 7–13 · Applied Build → Deployment", "goal": "Multi-agent, fine-tuned, secured, integrated, and cost-optimized in the cloud.", "capstone": "Capstone 1" },
+      { "weeks": "Weeks 14–16 · Field Readiness", "goal": "Live incident debugging, adoption planning, full engagement simulation.", "capstone": "Capstone 2" }
+    ],
+    "whoFor": {
+      "yes": [
+        "Moving into or already in a Forward Deployed Engineer, implementation consultant, or customer-facing solutions engineer role",
+        "Targeting AI vendors or enterprise software companies that deploy AI directly into customer environments",
+        "Ready to be graded on discovery, live incident debugging, and a panel presentation — not just a code submission",
+        "Part of a vendor's professional services or pre-sales org being upskilled together"
+      ],
+      "no": [
+        "Only want internal-facing technical depth with no customer-facing ambitions — see our Builder Track instead",
+        "Aren't ready for a longer, field-readiness-graded commitment (16 weeks)",
+        "Want a generic AI project instead of a credential mapped to a real job's success metrics"
+      ]
+    },
+    "whyHeading": "We've sat across the table from the customer — not just at the whiteboard.",
+    "whyDescription": "This curriculum comes from a team that has designed, deployed, and operated agentic AI systems in real production environments — including the messy, undocumented, time-pressured conditions a Forward Deployed Engineer actually works in.",
+    "whyUs": [
+      { "title": "Built around a real job", "description": "Every phase maps to the stated success metrics of an actual FDE role, not a generic curriculum." },
+      { "title": "Corrupted-environment training", "description": "You'll build against a deliberately messy, undocumented system — customer environments never look like the demo." },
+      { "title": "Live-fire incident practice", "description": "Debug a production issue with a stakeholder role-play watching, before it happens for real." },
+      { "title": "Graded like the job", "description": "Capstone 2 compresses a full engagement — discovery through adoption plan — into one session." },
+      { "title": "Architects as instructors", "description": "Learn from people who deploy these systems in the field, not just present slides about them." },
+      { "title": "Field-tested content", "description": "Benchmarked against live market job postings, not a syllabus written once and left alone." }
+    ],
+    "format": [
+      { "value": "16", "label": "weeks, one continuous engagement" },
+      { "value": "2 hrs", "label": "live session per week" },
+      { "value": "2", "label": "graded capstones" },
+      { "value": "0", "label": "prerequisites — fully self-contained" }
+    ],
+    "closingHeadline": "Ready to prove you can deploy, not just build?"
+  },
+  {
+    "slug": "core-playwright-testing-frameworks",
+    "trackLabel": "Core Track",
+    "accent": "accent",
+    "eyebrow": "Cohorts opening soon · Core Track",
+    "title": "Write Playwright tests the way production suites are actually built.",
+    "summary": "A cohort for QA engineers and developers who want to go beyond locators and assertions into real test-suite structure.",
+    "description": "Writing a Playwright test is easy. Structuring a suite that survives a real, evolving codebase is not. This course takes you from your first automated test through the Page Object Model, data-driven design, BDD, and parallel execution — building one real, evolving application throughout, not a series of disconnected exercises.",
+    "ctaSubject": "Core Playwright Cohort - Early Access",
+    "crossLink": { "slug": "advanced-playwright-production-automation", "label": "Advanced Playwright & Production Automation course" },
+    "stats": [
+      { "value": "12", "label": "modules, built around one evolving application" },
+      { "value": "1", "label": "real end-to-end app, carried through both courses" },
+      { "value": "TS", "label": "TypeScript from Module 3 onward — POM, fixtures, everything" },
+      { "value": "1", "label": "graded capstone: a data-driven, parallelized, BDD-structured suite" }
+    ],
+    "buildHeading": "One evolving application. Every core Playwright skill.",
+    "buildDescription": "Every module adds one capability to the same real, evolving application — carried through both courses — so you leave Course 1 with a suite that already holds together, not a folder of disconnected exercises.",
+    "pillars": [
+      { "icon": "P", "label": "Structured before it's needed.", "description": "Page Object Model and test isolation, taught from Module 3 — not retrofitted later." },
+      { "icon": "D", "label": "Data-driven, not one-off.", "description": "Fixtures and parameterization run the same test across real datasets." },
+      { "icon": "R", "label": "Reliable in parallel.", "description": "Independence and isolation as a principle, so tests run concurrently without flaking." },
+      { "icon": "B", "label": "Readable to stakeholders.", "description": "BDD scenarios translate specs into language non-engineers can follow." }
+    ],
+    "programArc": [
+      { "weeks": "Modules 1–4 · Foundations", "goal": "Set up Playwright, master locator strategy, and structure every test with the Page Object Model from day one." },
+      { "weeks": "Modules 5–9 · Building the Suite", "goal": "Handle real UI end to end, build tests that are independent and data-driven, then run them safely in parallel." },
+      { "weeks": "Modules 10–12 · BDD, Reporting & Capstone", "goal": "Translate specs into stakeholder-readable BDD scenarios, build a readable report, then ship a data-driven, parallelized, BDD-structured capstone suite.", "capstone": "Capstone" }
+    ],
+    "whoFor": {
+      "yes": [
+        "QA engineers, SDETs, or developers who already write basic Playwright tests but want production-grade structure, not just more syntax",
+        "Engineers who want a real, evolving codebase to practice on instead of isolated exercises",
+        "Comfortable with, or ready to pick up, TypeScript — POM and fixtures are taught in TS from Module 3 onward",
+        "Want a foundation in BDD, data-driven testing, and parallel execution before moving into CI/CD and AI-augmented automation in Course 2"
+      ],
+      "no": [
+        "Already comfortable with API testing, CI/CD pipelines, and framework design at scale — see our Advanced course instead",
+        "Looking for a language-agnostic or no-code approach — this course is TypeScript-first from Module 3",
+        "Want a certificate without building a real, working test suite"
+      ]
+    },
+    "whyHeading": "Built by someone who's owned quality engineering, not just taught it.",
+    "whyDescription": "This curriculum comes from 13+ years building and leading quality engineering functions across SaaS, retail, insurance, financial services, and energy — the same production discipline applied to how this cohort is taught.",
+    "whyUs": [
+      { "title": "Practitioner-led", "description": "Taught by someone who has built and led QE functions for 13+ years across five industries, not a syntax tutorial writer." },
+      { "title": "One evolving application", "description": "Every module builds on the same real app instead of disconnected exercises, so the suite you leave with actually holds together." },
+      { "title": "Structured before it's needed", "description": "Page Object Model and test isolation are taught from day one, so nothing gets retrofitted later." },
+      { "title": "TypeScript from the start", "description": "POM, fixtures, and everything from Module 3 onward is written the way production suites actually are." },
+      { "title": "BDD stakeholders can read", "description": "Specs translate into Gherkin scenarios non-engineers can follow, not just engineer-only test code." },
+      { "title": "A real capstone", "description": "You leave with a data-driven, parallelized, BDD-structured suite for a genuine end-to-end flow, not a toy demo." }
+    ],
+    "format": [
+      { "value": "12", "label": "modules, one evolving suite" },
+      { "value": "TypeScript", "label": "primary language track, from Module 3" },
+      { "value": "1", "label": "graded capstone" },
+      { "value": "Cohort-based", "label": "program" }
+    ],
+    "closingHeadline": "Ready to write tests the way production suites are actually built?"
+  },
+  {
+    "slug": "advanced-playwright-production-automation",
+    "trackLabel": "Advanced Track",
+    "accent": "accent-2",
+    "eyebrow": "Cohorts opening soon · Advanced Track",
+    "title": "Take your test suite from CI-ready to production-owned.",
+    "summary": "The follow-on cohort for owning test automation as a production system — API coverage, CI/CD, and AI-augmented QA.",
+    "description": "Writing tests is easy. Owning test automation the way a production system needs to be owned is not. This course evolves the suite from Course 1 into API coverage, robust CI/CD, framework architecture at scale, and AI-augmented workflows built on Playwright's official MCP server.",
+    "ctaSubject": "Advanced Playwright Cohort - Early Access",
+    "crossLink": { "slug": "core-playwright-testing-frameworks", "label": "Core Playwright & Testing Frameworks course" },
+    "stats": [
+      { "value": "14", "label": "modules, from API coverage to AI-augmented automation" },
+      { "value": "2", "label": "capstones across the full program — this course ships the final one" },
+      { "value": "1", "label": "agentic QA module built on Playwright's official MCP server" },
+      { "value": "1", "label": "evolving suite, now shipped through a full CI/CD pipeline" }
+    ],
+    "buildHeading": "The same suite. Now owned like production.",
+    "buildDescription": "Course 2 picks up the suite from Course 1 and takes it into API coverage, CI/CD, framework architecture, and AI-augmented maintenance — so the capstone ships everything built across both courses as one working pipeline.",
+    "pillars": [
+      { "icon": "A", "label": "API-aware, not UI-only.", "description": "Hybrid API and UI tests, sharing the same suite." },
+      { "icon": "S", "label": "Built to scale.", "description": "Monorepo structuring, multi-environment config, and framework architecture patterns." },
+      { "icon": "C", "label": "Shipped through CI/CD.", "description": "Containerized runners, cloud grids, and dashboards wired in as the pipeline is built." },
+      { "icon": "AI", "label": "AI-augmented, deliberately.", "description": "Self-healing locators and agentic QA workflows built on Playwright's official MCP server." }
+    ],
+    "programArc": [
+      { "weeks": "Modules 1–4 · API, Auth & Edge Cases", "goal": "Extend the Course 1 suite with API coverage, production-grade auth reuse, network mocking, and visual regression." },
+      { "weeks": "Modules 5–8 · Scale & Pipeline", "goal": "Architect the framework for scale, root-cause flaky tests as a production discipline, and wire the suite into a live CI/CD pipeline." },
+      { "weeks": "Modules 9–14 · AI, Observability & Capstone", "goal": "Add self-healing locators and agentic, MCP-driven QA workflows, layer in observability and governance, then ship a capstone that evolves the suite into a full CI/CD pipeline.", "capstone": "Capstone" }
+    ],
+    "whoFor": {
+      "yes": [
+        "Completed Course 1 — or already comfortable with Playwright fundamentals, the Page Object Model, and basic parallel execution",
+        "Ready to take a test suite into API coverage, CI/CD pipelines, and framework design at scale",
+        "Curious about where AI actually helps in QA — self-healing locators and agentic workflows built on Playwright's official MCP server",
+        "Want to own test automation as a production system, not a folder of scripts"
+      ],
+      "no": [
+        "New to Playwright — start with our Core course first",
+        "Not familiar with Docker or basic cloud infrastructure concepts — recommended background going into the CI/CD module",
+        "Looking for a deep performance- or security-engineering course — Playwright's role in each is covered, but scoped, not exhaustive"
+      ]
+    },
+    "whyHeading": "Same practitioner, now applied at production scale.",
+    "whyDescription": "This curriculum comes from 13+ years building and leading quality engineering functions across SaaS, retail, insurance, financial services, and energy — the same production discipline applied to CI/CD, framework architecture, and governance.",
+    "whyUs": [
+      { "title": "Practitioner-led at production scale", "description": "The same 13+ year background, now applied to CI/CD, framework architecture, and governance." },
+      { "title": "Nothing taught goes unexercised", "description": "The capstone pulls the API tests, mocking, auth, and visual regression built earlier in this course into one shipped pipeline." },
+      { "title": "AI where it actually helps", "description": "Self-healing locators and agentic QA workflows built on Playwright's official MCP server, not AI for its own sake." },
+      { "title": "Framework design at scale", "description": "Monorepo structuring, multi-environment config, and architecture patterns for suites bigger than one project." },
+      { "title": "CI/CD built alongside reporting", "description": "Pipeline design and dashboard reporting are taught together, wired in as the pipeline is built, not bolted on after." },
+      { "title": "Flaky tests treated as a production discipline", "description": "Root-causing shared state and quarantine strategies, distinct from Course 1's basic parallel-execution mechanics." }
+    ],
+    "format": [
+      { "value": "14", "label": "modules" },
+      { "value": "1", "label": "full CI/CD pipeline shipped" },
+      { "value": "1", "label": "graded capstone" },
+      { "value": "Cohort-based", "label": "program" }
+    ],
+    "closingHeadline": "Ready to own automation as a production system, not a folder of scripts?"
+  }
+]

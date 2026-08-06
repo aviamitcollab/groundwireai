@@ -15,8 +15,8 @@ export default function Capstone() {
           Ship a <em>real</em> agent system, not a toy demo.
         </h2>
         <p className="mt-4 max-w-[520px] text-ink-dim">
-          In Module 14 you&rsquo;ll build and present a capstone modeled on
-          one of these production use cases.
+          By the program&rsquo;s end, you&rsquo;ll build and present a capstone
+          modeled on one of these production use cases.
         </p>
       </Reveal>
 

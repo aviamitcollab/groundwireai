@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { academyFacts, contactEmail } from "@/lib/data";
+import { bootcampFacts } from "@/lib/data";
 
 const container = {
   hidden: {},
@@ -19,7 +19,7 @@ const item = {
   },
 };
 
-export default function AcademyHero() {
+export default function BootcampHero() {
   return (
     <section className="relative overflow-hidden px-5 pb-16 pt-32 sm:px-8 md:px-16 md:pt-40">
       <div className="pointer-events-none absolute inset-0 z-0" aria-hidden>
@@ -39,7 +39,7 @@ export default function AcademyHero() {
           variants={item}
           className="mb-5 inline-block rounded-full border border-line px-4 py-1.5 text-sm font-medium tracking-[0.02em] text-accent"
         >
-          Enterprise AI Academy
+          Enterprise AI Bootcamp
         </motion.p>
         <motion.h1
           variants={item}
@@ -57,18 +57,11 @@ export default function AcademyHero() {
         </motion.p>
         <motion.div variants={item} className="mb-14 flex flex-wrap gap-4">
           <a
-            href={`mailto:${contactEmail}?subject=Enterprise%20AI%20Academy`}
+            href="#cohorts"
             data-cursor="hover"
             className="inline-flex items-center justify-center gap-2 rounded-full bg-ink px-6 py-3.5 text-sm font-medium text-bg transition-all hover:-translate-y-0.5 hover:bg-accent hover:text-white hover:shadow-[0_10px_30px_rgba(51,87,232,0.25)]"
           >
             Join Next Cohort
-          </a>
-          <a
-            href="#curriculum"
-            data-cursor="hover"
-            className="inline-flex items-center justify-center gap-2 rounded-full border border-line px-6 py-3.5 text-sm font-medium transition-all hover:-translate-y-0.5 hover:border-accent hover:text-accent"
-          >
-            View curriculum
           </a>
         </motion.div>
 
@@ -76,7 +69,7 @@ export default function AcademyHero() {
           variants={item}
           className="grid grid-cols-2 gap-6 rounded-card border border-line bg-bg-soft px-6 py-7 sm:grid-cols-4 sm:px-8"
         >
-          {academyFacts.map((fact) => (
+          {bootcampFacts.map((fact) => (
             <div key={fact.label}>
               <p className="mb-1 text-[0.72rem] uppercase tracking-[0.08em] text-ink-dim">
                 {fact.label}

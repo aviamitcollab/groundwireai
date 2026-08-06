@@ -45,9 +45,9 @@ export default function Programs() {
                 >
                   {pillar.cta.label} <span aria-hidden>→</span>
                 </a>
-                {pillar.id === "academy" && (
+                {pillar.id === "bootcamp" && (
                   <a
-                    href="/academy"
+                    href="/bootcamp"
                     data-cursor="hover"
                     className="inline-flex w-fit items-center gap-1.5 text-sm font-medium text-ink-dim transition-colors hover:text-ink"
                   >

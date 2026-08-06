@@ -16,7 +16,7 @@ export default function Process() {
           From strategy to <em>shipped</em>, in four steps.
         </h2>
         <p className="max-w-[520px] text-ink-dim">
-          A tight, production-first process — across academy cohorts, consulting
+          A tight, production-first process — across bootcamp cohorts, consulting
           engagements, and product builds alike.
         </p>
       </Reveal>
