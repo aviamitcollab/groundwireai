@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Forward Deployed Engineer — GroundwireAI Academy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0a0a0c;
+    --bg-alt:#0e0e11;
+    --card:#131317;
+    --card-border:#232329;
+    --text:#f2f2f0;
+    --text-dim:#93938f;
+    --accent:#ff9d5c;
+    --accent-soft:rgba(255,157,92,0.12);
+    --radius:14px;
+    --serif:'Instrument Serif', Georgia, serif;
+    --sans:'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:var(--sans);
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    font-size:15.5px;
+  }
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 32px;}
+  em{font-family:var(--serif);font-style:italic;color:var(--accent);font-weight:400;}
+
+  /* NAV */
+  header.nav{
+    position:sticky;top:0;z-index:50;
+    background:rgba(10,10,12,0.82);
+    backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--card-border);
+  }
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;padding:20px 0;}
+  .brand{display:flex;align-items:baseline;gap:8px;font-weight:700;font-size:16.5px;letter-spacing:-0.2px;}
+  .brand .sub{font-weight:400;color:var(--text-dim);font-size:13px;}
+  .nav-links{display:flex;gap:32px;font-size:13.5px;color:var(--text-dim);}
+  .nav-links a{transition:color 0.15s;}
+  .nav-links a:hover{color:var(--text);}
+  .nav-cta{
+    background:var(--text);color:var(--bg);font-weight:600;font-size:13px;
+    padding:10px 20px;border-radius:8px;
+  }
+  @media(max-width:760px){.nav-links{display:none;}}
+
+  /* HERO */
+  .hero{padding:96px 0 0;text-align:center;}
+  .eyebrow{
+    display:inline-flex;align-items:center;gap:8px;
+    font-size:12px;font-weight:600;letter-spacing:0.5px;
+    color:var(--accent);
+    background:var(--accent-soft);
+    border:1px solid rgba(255,157,92,0.24);
+    padding:7px 16px;border-radius:999px;margin-bottom:28px;
+  }
+  .pulse-dot{width:6px;height:6px;border-radius:50%;background:var(--accent);position:relative;}
+  .pulse-dot::after{
+    content:"";position:absolute;inset:-4px;border-radius:50%;border:1px solid var(--accent);
+    animation:ring 1.8s ease-out infinite;
+  }
+  @keyframes ring{0%{transform:scale(0.4);opacity:1;}100%{transform:scale(2.2);opacity:0;}}
+
+  h1{font-size:56px;line-height:1.08;font-weight:700;letter-spacing:-1.5px;margin-bottom:22px;max-width:840px;margin-left:auto;margin-right:auto;}
+  .hero p.sub{font-size:18px;color:var(--text-dim);max-width:600px;margin:0 auto 38px;}
+  .cta-row{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;margin-bottom:20px;}
+  .btn-primary{
+    background:var(--text);color:var(--bg);font-weight:600;font-size:14.5px;
+    padding:14px 26px;border-radius:9px;display:inline-flex;align-items:center;gap:8px;
+  }
+  .btn-secondary{
+    border:1px solid var(--card-border);color:var(--text);font-weight:500;font-size:14.5px;
+    padding:14px 26px;border-radius:9px;display:inline-block;
+  }
+  .btn-secondary:hover{border-color:var(--accent);}
+  .coming-soon-note{font-size:12.5px;color:var(--text-dim);margin-bottom:56px;}
+  .coming-soon-note b{color:var(--accent);font-weight:600;}
+
+  @media(max-width:640px){h1{font-size:38px;letter-spacing:-1px;}}
+
+  /* MARQUEE */
+  .marquee{
+    border-top:1px solid var(--card-border);border-bottom:1px solid var(--card-border);
+    overflow:hidden;white-space:nowrap;padding:16px 0;background:var(--bg-alt);
+  }
+  .marquee-track{display:inline-block;animation:scroll-left 34s linear infinite;font-size:13.5px;color:var(--text-dim);letter-spacing:0.3px;}
+  .marquee-track span{margin:0 22px;}
+  .marquee-track .sep{color:var(--accent);opacity:0.6;}
+  @keyframes scroll-left{from{transform:translateX(0);}to{transform:translateX(-50%);}}
+
+  /* SECTION SHARED */
+  section{padding:100px 0;}
+  .sec-head{display:flex;align-items:baseline;gap:14px;margin-bottom:16px;}
+  .sec-num{font-size:13px;font-weight:600;color:var(--accent);font-variant-numeric:tabular-nums;}
+  .sec-label{font-size:12px;font-weight:600;letter-spacing:1.2px;text-transform:uppercase;color:var(--text-dim);}
+  h2{font-size:32px;font-weight:700;letter-spacing:-0.8px;margin-bottom:16px;max-width:620px;}
+  .section-sub{color:var(--text-dim);font-size:15.5px;max-width:600px;margin-bottom:48px;}
+
+  /* STAT BAND */
+  .stat-band{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--card-border);border-bottom:1px solid var(--card-border);}
+  .stat-col{padding:32px 24px;border-left:1px solid var(--card-border);}
+  .stat-col:first-child{border-left:none;}
+  @media(max-width:820px){.stat-band{grid-template-columns:repeat(2,1fr);}.stat-col:nth-child(3){border-left:none;}}
+  @media(max-width:480px){.stat-band{grid-template-columns:1fr;}.stat-col{border-left:none !important;border-top:1px solid var(--card-border);}.stat-col:first-child{border-top:none;}}
+  .stat-num{font-size:34px;font-weight:700;letter-spacing:-1px;margin-bottom:6px;}
+  .stat-label{font-size:13px;color:var(--text-dim);line-height:1.5;}
+
+  /* USE CASE */
+  .use-case-inner{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;}
+  @media(max-width:900px){.use-case-inner{grid-template-columns:1fr;}}
+  .uc-pillars{display:flex;flex-direction:column;gap:0;margin-top:8px;border-top:1px solid var(--card-border);}
+  .uc-pillar{display:flex;gap:16px;align-items:flex-start;font-size:14.5px;color:var(--text-dim);padding:18px 0;border-bottom:1px solid var(--card-border);}
+  .uc-pillar .ic{
+    flex:none;width:24px;height:24px;border-radius:6px;background:var(--accent-soft);
+    display:flex;align-items:center;justify-content:center;color:var(--accent);font-size:11px;font-weight:700;margin-top:2px;
+  }
+  .uc-pillar b{color:var(--text);font-weight:600;}
+
+  .arc-card{
+    background:var(--card);border:1px solid var(--card-border);border-radius:var(--radius);padding:22px;margin-bottom:14px;
+  }
+  .arc-weeks{font-size:12px;color:var(--accent);font-weight:600;margin-bottom:10px;letter-spacing:0.3px;}
+  .arc-goal{font-size:15px;color:var(--text);}
+  .arc-cap{
+    margin-top:14px;display:inline-block;font-size:11.5px;font-weight:600;color:var(--bg);
+    background:var(--accent);padding:5px 12px;border-radius:999px;
+  }
+
+  /* WHO FOR */
+  .who-grid{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--card-border);border:1px solid var(--card-border);border-radius:var(--radius);overflow:hidden;}
+  @media(max-width:820px){.who-grid{grid-template-columns:1fr;}}
+  .who-card{background:var(--bg);padding:32px;}
+  .who-title{font-weight:600;font-size:15px;margin-bottom:18px;color:var(--text);}
+  .who-title.yes-t{color:var(--accent);}
+  .who-card ul{list-style:none;display:flex;flex-direction:column;gap:12px;}
+  .who-card li{font-size:14px;color:var(--text-dim);padding-left:18px;position:relative;}
+  .who-card li::before{content:"—";position:absolute;left:0;color:var(--text-dim);opacity:0.5;}
+
+  /* WHY US */
+  .why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--card-border);border:1px solid var(--card-border);border-radius:var(--radius);overflow:hidden;}
+  @media(max-width:820px){.why-grid{grid-template-columns:repeat(2,1fr);}}
+  @media(max-width:560px){.why-grid{grid-template-columns:1fr;}}
+  .why-card{background:var(--bg);padding:28px 24px;}
+  .why-card h3{font-size:15px;font-weight:600;margin-bottom:8px;}
+  .why-card p{font-size:13.5px;color:var(--text-dim);}
+
+  /* FORMAT STRIP */
+  .format-strip{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--card-border);border-radius:var(--radius);overflow:hidden;}
+  .format-item{padding:26px 20px;border-left:1px solid var(--card-border);text-align:center;}
+  .format-item:first-child{border-left:none;}
+  @media(max-width:700px){.format-strip{grid-template-columns:repeat(2,1fr);}.format-item:nth-child(3){border-left:none;}}
+  .format-item .n{font-size:22px;font-weight:700;color:var(--accent);margin-bottom:4px;}
+  .format-item .l{font-size:12.5px;color:var(--text-dim);}
+
+  /* CTA FOOTER */
+  .cta-band{text-align:center;padding:110px 0 100px;}
+  .cta-band h2{font-size:36px;margin:0 auto 14px;max-width:600px;}
+  .cta-band p{color:var(--text-dim);font-size:15.5px;margin-bottom:34px;}
+
+  footer{border-top:1px solid var(--card-border);padding:40px 0;}
+  .footer-inner{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;align-items:center;}
+  .footer-brand{font-weight:700;font-size:14px;}
+  .footer-brand .dim{color:var(--text-dim);font-weight:400;font-size:12.5px;margin-left:8px;}
+  .footer-links{display:flex;gap:22px;font-size:13px;color:var(--text-dim);}
+  .footer-links a:hover{color:var(--text);}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="https://nodewire.vercel.app/">GroundwireAI <span class="sub">/ Academy</span></a>
+    <nav class="nav-links">
+      <a href="#program">Program</a>
+      <a href="#who">Who It's For</a>
+      <a href="#why-us">Why Us</a>
+      <a href="enterprise-ai-cohort.html">Builder Track →</a>
+    </nav>
+    <a class="nav-cta" href="mailto:avi.amit.collab@gmail.com?subject=FDE%20Cohort%20-%20Early%20Access">Get Early Access</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow"><span class="pulse-dot"></span> Cohorts opening soon · Field-Readiness Track</div>
+    <h1>Deploy agentic AI at a <em>customer's door</em>, not just your own.</h1>
+    <p class="sub">A field-readiness cohort for Forward Deployed Engineers, implementation consultants, and customer-facing solutions engineers — taught by a team that has done this in the field, not just in a classroom.</p>
+    <div class="cta-row">
+      <a class="btn-primary" href="mailto:avi.amit.collab@gmail.com?subject=FDE%20Cohort%20-%20Early%20Access">Get Early Access →</a>
+      <a class="btn-secondary" href="#program">See the Program Arc</a>
+    </div>
+    <div class="coming-soon-note"><b>Coming soon</b> — next cohort dates land here first for the waitlist.</div>
+  </div>
+</section>
+
+<div class="marquee">
+  <div class="marquee-track">
+    <span>Discovery &amp; Proposals</span><span class="sep">✦</span><span>Enterprise Integration</span><span class="sep">✦</span><span>Agentic AI</span><span class="sep">✦</span><span>Secure Auth</span><span class="sep">✦</span><span>Live Incident Response</span><span class="sep">✦</span><span>Adoption Planning</span><span class="sep">✦</span><span>Production Deployment</span><span class="sep">✦</span>
+    <span>Discovery &amp; Proposals</span><span class="sep">✦</span><span>Enterprise Integration</span><span class="sep">✦</span><span>Agentic AI</span><span class="sep">✦</span><span>Secure Auth</span><span class="sep">✦</span><span>Live Incident Response</span><span class="sep">✦</span><span>Adoption Planning</span><span class="sep">✦</span><span>Production Deployment</span><span class="sep">✦</span>
+  </div>
+</div>
+
+<section>
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">01</span><span class="sec-label">Why This, Why Now</span></div>
+    <h2>The job isn't just building the agent. It's making it work at someone else's door.</h2>
+    <p class="section-sub">This cohort is built directly around a real Forward Deployed Engineer job description's stated success metrics — not a generic "AI bootcamp" syllabus.</p>
+  </div>
+  <div class="wrap" style="padding:0;">
+    <div class="stat-band">
+      <div class="stat-col"><div class="stat-num">6+ yrs</div><div class="stat-label">typical experience bar for the target FDE role this program is benchmarked against</div></div>
+      <div class="stat-col"><div class="stat-num">340%</div><div class="stat-label">year-over-year rise in prompt injection attacks — the risk you'll inherit at a customer site</div></div>
+      <div class="stat-col"><div class="stat-num">2</div><div class="stat-label">capstones: a deployed, cost-optimized build, then a full engagement simulation</div></div>
+      <div class="stat-col"><div class="stat-num">#1</div><div class="stat-label">cited cause of stalled agent rollouts: governance gaps, not model quality</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="program">
+  <div class="wrap use-case-inner">
+    <div>
+      <div class="sec-head"><span class="sec-num">02</span><span class="sec-label">What You'll Build</span></div>
+      <h2>The full engagement, not just the code.</h2>
+      <p style="color:var(--text-dim);font-size:15px;margin-bottom:8px;">You'll build the same production-grade agentic system as our builder track — then take it further: scope it against a vague brief, deploy it into a deliberately corrupted, undocumented environment standing in for a real customer's stack, and defend it live under pressure.</p>
+      <div class="uc-pillars">
+        <div class="uc-pillar"><span class="ic">D</span><div><b>Discover &amp; propose.</b> Turn a vague brief into a scoped, approvable technical plan.</div></div>
+        <div class="uc-pillar"><span class="ic">I</span><div><b>Integrate for real.</b> Enterprise auth, messy systems, someone else's constraints.</div></div>
+        <div class="uc-pillar"><span class="ic">F</span><div><b>Field-harden it.</b> Build against a deliberately corrupted, undocumented environment.</div></div>
+        <div class="uc-pillar"><span class="ic">L</span><div><b>Debug live.</b> Own an incident with a stakeholder watching, then plan the adoption path.</div></div>
+      </div>
+    </div>
+    <div>
+      <div class="arc-weeks" style="margin-bottom:16px;font-size:12px;color:var(--text-dim);text-transform:uppercase;letter-spacing:1px;">Program Arc</div>
+      <div class="arc-card">
+        <div class="arc-weeks">Weeks 1–6 · Foundations → Discovery &amp; Design</div>
+        <div class="arc-goal">Ship a grounded, tool-using assistant, then scope a real technical proposal.</div>
+      </div>
+      <div class="arc-card">
+        <div class="arc-weeks">Weeks 7–13 · Applied Build → Deployment</div>
+        <div class="arc-goal">Multi-agent, fine-tuned, secured, integrated, and cost-optimized in the cloud.</div>
+        <span class="arc-cap">Capstone 1</span>
+      </div>
+      <div class="arc-card" style="margin-bottom:0;">
+        <div class="arc-weeks">Weeks 14–16 · Field Readiness</div>
+        <div class="arc-goal">Live incident debugging, adoption planning, full engagement simulation.</div>
+        <span class="arc-cap">Capstone 2</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="who">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">03</span><span class="sec-label">Fit Check</span></div>
+    <h2>Who this program is for.</h2>
+    <p class="section-sub">We'd rather tell you now than have you find out mid-cohort.</p>
+    <div class="who-grid">
+      <div class="who-card">
+        <div class="who-title yes-t">A strong fit if you're —</div>
+        <ul>
+          <li>Moving into or already in a Forward Deployed Engineer, implementation consultant, or customer-facing solutions engineer role</li>
+          <li>Targeting AI vendors or enterprise software companies that deploy AI directly into customer environments</li>
+          <li>Ready to be graded on discovery, live incident debugging, and a panel presentation — not just a code submission</li>
+          <li>Part of a vendor's professional services or pre-sales org being upskilled together</li>
+        </ul>
+      </div>
+      <div class="who-card">
+        <div class="who-title">Not the right fit if you —</div>
+        <ul>
+          <li>Only want internal-facing technical depth with no customer-facing ambitions — see our Builder Track instead</li>
+          <li>Aren't ready for a longer, field-readiness-graded commitment (16 weeks)</li>
+          <li>Want a generic AI project instead of a credential mapped to a real job's success metrics</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="why-us">
+  <div class="wrap">
+    <div class="sec-head"><span class="sec-num">04</span><span class="sec-label">Why GroundwireAI</span></div>
+    <h2>We've sat across the table from the customer — not just at the whiteboard.</h2>
+    <p class="section-sub">This curriculum comes from a team that has designed, deployed, and operated agentic AI systems in real production environments — including the messy, undocumented, time-pressured conditions a Forward Deployed Engineer actually works in.</p>
+    <div class="why-grid">
+      <div class="why-card"><h3>Built around a real job</h3><p>Every phase maps to the stated success metrics of an actual FDE role, not a generic curriculum.</p></div>
+      <div class="why-card"><h3>Corrupted-environment training</h3><p>You'll build against a deliberately messy, undocumented system — customer environments never look like the demo.</p></div>
+      <div class="why-card"><h3>Live-fire incident practice</h3><p>Debug a production issue with a stakeholder role-play watching, before it happens for real.</p></div>
+      <div class="why-card"><h3>Graded like the job</h3><p>Capstone 2 compresses a full engagement — discovery through adoption plan — into one session.</p></div>
+      <div class="why-card"><h3>Architects as instructors</h3><p>Learn from people who deploy these systems in the field, not just present slides about them.</p></div>
+      <div class="why-card"><h3>Field-tested content</h3><p>Benchmarked against live market job postings, not a syllabus written once and left alone.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="format-strip">
+      <div class="format-item"><div class="n">16</div><div class="l">weeks, one continuous engagement</div></div>
+      <div class="format-item"><div class="n">2 hrs</div><div class="l">live session per week</div></div>
+      <div class="format-item"><div class="n">2</div><div class="l">graded capstones</div></div>
+      <div class="format-item"><div class="n">0</div><div class="l">prerequisites — fully self-contained</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="wrap">
+    <div class="sec-head" style="justify-content:center;margin-bottom:20px;"><span class="sec-num">05</span><span class="sec-label">Let's Talk</span></div>
+    <h2>Ready to prove you can deploy, not just build?</h2>
+    <p>Cohorts are small and instructor-led, opening on a rolling basis. Get on the list to hear first.</p>
+    <a class="btn-primary" href="mailto:avi.amit.collab@gmail.com?subject=FDE%20Cohort%20-%20Early%20Access">Get Early Access →</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap footer-inner">
+    <div class="footer-brand">GroundwireAI <span class="dim">© 2026 · Build. Transform. Scale.</span></div>
+    <div class="footer-links">
+      <a href="enterprise-ai-cohort.html">Builder Track</a>
+      <a href="https://nodewire.vercel.app/">Main Site</a>
+      <a href="mailto:avi.amit.collab@gmail.com">Contact</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
