@@ -13,6 +13,7 @@ import tracksData from "@/content/bootcamp/tracks.json";
 import consultingFactsData from "@/content/consulting/facts.json";
 import consultingServicesData from "@/content/consulting/services.json";
 import consultingEngagementData from "@/content/consulting/engagement.json";
+import productsData from "@/content/products/products.json";
 
 export const siteUrl = "https://groundwireai.vercel.app";
 
@@ -40,7 +41,7 @@ export const hero = {
       href: `mailto:${contactEmail}?subject=AI%20Strategy%20Call`,
       variant: "ghost" as const,
     },
-    { label: "Explore Products", href: "#products", variant: "text" as const },
+    { label: "Explore Products", href: "/products", variant: "text" as const },
   ],
 };
 
@@ -48,7 +49,10 @@ export const pillars = pillarsData.map((pillar) => ({
   ...pillar,
   cta: {
     label: pillar.cta.label,
-    href: `mailto:${contactEmail}?subject=${encodeURIComponent(pillar.cta.subject)}`,
+    href:
+      pillar.id === "products"
+        ? "/products"
+        : `mailto:${contactEmail}?subject=${encodeURIComponent(pillar.cta.subject)}`,
   },
 }));
 
@@ -76,10 +80,14 @@ export const consultingServices = consultingServicesData;
 
 export const consultingEngagement = consultingEngagementData;
 
+export const products = productsData;
+
+export type Product = (typeof productsData)[number];
+
 export const navLinks = [
   { href: "/bootcamp", label: "Bootcamp" },
   { href: "/consulting", label: "Consulting" },
-  { href: "/#products", label: "Products" },
+  { href: "/products", label: "Products" },
   { href: "/#why-us", label: "Why Us" },
   { href: "/#contact", label: "Contact" },
 ];

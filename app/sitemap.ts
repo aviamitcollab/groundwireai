@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { cohorts, siteUrl } from "@/lib/data";
+import { cohorts, products, siteUrl } from "@/lib/data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes: MetadataRoute.Sitemap = [
@@ -16,6 +16,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.8,
     },
+    {
+      url: `${siteUrl}/products`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.9,
+    },
   ];
 
   const cohortRoutes: MetadataRoute.Sitemap = cohorts.map((cohort) => ({
@@ -25,5 +31,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...staticRoutes, ...cohortRoutes];
+  const productRoutes: MetadataRoute.Sitemap = products.map((product) => ({
+    url: `${siteUrl}/products/${product.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly",
+    priority: 0.7,
+  }));
+
+  return [...staticRoutes, ...cohortRoutes, ...productRoutes];
 }

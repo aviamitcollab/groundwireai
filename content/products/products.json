@@ -1,0 +1,65 @@
+[
+  {
+    "slug": "buddhi-health",
+    "category": "Healthcare",
+    "statusLabel": "In development",
+    "accent": "accent-2",
+    "eyebrow": "An AI clinical co-pilot for the Indian visit",
+    "title": "Diagnose.",
+    "titleEmphasis": "Not document.",
+    "summary": "An AI clinical co-pilot that drafts a differential grounded in India-first guidelines — the doctor still decides.",
+    "description": "Buddhi listens to the visit, drafts a differential grounded in India-first guidelines, and hands it to the doctor to decide. Currently in development, working closely with a small number of early hospital partners.",
+    "ctas": [
+      { "label": "For hospitals", "subject": "Buddhi Health - Hospital Interest" },
+      { "label": "For investors", "subject": "Buddhi Health - Investor Interest" }
+    ],
+    "painHeading": "Two minutes, a fever, three possible causes — and a note that gets shorter every time volume goes up.",
+    "painDescription": "The patient describes their symptoms in Telugu, switches to English mid-sentence, and the doctor is already thinking about the next twenty people in the waiting room. Whatever gets typed in that window has to carry the differential, the plan, and the record — in a system built for single-language, unhurried input. Tools built somewhere else don't fix this: they carry someone else's guidelines, someone else's tests, and English-only listening into a visit that runs on none of those.",
+    "solutionHeading": "Describe the visit. Get the draft — never the decision.",
+    "features": [
+      { "num": "01", "title": "Listens in the language actually spoken", "description": "Code-switched, multi-language, real-time — built around how Indian consultations actually sound, not accented English." },
+      { "num": "02", "title": "Reasons like it trained here", "description": "Grounded in India-first guidelines, tests, and formulary data — never a foreign default quietly standing in for local practice." },
+      { "num": "03", "title": "Sees more than the conversation", "description": "Labs, imaging, vitals, medication and visit history — where available — inform the same picture as the transcript, not a separate silo." },
+      { "num": "04", "title": "Never finalizes without the doctor", "description": "Every item is a draft. Nothing reaches the record, and nothing is prescribed, until a registered practitioner says so." }
+    ],
+    "visionHeading": "The consult is where we're starting. Not where we stop.",
+    "visionDescription": "What we're building underneath a single visit is meant to eventually hold a lot more of how a hospital practices medicine — but we're earning that scope one design partner, one specialty, one language at a time. What's public today is a fraction of the work. That's deliberate.",
+    "facts": [
+      { "tag": "In development", "description": "Actively building with early hospital design partners, not yet generally available." },
+      { "tag": "Founder-led", "description": "Built by a technical founder with a background in enterprise-scale platform architecture." },
+      { "tag": "India-first, from day one", "description": "Not a global product with local settings changed — built here, for here, first." }
+    ],
+    "closingHeadline": "The visit shouldn't be a trade-off between documenting and diagnosing."
+  },
+  {
+    "slug": "shopify-ai-app-suite",
+    "category": "Commerce",
+    "statusLabel": "In development",
+    "accent": "accent",
+    "eyebrow": "AI-powered Shopify apps",
+    "title": "Four small apps.",
+    "titleEmphasis": "One thesis: ship fast, prove it, go deeper.",
+    "summary": "A portfolio of small, shippable Shopify apps — prioritized by build speed and real market gaps, not gut feel.",
+    "description": "Three to four small, shippable Shopify apps that demonstrate product development capability and generate revenue — prioritized by build speed and market gap rather than gut feel.",
+    "ctas": [
+      { "label": "Get early access", "subject": "Shopify AI App Suite - Early Access" }
+    ],
+    "painHeading": "Most merchants are drowning in manual catalog work, one-size chatbots, or checkout tools that ignore their vertical.",
+    "painDescription": "The Shopify app ecosystem is the fastest-growing AI app category on the platform — 11.6K to 17.6K AI apps in a single year — but most solve generic problems generically. We're building four apps, each picked for a specific, provable gap: fast wins that prove the pipeline, then harder, higher-trust builds once it's proven.",
+    "solutionHeading": "Ship fast, bank revenue, then go deep.",
+    "features": [
+      { "num": "01", "title": "AI Product Content Generator", "description": "One-click AI-optimized titles, descriptions, and SEO tags, bulk-applied via the Admin API. AI-generated content correlates with ~18% higher conversion, and it sells to any merchant — no vertical lock-in. Low build complexity, fastest to revenue." },
+      { "num": "02", "title": "Post-Purchase Upsell", "description": "A one-click upsell offer on the thank-you page, with no cart disruption. Built on Shopify's newer checkout extensions — a modern, portfolio-worthy technique — and \"+$X per order\" is an easy, provable pitch to merchants." },
+      { "num": "03", "title": "Jewelry AI Sales & Gifting Assistant", "description": "A chat assistant for gemstone/metal choice, budget, occasion gifting, and sizing. Existing tools are narrow (ring sizers, diamond finders) — not conversational. Jewelry converts at only 0.5–1%, so even a small lift is high-value." },
+      { "num": "04", "title": "Fashion AI Fit & Style Assistant", "description": "The same chatbot engine as the jewelry assistant, retuned for apparel sizing and fit confidence. Second-best vertical after jewelry, and reuses most of the jewelry assistant's engine — nearly free to build once #3 ships." }
+    ],
+    "visionHeading": "Suggested build order: 1 → 2 → 3 → 4.",
+    "visionDescription": "Bank fast revenue and portfolio proof early with the content generator and the upsell app, then put the harder AI-engineering effort into the chatbot once the pipeline — Shopify auth, billing, deployment — is already proven. The fashion variant comes nearly free by reusing the jewelry chatbot's engine.",
+    "facts": [
+      { "tag": "17.6K", "description": "AI apps in the Shopify ecosystem, up from 11.6K a year ago — the fastest-growing app category on the platform." },
+      { "tag": "~18%", "description": "higher conversion correlated with AI-generated product content." },
+      { "tag": "4", "description": "apps planned, prioritized by build speed and market gap, not gut feel." }
+    ],
+    "closingHeadline": "Ready to bring AI-native tools to your Shopify store?"
+  }
+]
