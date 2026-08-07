@@ -2,13 +2,13 @@
   {
     "id": "bootcamp",
     "num": "01",
-    "title": "Enterprise AI Bootcamp",
-    "description": "Live, cohort-based programs that teach production-first AI engineering — not just prompt engineering.",
+    "title": "AI & QA Engineering Bootcamp",
+    "description": "Live, cohort-based programs covering agentic AI engineering and production-grade QA automation — not just prompt engineering or syntax tutorials.",
     "bullets": [
-      "Live Cohort Programs",
-      "Production-first learning",
-      "Certification",
-      "Career support"
+      "Enterprise AI Cohort — Builder Track",
+      "AI Forward Deployed Engineer — Field-Readiness Track",
+      "Core Playwright & Testing Frameworks",
+      "Advanced Playwright & Agentic AI QA"
     ],
     "cta": { "label": "Join Next Cohort", "subject": "Enterprise AI Bootcamp" }
   },
@@ -16,13 +16,13 @@
     "id": "consulting",
     "num": "02",
     "title": "AI Transformation Consulting",
-    "description": "We help enterprises adopt AI responsibly — from readiness and architecture through to governed, production deployment.",
+    "description": "We help enterprises adopt AI responsibly — from readiness and use-case prioritization through governed, production deployment, closing the governance gap that stalls most agentic AI rollouts.",
     "bullets": [
-      "AI Readiness Assessment",
-      "AI Governance",
+      "AI Readiness & Use-Case Prioritization",
+      "Agentic AI Governance & AgentOps",
       "AI Architecture",
       "AI Center of Excellence",
-      "Production Deployment",
+      "Production Deployment & Monitoring",
       "Managed AI Services"
     ],
     "cta": { "label": "Book AI Strategy Call", "subject": "AI Strategy Call" }
@@ -31,8 +31,12 @@
     "id": "products",
     "num": "03",
     "title": "AI Products",
-    "description": "AI SaaS products and agent platforms built with the same production standards we teach and consult on.",
-    "bullets": ["AI SaaS products", "Agent Platforms", "Enterprise AI Solutions"],
+    "description": "Two AI-native products currently in development, built with the same production standards we teach and consult on — an AI-powered Shopify app suite, and Buddhi Health, an AI clinical co-pilot for the Indian hospital visit.",
+    "bullets": [
+      "Buddhi Health — AI clinical co-pilot",
+      "Shopify AI App Suite — commerce automation",
+      "In development with early design partners"
+    ],
     "cta": { "label": "Explore Products", "subject": "AI Products" }
   }
 ]
