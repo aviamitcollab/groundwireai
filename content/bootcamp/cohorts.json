@@ -121,19 +121,26 @@
   },
   {
     "slug": "core-playwright-testing-frameworks",
-    "trackLabel": "Core Track",
+    "trackLabel": "QA Track",
+    "courseName": "Core Playwright & Testing Frameworks",
     "accent": "accent",
-    "eyebrow": "Cohorts opening soon · Core Track",
+    "eyebrow": "Cohorts opening soon · QA Track · Course 1 of 2",
     "title": "Write Playwright tests the way production suites are actually built.",
     "summary": "A cohort for QA engineers and developers who want to go beyond locators and assertions into real test-suite structure.",
     "description": "Writing a Playwright test is easy. Structuring a suite that survives a real, evolving codebase is not. This course takes you from your first automated test through the Page Object Model, data-driven design, BDD, and parallel execution — building one real, evolving application throughout, not a series of disconnected exercises.",
     "ctaSubject": "Core Playwright Cohort - Early Access",
-    "crossLink": { "slug": "advanced-playwright-production-automation", "label": "Advanced Playwright & Production Automation course" },
+    "sequence": {
+      "trackName": "QA Track",
+      "courseNumber": 1,
+      "totalCourses": 2,
+      "nextSlug": "advanced-playwright-production-automation",
+      "nextTitle": "Advanced Playwright & Production Automation"
+    },
     "stats": [
-      { "value": "12", "label": "modules, built around one evolving application" },
-      { "value": "1", "label": "real end-to-end app, carried through both courses" },
-      { "value": "TS", "label": "TypeScript from Module 3 onward — POM, fixtures, everything" },
-      { "value": "1", "label": "graded capstone: a data-driven, parallelized, BDD-structured suite" }
+      { "value": "45.1%", "label": "of QA pros now use Playwright, overtaking Selenium for the first time (TestGuild, 2026)" },
+      { "value": "240%", "label": "year-over-year growth in Playwright downloads — the fastest-growing test tool" },
+      { "value": "12,000+", "label": "companies run Playwright in production, including Amazon, Microsoft, and NVIDIA" },
+      { "value": "57%", "label": "of QA tests are now automated industry-wide (Sembi, 2026)" }
     ],
     "buildHeading": "One evolving application. Every core Playwright skill.",
     "buildDescription": "Every module adds one capability to the same real, evolving application — carried through both courses — so you leave Course 1 with a suite that already holds together, not a folder of disconnected exercises.",
@@ -144,9 +151,9 @@
       { "icon": "B", "label": "Readable to stakeholders.", "description": "BDD scenarios translate specs into language non-engineers can follow." }
     ],
     "programArc": [
-      { "weeks": "Modules 1–4 · Foundations", "goal": "Set up Playwright, master locator strategy, and structure every test with the Page Object Model from day one." },
-      { "weeks": "Modules 5–9 · Building the Suite", "goal": "Handle real UI end to end, build tests that are independent and data-driven, then run them safely in parallel." },
-      { "weeks": "Modules 10–12 · BDD, Reporting & Capstone", "goal": "Translate specs into stakeholder-readable BDD scenarios, build a readable report, then ship a data-driven, parallelized, BDD-structured capstone suite.", "capstone": "Capstone" }
+      { "weeks": "Weeks 1–2 · Foundations", "goal": "Ship your first structured test suite — Page Object Model from day one, not retrofitted later." },
+      { "weeks": "Weeks 3–6 · Building the Suite", "goal": "Make it real: a data-driven suite covering full UI flows, running safely in parallel." },
+      { "weeks": "Weeks 7–8 · BDD, Reporting & Capstone", "goal": "Ship the capstone: a stakeholder-readable, BDD-structured, parallelized suite — Course 1 complete.", "capstone": "Capstone" }
     ],
     "whoFor": {
       "yes": [
@@ -172,28 +179,35 @@
       { "title": "A real capstone", "description": "You leave with a data-driven, parallelized, BDD-structured suite for a genuine end-to-end flow, not a toy demo." }
     ],
     "format": [
-      { "value": "12", "label": "modules, one evolving suite" },
-      { "value": "TypeScript", "label": "primary language track, from Module 3" },
+      { "value": "8", "label": "weeks, one continuous build" },
+      { "value": "2", "label": "modules per week, plus a capstone buffer week" },
       { "value": "1", "label": "graded capstone" },
-      { "value": "Cohort-based", "label": "program" }
+      { "value": "TypeScript", "label": "primary language, from Module 3" }
     ],
     "closingHeadline": "Ready to write tests the way production suites are actually built?"
   },
   {
     "slug": "advanced-playwright-production-automation",
-    "trackLabel": "Advanced Track",
+    "trackLabel": "QA Track",
+    "courseName": "Advanced Playwright & Production Automation",
     "accent": "accent-2",
-    "eyebrow": "Cohorts opening soon · Advanced Track",
+    "eyebrow": "Cohorts opening soon · QA Track · Course 2 of 2",
     "title": "Take your test suite from CI-ready to production-owned.",
     "summary": "The follow-on cohort for owning test automation as a production system — API coverage, CI/CD, and AI-augmented QA.",
     "description": "Writing tests is easy. Owning test automation the way a production system needs to be owned is not. This course evolves the suite from Course 1 into API coverage, robust CI/CD, framework architecture at scale, and AI-augmented workflows built on Playwright's official MCP server.",
     "ctaSubject": "Advanced Playwright Cohort - Early Access",
-    "crossLink": { "slug": "core-playwright-testing-frameworks", "label": "Core Playwright & Testing Frameworks course" },
+    "sequence": {
+      "trackName": "QA Track",
+      "courseNumber": 2,
+      "totalCourses": 2,
+      "prevSlug": "core-playwright-testing-frameworks",
+      "prevTitle": "Core Playwright & Testing Frameworks"
+    },
     "stats": [
-      { "value": "14", "label": "modules, from API coverage to AI-augmented automation" },
-      { "value": "2", "label": "capstones across the full program — this course ships the final one" },
-      { "value": "1", "label": "agentic QA module built on Playwright's official MCP server" },
-      { "value": "1", "label": "evolving suite, now shipped through a full CI/CD pipeline" }
+      { "value": "26%", "label": "of teams hit flaky tests regularly, up from 10% in 2022 (Sembi, 2026)" },
+      { "value": "$120K", "label": "estimated yearly cost of flaky tests for a 20-engineer team in wasted CI time" },
+      { "value": "80%", "label": "of enterprises plan to adopt AI-powered testing tools by 2027, up from ~15% in 2023" },
+      { "value": "35–50%", "label": "fewer broken tests per release reported with AI-assisted self-healing locators" }
     ],
     "buildHeading": "The same suite. Now owned like production.",
     "buildDescription": "Course 2 picks up the suite from Course 1 and takes it into API coverage, CI/CD, framework architecture, and AI-augmented maintenance — so the capstone ships everything built across both courses as one working pipeline.",
@@ -204,9 +218,9 @@
       { "icon": "AI", "label": "AI-augmented, deliberately.", "description": "Self-healing locators and agentic QA workflows built on Playwright's official MCP server." }
     ],
     "programArc": [
-      { "weeks": "Modules 1–4 · API, Auth & Edge Cases", "goal": "Extend the Course 1 suite with API coverage, production-grade auth reuse, network mocking, and visual regression." },
-      { "weeks": "Modules 5–8 · Scale & Pipeline", "goal": "Architect the framework for scale, root-cause flaky tests as a production discipline, and wire the suite into a live CI/CD pipeline." },
-      { "weeks": "Modules 9–14 · AI, Observability & Capstone", "goal": "Add self-healing locators and agentic, MCP-driven QA workflows, layer in observability and governance, then ship a capstone that evolves the suite into a full CI/CD pipeline.", "capstone": "Capstone" }
+      { "weeks": "Weeks 1–2 · API, Auth & Edge Cases", "goal": "Extend it: API coverage, production-grade auth reuse, and visual regression — no longer UI-only." },
+      { "weeks": "Weeks 3–5 · Scale & Pipeline", "goal": "Make it scale: architected for growth, running in a live CI/CD pipeline, flaky tests root-caused not ignored." },
+      { "weeks": "Weeks 6–8 · AI, Observability & Capstone", "goal": "Ship the capstone: a self-healing, MCP-driven, fully observable suite — owned in production, end to end.", "capstone": "Capstone" }
     ],
     "whoFor": {
       "yes": [
@@ -232,10 +246,10 @@
       { "title": "Flaky tests treated as a production discipline", "description": "Root-causing shared state and quarantine strategies, distinct from Course 1's basic parallel-execution mechanics." }
     ],
     "format": [
-      { "value": "14", "label": "modules" },
-      { "value": "1", "label": "full CI/CD pipeline shipped" },
+      { "value": "8", "label": "weeks, one continuous engagement" },
+      { "value": "2", "label": "modules per week, plus a capstone buffer week" },
       { "value": "1", "label": "graded capstone" },
-      { "value": "Cohort-based", "label": "program" }
+      { "value": "1", "label": "full CI/CD pipeline shipped" }
     ],
     "closingHeadline": "Ready to own automation as a production system, not a folder of scripts?"
   }

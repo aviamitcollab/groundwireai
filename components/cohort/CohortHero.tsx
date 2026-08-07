@@ -90,6 +90,32 @@ export default function CohortHero({ cohort }: { cohort: Cohort }) {
               instead?
             </>
           )}
+          {cohort.sequence?.nextSlug && (
+            <>
+              {" · "}
+              Continue to{" "}
+              <a
+                href={`/bootcamp/${cohort.sequence.nextSlug}`}
+                data-cursor="hover"
+                className="underline decoration-line underline-offset-4 hover:text-ink"
+              >
+                Course {cohort.sequence.courseNumber + 1}: {cohort.sequence.nextTitle}
+              </a>
+            </>
+          )}
+          {cohort.sequence?.prevSlug && (
+            <>
+              {" · "}
+              New to {cohort.sequence.trackName}? Start with{" "}
+              <a
+                href={`/bootcamp/${cohort.sequence.prevSlug}`}
+                data-cursor="hover"
+                className="underline decoration-line underline-offset-4 hover:text-ink"
+              >
+                Course 1: {cohort.sequence.prevTitle}
+              </a>
+            </>
+          )}
         </motion.p>
       </motion.div>
     </section>

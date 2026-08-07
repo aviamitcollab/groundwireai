@@ -9,6 +9,7 @@ import whyUsData from "@/content/homepage/why-us.json";
 import techStackData from "@/content/shared/tech-stack.json";
 import bootcampFactsData from "@/content/bootcamp/facts.json";
 import cohortsData from "@/content/bootcamp/cohorts.json";
+import tracksData from "@/content/bootcamp/tracks.json";
 import consultingFactsData from "@/content/consulting/facts.json";
 import consultingServicesData from "@/content/consulting/services.json";
 import consultingEngagementData from "@/content/consulting/engagement.json";
@@ -66,6 +67,8 @@ export const bootcampFacts = bootcampFactsData;
 export const cohorts = cohortsData;
 
 export type Cohort = (typeof cohortsData)[number];
+
+export const cohortTracks = tracksData;
 
 export const consultingFacts = consultingFactsData;
 
