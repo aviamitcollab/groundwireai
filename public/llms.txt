@@ -2,7 +2,7 @@
 
 > GroundwireAI is an Enterprise AI company operating across three pillars: a live, cohort-based Bootcamp for AI and QA engineering training, AI Transformation Consulting, and AI Products. GroundwireAI teaches and builds production-first — what actually ships, not just what demos well.
 
-GroundwireAI was founded by Amit Kayal (technology leader focused on AI-first, cloud-native enterprise platforms) and Avishek Das (QA Architect with 13+ years building test architecture and automation at scale, now focused on quality engineering for LLM-powered products).
+GroundwireAI was founded by Amit Kayal (Founder — technology leader focused on AI-first, cloud-native enterprise platforms) and Avishek Das (Co-Founder — QA Architect with 13+ years building test architecture and automation at scale, now focused on quality engineering for LLM-powered products).
 
 ## Bootcamp
 
@@ -20,7 +20,19 @@ Live, cohort-based training programs. Each cohort is built around one evolving r
 
 ## Products
 
-AI SaaS products and agent platforms built with the same production standards GroundwireAI teaches and consults on — see the homepage for current examples.
+AI SaaS products and agent platforms built with the same production standards GroundwireAI teaches and consults on. All are currently in development, working with early design partners.
+
+- [Products overview](https://groundwireai.vercel.app/products): all products, in one place
+- [Buddhi Health](https://groundwireai.vercel.app/products/buddhi-health): an AI clinical co-pilot that drafts a differential grounded in India-first guidelines — the doctor still decides
+- [Shopify AI App Suite](https://groundwireai.vercel.app/products/shopify-ai-app-suite): a portfolio of small, shippable Shopify apps — AI product content, post-purchase upsell, and AI sales/gifting assistants
+- [Solvent](https://groundwireai.vercel.app/products/solvent): AI employees for Indian accounting — reads GSTR-2A/2B, vendor invoices, and books, then prepares reconciliation, exceptions, and filing packets, never filed without sign-off
+- [FlatChat](https://groundwireai.vercel.app/products/flatchat): AI support and sales for Shopify, priced on outcomes (a fixed platform fee plus a component tied to resolved questions and recovered carts) instead of raw AI replies
+
+## Company
+
+- [Company](https://groundwireai.vercel.app/company): mission, values, and founders
+- [Careers](https://groundwireai.vercel.app/careers): open roles (currently none — GroundwireAI is a two-person founding team)
+- [Resources](https://groundwireai.vercel.app/resources): courses, products, and services in one place
 
 ## Contact
 

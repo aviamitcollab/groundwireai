@@ -21,7 +21,7 @@ const inter = Inter({
   display: "swap",
 });
 
-const siteTitle = "GroundwireAI — Build Production-Ready Enterprise AI Systems";
+const siteTitle = "GroundwireAI — AI that ships, not just demos.";
 const siteDescription =
   "GroundwireAI is an Enterprise AI company. We help organizations adopt AI through our Enterprise AI Bootcamp, AI Transformation Consulting, and AI Products.";
 
