@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FlatChat — AI support & sales for Shopify, priced on outcomes</title>
+<style>
+  :root{
+    --primary:#14332B;
+    --dark-bg:#0D221C;
+    --darker:#081713;
+    --accent:#C98A2E;
+    --card-bg:#F3EEE3;
+    --card-bg2:#FAF7F0;
+    --light-txt:#E3E6DE;
+    --muted:#6B675C;
+    --text-dark:#22201B;
+    --white:#FFFFFF;
+    --line:#DED7C6;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:-apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    color:var(--text-dark);
+    background:var(--white);
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{
+    font-family:Georgia, "Cambria", "Times New Roman", serif;
+    font-weight:700;
+    letter-spacing:-0.01em;
+  }
+  a{color:inherit; text-decoration:none;}
+  .wrap{max-width:1120px; margin:0 auto; padding:0 32px;}
+  .eyebrow{
+    font-size:12.5px; letter-spacing:0.14em; font-weight:700; text-transform:uppercase; color:var(--accent);
+  }
+
+  /* NAV */
+  header{
+    position:sticky; top:0; z-index:100;
+    background:rgba(255,255,255,0.92);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  nav{
+    display:flex; align-items:center; justify-content:space-between;
+    max-width:1120px; margin:0 auto; padding:18px 32px;
+  }
+  .logo{font-family:Georgia, serif; font-weight:700; font-size:19px; letter-spacing:0.02em; color:var(--primary);}
+  .logo span{color:var(--accent);}
+  .nav-links{display:flex; align-items:center; gap:34px;}
+  .nav-links a{font-size:14.5px; font-weight:500; color:var(--text-dark);}
+  .nav-links a:hover{color:var(--accent);}
+  .btn{
+    display:inline-block; padding:11px 22px; border-radius:7px; font-size:14px; font-weight:600;
+    cursor:pointer; transition:all .15s ease; border:1px solid transparent;
+  }
+  .btn-primary{background:var(--primary); color:var(--white);}
+  .btn-primary:hover{background:var(--darker);}
+  .btn-outline{border-color:var(--primary); color:var(--primary);}
+  .btn-outline:hover{background:var(--primary); color:var(--white);}
+  .btn-gold{background:var(--accent); color:var(--darker);}
+  .btn-gold:hover{opacity:0.88;}
+
+  /* HERO */
+  .hero{
+    background:var(--dark-bg);
+    color:var(--light-txt);
+    padding:100px 0 90px;
+  }
+  .hero .wrap{max-width:820px;}
+  .hero h1{
+    font-size:52px; line-height:1.12; color:var(--white); margin:22px 0 24px;
+  }
+  .hero h1 .accent{color:var(--accent);}
+  .hero p.lead{font-size:18px; color:var(--light-txt); max-width:660px; line-height:1.6; margin-bottom:36px;}
+  .hero-ctas{display:flex; gap:16px;}
+  .hero-ctas .btn-outline{border-color:rgba(227,230,222,0.4); color:var(--light-txt);}
+  .hero-ctas .btn-outline:hover{background:rgba(227,230,222,0.1); border-color:var(--light-txt);}
+
+  /* PAIN */
+  .pain{padding:88px 0; background:var(--white); text-align:center;}
+  .pain .wrap{max-width:840px;}
+  .pain h2{font-size:30px; line-height:1.35; color:var(--text-dark);}
+  .pain h2 .u{border-bottom:3px solid var(--accent);}
+
+  /* SOLUTION BANNER */
+  .solution-band{
+    background:var(--card-bg); padding:70px 0; text-align:center; border-top:1px solid var(--line); border-bottom:1px solid var(--line);
+  }
+  .solution-band h2{font-size:26px; color:var(--primary); max-width:760px; margin:0 auto; line-height:1.4;}
+
+  /* FEATURES */
+  .features{padding:100px 0;}
+  .features .head{max-width:620px; margin-bottom:56px;}
+  .features h2{font-size:32px; color:var(--primary); margin-top:14px;}
+  .feat-row{
+    display:grid; grid-template-columns:90px 1fr; gap:28px;
+    padding:34px 0; border-top:1px solid var(--line);
+  }
+  .feat-row:last-child{border-bottom:1px solid var(--line);}
+  .feat-num{font-family:Georgia, serif; font-size:34px; font-weight:700; color:var(--accent);}
+  .feat-body h3{font-size:20px; color:var(--text-dark); margin-bottom:8px; font-family:Georgia, serif;}
+  .feat-body p{font-size:15px; color:var(--muted); max-width:640px; line-height:1.6;}
+
+  /* DEMO MOCKUP */
+  .demo{background:var(--darker); padding:100px 0; color:var(--light-txt);}
+  .demo .head{max-width:640px; margin-bottom:56px;}
+  .demo h2{font-size:32px; color:var(--white); margin-top:14px;}
+  .demo p.sub{color:var(--light-txt); font-size:15.5px; margin-top:14px; max-width:560px; line-height:1.6;}
+  .mock{
+    display:grid; grid-template-columns:1fr 1fr; gap:24px;
+  }
+  .mock-panel{
+    background:#122A22; border:1px solid rgba(227,230,222,0.12); border-radius:12px; padding:26px;
+  }
+  .mock-left .step-track{display:flex; flex-direction:column; gap:0; margin-top:18px;}
+  .step{display:flex; align-items:center; gap:14px; padding:12px 0; position:relative;}
+  .step::before{
+    content:''; position:absolute; left:11px; top:34px; bottom:-12px; width:1px; background:rgba(227,230,222,0.18);
+  }
+  .step:last-child::before{display:none;}
+  .step-dot{
+    width:23px; height:23px; border-radius:50%; background:rgba(227,230,222,0.1); border:1px solid rgba(227,230,222,0.25);
+    display:flex; align-items:center; justify-content:center; font-size:11px; flex-shrink:0; z-index:1;
+  }
+  .step.done .step-dot{background:var(--accent); border-color:var(--accent); color:var(--darker); font-weight:700;}
+  .step-label{font-size:14.5px; color:var(--light-txt);}
+  .step.done .step-label{color:var(--white); font-weight:600;}
+  .mock-feed{font-size:12.5px; color:#9AA69C; margin-top:4px; font-family:'SF Mono', 'Courier New', monospace; background:#0D211B; border-radius:7px; padding:14px; line-height:1.7; border:1px solid rgba(227,230,222,0.08);}
+  .mock-right .card-title{font-size:13px; text-transform:uppercase; letter-spacing:0.08em; color:#9AA69C; margin-bottom:16px;}
+  .mval-row{display:flex; justify-content:space-between; align-items:center; padding:11px 0; border-bottom:1px solid rgba(227,230,222,0.1); gap:16px;}
+  .mval-row:last-of-type{border-bottom:none;}
+  .mval-label{font-size:13.5px; color:#9AA69C; flex-shrink:0;}
+  .mval{font-size:13.5px; font-weight:600; padding:3px 10px; border-radius:5px;}
+  .mval.pending{background:rgba(201,138,46,0.18); color:var(--accent);}
+  .mval.flagged{background:rgba(201,138,46,0.18); color:var(--accent);}
+  .mval.approved{background:rgba(90,140,110,0.2); color:#8FCBA6;}
+  .mock-actions{display:flex; gap:10px; margin-top:20px;}
+  .mock-actions .btn{padding:9px 16px; font-size:13px;}
+
+  /* APPROACH */
+  .approach{padding:100px 0; background:var(--card-bg2); text-align:center;}
+  .approach .wrap{max-width:760px;}
+  .approach h2{font-size:30px; color:var(--primary); line-height:1.4;}
+  .approach p{font-size:16px; color:var(--muted); margin-top:20px; line-height:1.7;}
+
+  /* PRICING / DIRECT OFFER */
+  .direct-offer{padding:100px 0; background:var(--card-bg2);}
+  .direct-offer .head{text-align:center; margin:0 auto 56px; max-width:700px;}
+  .direct-offer h2{font-size:30px; color:var(--primary); margin-top:14px;}
+  .direct-offer .head p.sub{font-size:15.5px; color:var(--muted); margin-top:14px; line-height:1.6;}
+  .compare-grid{display:grid; grid-template-columns:1fr auto 1fr; gap:24px; align-items:center; max-width:920px; margin:0 auto;}
+  .compare-card{background:var(--white); border:1px solid var(--line); border-radius:12px; padding:32px;}
+  .compare-card.after{background:var(--primary); border:none;}
+  .compare-tag{font-size:11px; letter-spacing:0.1em; text-transform:uppercase; font-weight:700; color:var(--muted); margin-bottom:14px;}
+  .compare-card.after .compare-tag{color:var(--accent);}
+  .compare-num{font-family:Georgia, serif; font-size:32px; font-weight:700; color:var(--text-dark); margin-bottom:14px;}
+  .compare-card.after .compare-num{color:var(--white);}
+  .compare-num span{font-size:14px; font-weight:400; color:var(--muted);}
+  .compare-card.after .compare-num span{color:var(--light-txt);}
+  .compare-card p{font-size:14px; color:var(--muted); line-height:1.6;}
+  .compare-card.after p{color:var(--light-txt);}
+  .compare-arrow{font-size:26px; color:var(--accent); font-weight:700; text-align:center;}
+  .savings-banner{text-align:center; font-size:17px; font-weight:700; color:var(--primary); margin:34px 0 48px; font-family:Georgia, serif;}
+  .included-grid{display:grid; grid-template-columns:1fr 1fr; gap:20px; max-width:920px; margin:0 auto;}
+  .included-item{font-size:14px; color:var(--text-dark); line-height:1.6; background:var(--white); border:1px solid var(--line); border-radius:8px; padding:18px 20px;}
+  .included-item strong{color:var(--primary);}
+
+  /* CALCULATOR */
+  .calc-box{max-width:520px; margin:0 auto 48px; background:var(--white); border:1px solid var(--line); border-radius:12px; padding:28px 32px;}
+  .calc-box label{display:block; font-size:13px; font-weight:600; color:var(--primary); margin-bottom:10px;}
+  .calc-input-row{display:flex; align-items:center; gap:10px; margin-bottom:22px; border:1px solid var(--line); border-radius:8px; padding:4px 14px; background:var(--card-bg2);}
+  .calc-input-row span{font-size:17px; color:var(--muted); font-weight:600;}
+  .calc-input-row input{flex:1; font-size:19px; padding:10px 0; border:none; background:transparent; font-family:inherit; color:var(--text-dark); outline:none;}
+  .calc-result{display:flex; justify-content:space-between; gap:12px; padding-top:18px; border-top:1px solid var(--line);}
+  .calc-result-item{text-align:center; flex:1;}
+  .calc-result-num{font-family:Georgia, serif; font-size:21px; font-weight:700; color:var(--primary);}
+  .calc-result-num.accent{color:var(--accent);}
+  .calc-result-label{font-size:11px; color:var(--muted); margin-top:5px; line-height:1.3;}
+  .calc-note{text-align:center; font-size:11.5px; color:var(--muted); font-style:italic; margin:-32px auto 48px;}
+
+  /* SECURITY */
+  .security{padding:100px 0; background:var(--darker); color:var(--light-txt);}
+  .security .head{max-width:640px; margin-bottom:48px;}
+  .security h2{font-size:32px; color:var(--white); margin-top:14px;}
+  .security .head p{color:var(--light-txt); font-size:15.5px; margin-top:14px; line-height:1.6;}
+  .sec-grid{display:grid; grid-template-columns:repeat(3, 1fr); gap:20px;}
+  .sec-card{background:#122A22; border:1px solid rgba(227,230,222,0.12); border-radius:10px; padding:22px 20px;}
+  .sec-card h3{font-family:Georgia, serif; font-size:15px; color:var(--white); margin-bottom:10px;}
+  .sec-card p{font-size:12.5px; color:#9AA69C; line-height:1.5;}
+  .security .note{margin-top:32px; font-size:12.5px; color:#8A9A8F; font-style:italic; text-align:center;}
+
+  /* FAQ */
+  .faq{padding:100px 0; background:var(--white);}
+  .faq .head{max-width:600px; margin-bottom:48px;}
+  .faq h2{font-size:32px; color:var(--primary); margin-top:14px;}
+  .faq-list{max-width:820px;}
+  .faq-item{border-bottom:1px solid var(--line); padding:6px 0;}
+  .faq-item summary{cursor:pointer; list-style:none; font-size:16px; font-weight:600; color:var(--text-dark); padding:18px 0; display:flex; justify-content:space-between; align-items:center; font-family:Georgia, serif; gap:16px;}
+  .faq-item summary::-webkit-details-marker{display:none;}
+  .faq-item summary::after{content:'+'; font-size:22px; color:var(--accent); font-weight:400; margin-left:16px; flex-shrink:0;}
+  .faq-item[open] summary::after{content:'−';}
+  .faq-item p{font-size:14.5px; color:var(--muted); line-height:1.65; padding-bottom:20px; max-width:680px;}
+
+  /* STATUS */
+  .status{padding:80px 0; text-align:center;}
+  .status h3{font-size:14px; text-transform:uppercase; letter-spacing:0.1em; color:var(--muted); margin-bottom:32px; font-family:inherit;}
+  .status-badges{display:flex; justify-content:center; gap:16px; flex-wrap:wrap;}
+  .badge{
+    border:1px solid var(--line); border-radius:30px; padding:10px 22px; font-size:14px; font-weight:600; color:var(--primary);
+    background:var(--card-bg2);
+  }
+
+  /* FINAL CTA */
+  .final-cta{background:var(--primary); padding:90px 0; text-align:center; color:var(--white);}
+  .final-cta h2{font-size:32px; color:var(--white); max-width:680px; margin:0 auto 34px;}
+  .final-cta .ctas{display:flex; justify-content:center; gap:16px;}
+
+  /* LEAD FORM */
+  .lead-form{max-width:520px; margin:44px auto 0; text-align:left;}
+  .lead-form .row{display:flex; gap:12px; margin-bottom:12px;}
+  .lead-form input, .lead-form select, .lead-form textarea{
+    width:100%; font-size:14.5px; padding:12px 14px; border-radius:7px; border:1px solid rgba(255,255,255,0.25);
+    background:rgba(255,255,255,0.08); color:var(--white); font-family:inherit; margin-bottom:12px;
+  }
+  .lead-form input::placeholder, .lead-form textarea::placeholder{color:rgba(227,230,222,0.55);}
+  .lead-form select option{color:var(--text-dark);}
+  .lead-form textarea{resize:vertical; min-height:70px;}
+  .lead-form button{width:100%; border:none; cursor:pointer;}
+
+  footer{background:var(--darker); color:#8A9A8F; padding:56px 0 34px;}
+  .foot-grid{display:grid; grid-template-columns:2fr 1fr 1fr; gap:40px; margin-bottom:40px;}
+  .foot-grid .logo{color:var(--white);}
+  .foot-grid p{font-size:13.5px; color:#8A9A8F; margin-top:12px; max-width:280px; line-height:1.6;}
+  .foot-col h4{font-size:12.5px; text-transform:uppercase; letter-spacing:0.08em; color:#8A9A8F; margin-bottom:14px;}
+  .foot-col a{display:block; font-size:14px; color:#C7CFC5; margin-bottom:10px;}
+  .foot-col a:hover{color:var(--white);}
+  .foot-bottom{border-top:1px solid rgba(227,230,222,0.1); padding-top:24px; font-size:12.5px; color:#6E7C71;}
+
+  .reveal{opacity:0; transform:translateY(18px); transition:opacity .6s ease, transform .6s ease;}
+  .reveal.in{opacity:1; transform:none;}
+
+  @media(max-width:820px){
+    .nav-links{display:none;}
+    .hero h1{font-size:36px;}
+    .mock{grid-template-columns:1fr;}
+    .foot-grid{grid-template-columns:1fr;}
+    .compare-grid{grid-template-columns:1fr;}
+    .compare-arrow{transform:rotate(90deg);}
+    .included-grid{grid-template-columns:1fr;}
+    .calc-result{flex-direction:column; gap:16px;}
+    .lead-form .row{flex-direction:column;}
+    .sec-grid{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="wrap">
+    <div class="logo">FLATCHAT<span>.</span></div>
+    <div class="nav-links">
+      <a href="#product">Product</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#security">Security</a>
+      <a href="#approach">Approach</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <a href="mailto:hello@flatchat.app" class="btn btn-primary">Get in touch</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <div class="eyebrow">AI SUPPORT & SALES FOR SHOPIFY</div>
+    <h1>Every question answered. <span class="accent">Never billed twice.</span></h1>
+    <p class="lead">FlatChat reads your product catalog and order history, answers shoppers instantly, handles the objections that stall a purchase, and lets them buy without leaving the chat — then hands off anything it isn't sure about. Most AI support tools bill you for the AI reply, then bill you again for the ticket it creates, whether that reply helped or not. FlatChat prices differently: a small fixed platform fee, plus a component tied to outcomes you actually get.</p>
+    <div class="hero-ctas">
+      <a href="#product" class="btn btn-gold">See how it works</a>
+      <a href="mailto:hello@flatchat.app" class="btn btn-outline">Get in touch</a>
+    </div>
+  </div>
+</section>
+
+<section class="pain reveal">
+  <div class="wrap">
+    <h2>You just found out "1,000 AI resolutions" can cost well over a thousand dollars a month on a typical per-resolution AI support plan — because every AI reply gets billed as an AI charge <span class="u">and</span> a support ticket, on top of the plan you're already paying for.</h2>
+  </div>
+</section>
+
+<section class="solution-band reveal" id="product">
+  <div class="wrap">
+    <h2>A question comes in. FlatChat answers it, handles the objection, closes the sale — and you're billed for what it actually got done.</h2>
+  </div>
+</section>
+
+<section class="features reveal">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">How it works</div>
+      <h2>Built to run inside the store you already have</h2>
+    </div>
+    <div class="feat-row reveal">
+      <div class="feat-num">01</div>
+      <div class="feat-body">
+        <h3>Connects to your catalog, not a config file</h3>
+        <p>Product data, variants, inventory, and order history sync straight from the Shopify Admin API — no separate database to maintain, no re-tagging your catalog to make the bot work.</p>
+      </div>
+    </div>
+    <div class="feat-row reveal">
+      <div class="feat-num">02</div>
+      <div class="feat-body">
+        <h3>Answers only what's actually true</h3>
+        <p>Every reply is grounded in your real product and order data — price, stock, variant availability, shipping status. If it isn't in your store's data, FlatChat says so instead of guessing.</p>
+      </div>
+    </div>
+    <div class="feat-row reveal">
+      <div class="feat-num">03</div>
+      <div class="feat-body">
+        <h3>Recovers the sale before it's gone</h3>
+        <p>Proactive nudges to shoppers who stall on a product page or leave items idle in cart — the same job most AI support tools charge separate add-ons for, included in the fixed platform fee here.</p>
+      </div>
+    </div>
+    <div class="feat-row reveal">
+      <div class="feat-num">04</div>
+      <div class="feat-body">
+        <h3>Sells without leaving the conversation</h3>
+        <p>Product cards, real prices, and an add-to-cart button live in the chat window — a shopper who's convinced doesn't have to go find the product page again to buy it.</p>
+      </div>
+    </div>
+    <div class="feat-row reveal">
+      <div class="feat-num">05</div>
+      <div class="feat-body">
+        <h3>Handles the objection, not just the question</h3>
+        <p>Shipping cost doubts, return-policy hesitation, fit uncertainty — the specific things that stall a purchase — get addressed directly and proactively, not just answered if asked.</p>
+      </div>
+    </div>
+    <div class="feat-row reveal">
+      <div class="feat-num">06</div>
+      <div class="feat-body">
+        <h3>Guides shoppers who don't know what they want yet</h3>
+        <p>A short, conversational set of questions — skin type, occasion, budget, fit — routes a browsing shopper to the right product, the same job a separate quiz app does, built into the conversation instead of a second tool to configure.</p>
+      </div>
+    </div>
+    <div class="feat-row reveal">
+      <div class="feat-num">07</div>
+      <div class="feat-body">
+        <h3>Hands off the moment it should</h3>
+        <p>Anything outside its confidence — a return dispute, a custom order, a frustrated customer — routes straight to your inbox or Slack with the full conversation attached. It never fakes a resolution to look useful.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="demo reveal">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">Inside a conversation</div>
+      <h2>What a shopper's question looks like on your side</h2>
+      <p class="sub">A live view of one storefront conversation — from a hesitation to a sale, in the same window your team already watches.</p>
+    </div>
+    <div class="mock">
+      <div class="mock-panel mock-left">
+        <div class="card-title" style="font-size:13px; text-transform:uppercase; letter-spacing:0.08em; color:#9AA69C; margin-bottom:6px;">Live chat — Meridian Skincare storefront</div>
+        <div class="mock-feed">
+          &gt; Shopper asks: "Does the Rose Clay Mask ship to Canada?"<br>
+          &gt; Catalog + shipping zones checked — match found<br>
+          &gt; Reply drafted and sent — 2.1s<br>
+          &gt; Return-policy doubt raised — addressed proactively<br>
+          &gt; Product card sent — added to cart in chat
+        </div>
+        <div class="step-track">
+          <div class="step done"><div class="step-dot">✓</div><div class="step-label">Received</div></div>
+          <div class="step done"><div class="step-dot">✓</div><div class="step-label">Checked against catalog</div></div>
+          <div class="step done"><div class="step-dot">✓</div><div class="step-label">Objection addressed</div></div>
+          <div class="step done"><div class="step-dot">✓</div><div class="step-label">Added to cart</div></div>
+        </div>
+      </div>
+      <div class="mock-panel mock-right">
+        <div class="card-title">Conversation #482</div>
+        <div class="mval-row"><span class="mval-label">Shopper</span><span style="font-size:13.5px; color:var(--light-txt);">Priya M. — Toronto, ON</span></div>
+        <div class="mval-row"><span class="mval-label">Question</span><span style="font-size:13.5px; color:var(--light-txt); text-align:right;">"Does this ship to Canada, and how long?"</span></div>
+        <div class="mval-row"><span class="mval-label">Answer sent</span><span style="font-size:13.5px; color:var(--light-txt); text-align:right;">"Yes — 6–9 business days, $8 flat rate"</span></div>
+        <div class="mval-row"><span class="mval-label">Then asked</span><span style="font-size:13.5px; color:var(--light-txt); text-align:right;">"What if it doesn't suit my skin?"</span></div>
+        <div class="mval-row"><span class="mval-label">Objection handled</span><span style="font-size:13.5px; color:var(--light-txt); text-align:right;">30-day return policy explained</span></div>
+        <div class="mval-row"><span class="mval-label">Outcome</span><span class="mval approved">Chat-assisted order — $34.00</span></div>
+        <div class="mock-actions">
+          <a class="btn btn-gold">View full transcript</a>
+          <a class="btn btn-outline" style="border-color:rgba(227,230,222,0.4); color:var(--light-txt);">Adjust this answer</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="approach reveal" id="approach">
+  <div class="wrap">
+    <div class="eyebrow">Our approach</div>
+    <h2>Chat is where we start. Not where we stop.</h2>
+    <p>Every feature we add — cart recovery, guided-discovery quizzes, replenishment reminders — is judged the same way: does it hold up as an honest answer to a real shopper, not just something that looks automated. We'd rather under-promise on what the bot can do than have it improvise an answer that costs you a return.</p>
+    <p style="margin-top:20px;">The "flat" in FlatChat is a promise about honesty, not an unlimited claim. Pricing has two honest parts: a fixed fee for the platform, and a component that only grows when it's tied to something you actually got — a resolved question, a recovered cart — never a meter running quietly on raw message volume.</p>
+    <p style="margin-top:20px;">Underneath, the Shopify-specific pieces — catalog sync, order lookups, checkout events — sit on a support engine that isn't tied to one platform. Shopify is where we're proving it first, not where the product ends.</p>
+  </div>
+</section>
+
+<section class="direct-offer reveal" id="pricing">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">A different way to price AI support</div>
+      <h2>A fixed base. A component tied to outcomes, not raw volume.</h2>
+      <p class="sub">Most AI support pricing charges you per interaction, whether that interaction actually helped or not. FlatChat splits the bill in two: a small fixed fee for the platform — catalog sync, order lookups, objection handling — and a variable component tied to outcomes actually achieved: a recovered cart, an order placed in chat, a resolved question, a quiz that ends in a sale. No charge for a reply that didn't do its job.</p>
+    </div>
+    <div class="compare-grid">
+      <div class="compare-card before">
+        <div class="compare-tag">Today, on a typical per-resolution plan</div>
+        <div class="compare-num">$1,260+<span>/month</span></div>
+        <p>A base helpdesk plan plus AI resolutions billed individually — often $0.90–$1.00 each — for around 1,000 conversations a month, with every AI reply billed twice: once as an AI charge, once as a support ticket. You pay the same whether the reply helped or not.</p>
+      </div>
+      <div class="compare-arrow">→</div>
+      <div class="compare-card after">
+        <div class="compare-tag">With FlatChat</div>
+        <div class="compare-num">Fixed + outcome<span>-based</span></div>
+        <p>A low fixed platform fee for catalog sync, order lookups, and objection handling — plus a component that scales with results actually delivered: a recovered cart, an order placed in chat, a quiz that ends in a sale. <a href="mailto:hello@flatchat.app?subject=FlatChat%20—%20Pricing" style="color:var(--accent); text-decoration:underline;">Contact us</a> for a number specific to your store.</p>
+      </div>
+    </div>
+    <div class="savings-banner">You stop paying for volume that didn't do anything — and start paying for results you can point to.</div>
+
+    <p style="text-align:center; font-family:Georgia, serif; font-size:17px; color:var(--primary); margin-bottom:24px;">Why fixed + outcome-based pricing works in your favor</p>
+    <div class="included-grid" style="margin-bottom:56px;">
+      <div class="included-item"><strong>You pay more only when you get more.</strong> The outcome component tracks resolved questions and recovered carts — a bot that talks a lot but converts nothing doesn't run up your bill.</div>
+      <div class="included-item"><strong>Slow months cost less, automatically.</strong> If conversations are down, the outcome component is too — you're never paying peak-season rates in a quiet week.</div>
+      <div class="included-item"><strong>Our incentives point the same way as yours.</strong> We only grow revenue when the bot actually resolves and recovers — not when it simply responds, so there's no reason to pad the reply count.</div>
+      <div class="included-item"><strong>A floor, not a runaway meter.</strong> The fixed fee is the most you'd ever pay if outcomes were zero — there's no per-message counter that can quietly outgrow your budget.</div>
+    </div>
+
+    <div class="calc-box" style="text-align:center;">
+      <label style="text-align:center;">Curious what this looks like for your store's actual conversation volume?</label>
+      <p style="font-size:14px; color:var(--muted); line-height:1.6; margin:4px 0 24px;">Every store's mix of questions, objections, and chat-assisted sales is different — rather than a rough self-serve estimate, we'll walk through your numbers directly and give you a real quote.</p>
+      <a href="mailto:hello@flatchat.app?subject=FlatChat%20—%20Pricing" class="btn btn-primary">Contact us for a sales discussion</a>
+    </div>
+
+    <p style="text-align:center; font-family:Georgia, serif; font-size:17px; color:var(--primary); margin-bottom:24px;">What's fixed vs. what's outcome-priced</p>
+    <div class="included-grid">
+      <div class="included-item"><strong>Catalog-grounded answers.</strong> Every reply checked against real product data — price, stock, variants — part of the fixed platform fee.</div>
+      <div class="included-item"><strong>Order status, part of the base.</strong> WISMO look-ups via the Shopify Admin API, not billed per lookup.</div>
+      <div class="included-item"><strong>Objection handling, part of the base.</strong> Shipping, returns, and fit doubts addressed proactively — no extra fee for doing the job well.</div>
+      <div class="included-item"><strong>Human handoff, part of the base.</strong> Anything outside its confidence routes to your inbox or Slack automatically.</div>
+      <div class="included-item"><strong>Cart recovery, outcome-priced.</strong> Proactive nudges to idle shoppers — the outcome component only applies when a nudge actually recovers a sale.</div>
+      <div class="included-item"><strong>Chat-assisted orders, outcome-priced.</strong> Product cards and add-to-cart inside the conversation — billed only when a shopper actually buys.</div>
+      <div class="included-item"><strong>Guided-discovery quizzes, outcome-priced.</strong> Built into the chat, not a separate app — billed only when a completed quiz leads to a purchase.</div>
+    </div>
+    <div style="text-align:center; margin-top:40px;">
+      <a href="mailto:hello@flatchat.app?subject=FlatChat%20—%20Pricing" class="btn btn-primary">Contact us for pricing</a>
+    </div>
+    <p style="text-align:center; font-size:12.5px; color:var(--muted); margin-top:18px; font-style:italic;">Pricing is shared directly with merchant partners, based on store size and the outcomes that matter to you.</p>
+  </div>
+</section>
+
+<section class="security reveal" id="security">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">Security & trust</div>
+      <h2>Built to be trusted with your storefront, not just installed on it</h2>
+      <p>This runs on live customer conversations, order data, and now purchases made inside the chat — the standard is what a careful support lead and a careful finance lead would both expect to see, not just what a typical chat widget ships with.</p>
+    </div>
+    <div class="sec-grid">
+      <div class="sec-card">
+        <h3>Encryption</h3>
+        <p>AES-256 at rest, TLS 1.3 in transit — every conversation, order look-up, and quiz response encrypted end to end.</p>
+      </div>
+      <div class="sec-card">
+        <h3>Minimal scopes</h3>
+        <p>Requests only the Shopify Admin API scopes it actually uses — read products, read orders, create draft orders — nothing broader.</p>
+      </div>
+      <div class="sec-card">
+        <h3>No payment data touches us</h3>
+        <p>Checkout happens on Shopify's own secure, PCI-compliant checkout — FlatChat never sees, stores, or processes card numbers, even when the sale starts inside the chat.</p>
+      </div>
+      <div class="sec-card">
+        <h3>No training on your data</h3>
+        <p>Your catalog, conversations, and quiz responses are never used to train a shared model across stores.</p>
+      </div>
+      <div class="sec-card">
+        <h3>Audit log</h3>
+        <p>Every AI reply, escalation, and handoff logged with a timestamp and the data it was grounded in.</p>
+      </div>
+      <div class="sec-card">
+        <h3>Every billed outcome, backed by evidence</h3>
+        <p>Each outcome on your invoice — a resolved question, a recovered cart, a chat-assisted order — links back to the transcript that earned it. Nothing billed without a record you can open and check.</p>
+      </div>
+      <div class="sec-card">
+        <h3>Per-store isolation</h3>
+        <p>One merchant's catalog, conversations, and quiz data are never reachable from another's workspace.</p>
+      </div>
+      <div class="sec-card">
+        <h3>Clean uninstall</h3>
+        <p>Uninstalling FlatChat removes stored conversation and preference data — no lingering copy left behind.</p>
+      </div>
+      <div class="sec-card">
+        <h3>Certification roadmap</h3>
+        <p>SOC 2 Type II targeted as the merchant base that requires it comes onboard — not claimed before it's earned.</p>
+      </div>
+    </div>
+    <p class="note">This is the standard we're building to before asking a merchant to put us in front of their customers and their revenue — not a claim that every piece is certified today.</p>
+  </div>
+</section>
+
+<section class="faq reveal">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">Questions</div>
+      <h2>Answers to what you'd actually ask</h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>Will FlatChat ever cancel an order or issue a refund without my approval?</summary>
+        <p>No. FlatChat can look up and explain — order status, shipping, stock — but any action with money or inventory attached, like refunds, cancellations, or address changes, is drafted for your team to approve, never executed on its own.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Where does payment go when someone buys inside the chat?</summary>
+        <p>Straight to Shopify's own checkout. FlatChat builds the product card and cart, then hands off to Shopify's PCI-compliant checkout for payment — card numbers never pass through FlatChat's systems at any point.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Does FlatChat train on my store's data?</summary>
+        <p>No. Each store's catalog, conversation history, and quiz responses are isolated and never used to train a shared model.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What happens when it doesn't know the answer?</summary>
+        <p>It says so, and hands the conversation to your inbox or Slack with full context — it doesn't guess at a spec or a policy it isn't sure about.</p>
+      </details>
+      <details class="faq-item">
+        <summary>How does "fixed plus outcome-based" pricing actually work?</summary>
+        <p>You pay a small fixed fee for the platform itself — catalog sync, the widget, order lookups, objection handling — plus a component that scales with outcomes actually achieved, like a resolved question, a recovered cart, or a purchase made inside the chat. A reply that didn't do anything doesn't add to the bill. We'll walk through the exact structure and a number for your store when you contact us.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What counts as an "outcome"?</summary>
+        <p>Things you'd count as a win yourself — a support question resolved without a human, a cart recovered after a nudge, an order placed through a chat-based product card, a guided-discovery quiz that ends in a purchase. Not raw message count, and not a reply that didn't lead anywhere. We agree on the specific definitions with you before you're billed on them.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Why is this better for me than a flat per-seat or per-resolution plan?</summary>
+        <p>A flat per-resolution plan bills you the same whether the bot helped or not — you're carrying all the risk if it underperforms. Splitting the price into a fixed base and an outcome component moves some of that risk onto us: our upside only grows when yours does, so a slow month costs you less automatically, and there's no incentive on our side to inflate reply counts just to run up your bill.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What do I need to install it?</summary>
+        <p>Just a Shopify store and a few minutes — FlatChat reads your product catalog and order data through the Shopify Admin API, no separate account or migration.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Can I customize how it sounds?</summary>
+        <p>Yes — tone, greeting, and escalation rules are all configurable, so it sounds like your store, not a generic bot.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="status reveal">
+  <div class="wrap">
+    <h3>Where we are today</h3>
+    <div class="status-badges">
+      <div class="badge">In development</div>
+      <div class="badge">Founder-led</div>
+      <div class="badge">Shopify-first</div>
+    </div>
+  </div>
+</section>
+
+<section class="final-cta reveal" id="contact">
+  <div class="wrap">
+    <h2>Building for Shopify merchants tired of paying twice for the same AI reply.</h2>
+    <p style="color:var(--light-txt); font-size:15px; margin-top:-14px; margin-bottom:0;">Tell us a bit about your store, and we'll get in touch directly.</p>
+    <form class="lead-form" onsubmit="return sendLead(event)">
+      <div class="row">
+        <input type="text" id="leadName" placeholder="Name" required>
+        <input type="email" id="leadEmail" placeholder="Email" required>
+      </div>
+      <select id="leadType">
+        <option value="Shopify merchant">I'm a Shopify merchant</option>
+        <option value="Shopify Partner / agency">I'm a Shopify Partner or agency</option>
+        <option value="Investor">I'm an investor</option>
+      </select>
+      <textarea id="leadMsg" placeholder="Anything specific you'd like to know? (optional)"></textarea>
+      <button type="submit" class="btn btn-gold">Get in touch</button>
+    </form>
+    <p style="text-align:center; font-size:12px; color:rgba(227,230,222,0.6); margin-top:16px;">Opens your email client with these details pre-filled — nothing is stored anywhere else.</p>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="logo">FLATCHAT<span>.</span></div>
+        <p>AI support & sales for Shopify — catalog-grounded answers, objection handling, and chat-assisted sales, priced on a fixed base plus the outcomes it actually delivers.</p>
+      </div>
+      <div class="foot-col">
+        <h4>Product</h4>
+        <a href="#product">How it works</a>
+        <a href="#pricing">Pricing</a>
+      </div>
+      <div class="foot-col">
+        <h4>Company</h4>
+        <a href="mailto:hello@flatchat.app">Contact</a>
+      </div>
+    </div>
+    <div class="foot-bottom">© 2026 FlatChat. Confidential — in active development.</div>
+  </div>
+</footer>
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if(entry.isIntersecting){
+        entry.target.classList.add('in');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+  function sendLead(e){
+    e.preventDefault();
+    const name = document.getElementById('leadName').value;
+    const email = document.getElementById('leadEmail').value;
+    const type = document.getElementById('leadType').value;
+    const msg = document.getElementById('leadMsg').value;
+    const subject = encodeURIComponent('FlatChat — ' + type + ' inquiry from ' + name);
+    const body = encodeURIComponent('Name: ' + name + '\nEmail: ' + email + '\nI am a: ' + type + '\n\nMessage:\n' + (msg || '(none)'));
+    window.location.href = 'mailto:hello@flatchat.app?subject=' + subject + '&body=' + body;
+    return false;
+  }
+</script>
+
+</body>
+</html>
