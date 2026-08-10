@@ -50,9 +50,9 @@ export default function ProductsHero() {
           variants={item}
           className="max-w-[560px] text-[clamp(1rem,1.4vw,1.15rem)] text-ink-dim"
         >
-          Four products currently in development — a Shopify app suite for AI-powered
-          commerce, an AI clinical co-pilot for the Indian hospital visit, Solvent, AI
-          employees for Indian accounting, and FlatChat, AI support and sales for Shopify.
+          Three products — Buddhi Health, an AI clinical co-pilot for the Indian hospital
+          visit, currently an early concept; Solvent, AI employees for Indian
+          accounting; and FlatChat, AI support and sales for Shopify.
         </motion.p>
       </motion.div>
     </section>

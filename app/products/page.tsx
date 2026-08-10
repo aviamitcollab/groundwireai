@@ -8,7 +8,7 @@ import { siteUrl } from "@/lib/data";
 
 const title = "AI Products — GroundwireAI";
 const description =
-  "AI-native products built by GroundwireAI, with the same production standards we teach and consult on — a Shopify AI app suite, Buddhi Health, an AI clinical co-pilot, Solvent, AI employees for Indian accounting, and FlatChat, AI support and sales for Shopify.";
+  "AI-native products built by GroundwireAI, with the same production standards we teach and consult on — Buddhi Health, an AI clinical co-pilot that's an early concept, Solvent, AI employees for Indian accounting, and FlatChat, AI support and sales for Shopify.";
 
 export const metadata: Metadata = {
   title,
