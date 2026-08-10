@@ -114,6 +114,15 @@
   .vision h2{font-size:30px; max-width:660px; margin:0 auto 20px;}
   .vision p.desc{color:var(--muted); font-size:16px; max-width:600px; margin:0 auto;}
 
+  /* COMPLIANCE / ACCESS */
+  .compliance{border-top:1px solid rgba(255,255,255,0.06); border-bottom:1px solid rgba(255,255,255,0.06); background:rgba(255,255,255,0.015);}
+  .compliance h2{font-size:28px; max-width:680px; margin-bottom:16px;}
+  .compliance p.desc{color:var(--muted); font-size:15.5px; max-width:640px; margin-bottom:36px;}
+  .compliance-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:16px;}
+  .compliance-item{background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.08); border-radius:10px; padding:20px 22px;}
+  .compliance-item .tag{font-family:Georgia,serif; font-size:15px; color:var(--white); margin-bottom:6px;}
+  .compliance-item .desc2{font-size:12.5px; color:var(--muted); line-height:1.5;}
+
   /* STATUS */
   .status{border-top:1px solid rgba(255,255,255,0.06); border-bottom:1px solid rgba(255,255,255,0.06); background:rgba(255,255,255,0.015);}
   .status-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.08); border-radius:16px; overflow:hidden;}
@@ -143,6 +152,7 @@
     section{padding:72px 0;}
     .mock{grid-template-columns:1fr;}
     .status-grid{grid-template-columns:1fr;}
+    .compliance-grid{grid-template-columns:1fr;}
     .footer-grid{grid-template-columns:1fr; gap:24px;}
     .feature-row{grid-template-columns:50px 1fr;}
   }
@@ -211,6 +221,10 @@
       <div class="feature-num">05</div>
       <div><h4>Follows the patient, with their consent</h4><p>A history from any ABDM-linked facility — not just ones running Buddhi — joins the same picture, so a first visit doesn't start from a blank page.</p></div>
     </div>
+    <div class="feature-row reveal">
+      <div class="feature-num">06</div>
+      <div><h4>Add to your own record</h4><p>A prescription or report from a visit we couldn't reach any other way — photographed and added by the patient, mapped straight into the same history.</p></div>
+    </div>
   </div>
 </section>
 
@@ -236,6 +250,28 @@
         <div class="mrow"><span class="mlabel">Suggested test</span><span class="mval pending">NS1 antigen — pending review</span></div>
         <div class="mrow"><span class="mlabel">Doctor</span><span class="mval approved">Approved · test ordered</span></div>
         <div class="mock-badge">✓ Nothing filed without sign-off</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="compliance">
+  <div class="wrap">
+    <div class="eyebrow">YOUR DATA, YOUR CALL</div>
+    <h2 class="reveal">Owned by you. Shared on your terms.</h2>
+    <p class="desc reveal">Every hospital you've ever visited keeps its own file on you — and none of them talk to each other. Buddhi flips that: the record travels with the patient, not the building, and no one sees it without a yes given right then, not a box ticked once and forgotten.</p>
+    <div class="compliance-grid">
+      <div class="compliance-item reveal">
+        <div class="tag">You decide, every time</div>
+        <div class="desc2">A new hospital sees nothing until you say so — there and then, not by default.</div>
+      </div>
+      <div class="compliance-item reveal">
+        <div class="tag">Fill in the gaps yourself</div>
+        <div class="desc2">A prescription or report from somewhere we haven't reached yet — added by you, mapped straight into your own history.</div>
+      </div>
+      <div class="compliance-item reveal">
+        <div class="tag">Protected like it's the only copy</div>
+        <div class="desc2">Encrypted and logged — because it's your record sitting there, not a hospital's.</div>
       </div>
     </div>
   </div>
