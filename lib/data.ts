@@ -105,7 +105,8 @@ export const navLinks = [
   { href: "/consulting", label: "Consulting" },
   { href: "/products", label: "Products" },
   { href: "/company", label: "Company" },
-  { href: "/#why-us", label: "Why Us" },
+  { href: "/careers", label: "Careers" },
+  { href: "/resources", label: "Resources" },
   { href: "/#contact", label: "Contact" },
 ];
 
