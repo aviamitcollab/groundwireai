@@ -31,11 +31,12 @@
     "id": "products",
     "num": "03",
     "title": "AI Products",
-    "description": "Two AI-native products currently in development, built with the same production standards we teach and consult on — an AI-powered Shopify app suite, and Buddhi Health, an AI clinical co-pilot for the Indian hospital visit.",
+    "description": "Four AI-native products currently in development, built with the same production standards we teach and consult on — spanning healthcare, commerce, accounting, and customer support.",
     "bullets": [
       "Buddhi Health — AI clinical co-pilot",
       "Shopify AI App Suite — commerce automation",
-      "In development with early design partners"
+      "Solvent — AI employees for Indian accounting",
+      "FlatChat — AI support & sales for Shopify"
     ],
     "cta": { "label": "Explore Products", "subject": "AI Products" }
   }

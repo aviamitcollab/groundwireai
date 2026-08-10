@@ -1,4 +1,4 @@
-import { contactEmail, navLinks } from "@/lib/data";
+import { companyLinks, contactEmail, navLinks } from "@/lib/data";
 
 export default function Footer() {
   return (
@@ -11,6 +11,13 @@ export default function Footer() {
       </a>
       <nav className="flex flex-wrap gap-6">
         {navLinks.map((link) => (
+          <a key={link.href} href={link.href} className="hover:text-ink">
+            {link.label}
+          </a>
+        ))}
+      </nav>
+      <nav className="flex flex-wrap gap-6">
+        {companyLinks.map((link) => (
           <a key={link.href} href={link.href} className="hover:text-ink">
             {link.label}
           </a>

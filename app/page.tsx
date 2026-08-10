@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import Marquee from "@/components/Marquee";
 import Programs from "@/components/Programs";
 import Process from "@/components/Process";
+import FounderQuote from "@/components/FounderQuote";
 import ProgramFormats from "@/components/ProgramFormats";
 import WhyUs from "@/components/WhyUs";
 import TechStack from "@/components/TechStack";
@@ -18,6 +19,7 @@ export default function Home() {
         <Marquee />
         <Programs />
         <Process />
+        <FounderQuote />
         <ProgramFormats />
         <WhyUs />
         <TechStack />

@@ -20,8 +20,20 @@
       { "num": "01", "title": "Listens in the language actually spoken", "description": "Code-switched, multi-language, real-time — built around how Indian consultations actually sound, not accented English." },
       { "num": "02", "title": "Reasons like it trained here", "description": "Grounded in India-first guidelines, tests, and formulary data — never a foreign default quietly standing in for local practice." },
       { "num": "03", "title": "Sees more than the conversation", "description": "Labs, imaging, vitals, medication and visit history — where available — inform the same picture as the transcript, not a separate silo." },
-      { "num": "04", "title": "Never finalizes without the doctor", "description": "Every item is a draft. Nothing reaches the record, and nothing is prescribed, until a registered practitioner says so." }
+      { "num": "04", "title": "Never finalizes without the doctor", "description": "Every item is a draft. Nothing reaches the record, and nothing is prescribed, until a registered practitioner says so." },
+      { "num": "05", "title": "Follows the patient, with their consent", "description": "A history from any ABDM-linked facility — not just ones running Buddhi — joins the same picture, so a first visit doesn't start from a blank page." },
+      { "num": "06", "title": "Add to your own record", "description": "A prescription or report from a visit we couldn't reach any other way — photographed and added by the patient, mapped straight into the same history." }
     ],
+    "compliance": {
+      "eyebrow": "Your data, your call",
+      "heading": "Owned by you. Shared on your terms.",
+      "description": "Every hospital you've ever visited keeps its own file on you — and none of them talk to each other. Buddhi flips that: the record travels with the patient, not the building, and no one sees it without a yes given right then, not a box ticked once and forgotten.",
+      "items": [
+        { "tag": "You decide, every time", "description": "A new hospital sees nothing until you say so — there and then, not by default." },
+        { "tag": "Fill in the gaps yourself", "description": "A prescription or report from somewhere we haven't reached yet — added by you, mapped straight into your own history." },
+        { "tag": "Protected like it's the only copy", "description": "Encrypted and logged — because it's your record sitting there, not a hospital's." }
+      ]
+    },
     "visionHeading": "The consult is where we're starting. Not where we stop.",
     "visionDescription": "What we're building underneath a single visit is meant to eventually hold a lot more of how a hospital practices medicine — but we're earning that scope one design partner, one specialty, one language at a time. What's public today is a fraction of the work. That's deliberate.",
     "facts": [
@@ -61,5 +73,103 @@
       { "tag": "4", "description": "apps planned, prioritized by build speed and market gap, not gut feel." }
     ],
     "closingHeadline": "Ready to bring AI-native tools to your Shopify store?"
+  },
+  {
+    "slug": "solvent",
+    "category": "Fintech",
+    "statusLabel": "In development",
+    "accent": "accent-2",
+    "eyebrow": "AI employees for Indian accounting",
+    "title": "Reconciled overnight.",
+    "titleEmphasis": "Not re-keyed by hand.",
+    "summary": "Solvent reads your GSTR-2A/2B, vendor invoices, and books, then prepares the reconciliation, exceptions, and filing packet — ready for review.",
+    "description": "Solvent reads your GSTR-2A/2B, your vendor invoices, and your books — then prepares the reconciliation, the exceptions, and the filing packet, ready for review. The manual version costs Indian businesses 15–20 hours and a 15–20% error rate every month. Solvent does it before your coffee's cold — not a smarter spreadsheet, an employee that never sleeps on close day.",
+    "ctas": [
+      { "label": "For CA firms", "subject": "Solvent - CA Firm Interest" },
+      { "label": "For business owners", "subject": "Solvent - Business Owner Interest" }
+    ],
+    "painHeading": "You've matched GSTR-2A against your books by hand, again, this month — for every client, every mismatch, every line.",
+    "painDescription": "Most of a small business's monthly accounting bill is staff time spent on data entry, not advice. GST and TDS reconciliation still runs on manual matching, one line at a time, across every client, every month.",
+    "solutionHeading": "Work comes in. Solvent prepares it. Your team signs off.",
+    "features": [
+      { "num": "01", "title": "Reads what your team already uses", "description": "Your accounting software, the GSTN portal, TRACES — Solvent works inside your existing stack through a dedicated connector for each one. No new system for your team to learn, no data migration to plan." },
+      { "num": "02", "title": "Matches every return before you do", "description": "GSTR-2A and 2B reconciled against your books automatically, vendor GSTINs validated, and every input tax credit checked before it's claimed — not after a notice arrives." },
+      { "num": "03", "title": "Flags exceptions, not just errors", "description": "Every mismatch arrives with the context to decide in seconds — what it is, why it happened, and what the fix looks like — instead of a raw list your team has to investigate cold." },
+      { "num": "04", "title": "Never files without your sign-off", "description": "Every return, every payment, every reconciliation is prepared and reviewer-ready — and stays a draft until someone on your team approves it. Always." }
+    ],
+    "compliance": {
+      "eyebrow": "Security & audit",
+      "heading": "Built to be audited, not just trusted",
+      "description": "This is compliance work — the standard is what a CA firm's own auditor, or a GST officer, would expect to see, not just what a typical SaaS product ships with.",
+      "items": [
+        { "tag": "Encryption", "description": "AES-256 at rest, TLS 1.3 in transit. Every document, ledger entry, and reconciliation record encrypted end to end." },
+        { "tag": "Identity & access", "description": "Role-based access per firm and per client, 2FA on every account — a firm's junior staff sees only what their role permits." },
+        { "tag": "Audit logging", "description": "Every read, edit, approval, and rejection immutably logged with actor, timestamp, and before/after state — not just a summary report." },
+        { "tag": "Data residency & isolation", "description": "Hosted in India, per-client data isolation by design — Client A's books are never reachable from Client B's workspace." },
+        { "tag": "Maker-checker, enforced", "description": "The approval step is a system-level gate, not a policy suggestion — the AI cannot mark its own work as filed or approved." },
+        { "tag": "Certification roadmap", "description": "SOC 2 Type II and ISO 27001 targeted post-seed, as the customer base that requires them is onboarded — not claimed before they're earned." }
+      ],
+      "note": "This is the standard we're building to before asking a firm to trust us with a live filing — not a claim that it's all live today."
+    },
+    "visionHeading": "GST reconciliation is where we start. Not where we stop.",
+    "visionDescription": "Every workflow we add — TDS, accounts payable, month-end close — is judged the same way: does it hold up against what a careful accountant would actually do, not just what looks automated. Underneath, GST and TDS are a compliance plugin on a core engine that doesn't change per country — India is where we're proving it first, not where the platform ends.",
+    "facts": [
+      { "tag": "In development", "description": "Actively building, working toward first design partners among CA firms and business owners." },
+      { "tag": "Founder-led", "description": "Built by a technical founder with a background in enterprise-scale platform architecture." },
+      { "tag": "India-first, from day one", "description": "GST, TDS, and DPDP-aligned data residency built in from the start, not bolted on later." }
+    ],
+    "closingHeadline": "Building for CA firms, finance teams, and business owners done reconciling by hand."
+  },
+  {
+    "slug": "flatchat",
+    "category": "Customer Support",
+    "statusLabel": "In development",
+    "accent": "accent",
+    "eyebrow": "AI support & sales for Shopify",
+    "title": "Every question answered.",
+    "titleEmphasis": "Never billed twice.",
+    "summary": "FlatChat answers shoppers from your real catalog and order data, handles the objections that stall a purchase, and lets them buy without leaving the chat — priced on a fixed fee plus outcomes, not raw AI replies.",
+    "description": "FlatChat reads your product catalog and order history, answers shoppers instantly, handles the objections that stall a purchase, and lets them buy without leaving the chat — then hands off anything it isn't sure about. Most AI support tools bill you for the AI reply, then bill you again for the ticket it creates, whether that reply helped or not. FlatChat prices differently: a small fixed platform fee, plus a component tied to outcomes you actually get.",
+    "ctas": [
+      { "label": "For merchants", "subject": "FlatChat - Merchant Interest" },
+      { "label": "For investors", "subject": "FlatChat - Investor Interest" }
+    ],
+    "painHeading": "You just found out \"1,000 AI resolutions\" can cost well over a thousand dollars a month on a typical per-resolution AI support plan — because every AI reply gets billed as an AI charge and a support ticket, on top of the plan you're already paying for.",
+    "painDescription": "Most AI support pricing charges you per interaction, whether that interaction actually helped or not — a base helpdesk plan plus AI resolutions billed individually, often $0.90–$1.00 each, with every AI reply billed twice: once as an AI charge, once as a support ticket.",
+    "solutionHeading": "A question comes in. FlatChat answers it, handles the objection, closes the sale — and you're billed for what it actually got done.",
+    "features": [
+      { "num": "01", "title": "Connects to your catalog, not a config file", "description": "Product data, variants, inventory, and order history sync straight from the Shopify Admin API — no separate database to maintain, no re-tagging your catalog to make the bot work." },
+      { "num": "02", "title": "Answers only what's actually true", "description": "Every reply is grounded in your real product and order data — price, stock, variant availability, shipping status. If it isn't in your store's data, FlatChat says so instead of guessing." },
+      { "num": "03", "title": "Recovers the sale before it's gone", "description": "Proactive nudges to shoppers who stall on a product page or leave items idle in cart — the same job most AI support tools charge separate add-ons for, included in the fixed platform fee here." },
+      { "num": "04", "title": "Sells without leaving the conversation", "description": "Product cards, real prices, and an add-to-cart button live in the chat window — a shopper who's convinced doesn't have to go find the product page again to buy it." },
+      { "num": "05", "title": "Handles the objection, not just the question", "description": "Shipping cost doubts, return-policy hesitation, fit uncertainty — the specific things that stall a purchase — get addressed directly and proactively, not just answered if asked." },
+      { "num": "06", "title": "Guides shoppers who don't know what they want yet", "description": "A short, conversational set of questions — skin type, occasion, budget, fit — routes a browsing shopper to the right product, the same job a separate quiz app does, built into the conversation instead of a second tool to configure." },
+      { "num": "07", "title": "Hands off the moment it should", "description": "Anything outside its confidence — a return dispute, a custom order, a frustrated customer — routes straight to your inbox or Slack with the full conversation attached. It never fakes a resolution to look useful." }
+    ],
+    "compliance": {
+      "eyebrow": "Security & trust",
+      "heading": "Built to be trusted with your storefront, not just installed on it",
+      "description": "This runs on live customer conversations, order data, and purchases made inside the chat — the standard is what a careful support lead and a careful finance lead would both expect to see, not just what a typical chat widget ships with.",
+      "items": [
+        { "tag": "Encryption", "description": "AES-256 at rest, TLS 1.3 in transit — every conversation, order look-up, and quiz response encrypted end to end." },
+        { "tag": "Minimal scopes", "description": "Requests only the Shopify Admin API scopes it actually uses — read products, read orders, create draft orders — nothing broader." },
+        { "tag": "No payment data touches us", "description": "Checkout happens on Shopify's own secure, PCI-compliant checkout — FlatChat never sees, stores, or processes card numbers, even when the sale starts inside the chat." },
+        { "tag": "No training on your data", "description": "Your catalog, conversations, and quiz responses are never used to train a shared model across stores." },
+        { "tag": "Audit log", "description": "Every AI reply, escalation, and handoff logged with a timestamp and the data it was grounded in." },
+        { "tag": "Every billed outcome, backed by evidence", "description": "Each outcome on your invoice — a resolved question, a recovered cart, a chat-assisted order — links back to the transcript that earned it. Nothing billed without a record you can open and check." },
+        { "tag": "Per-store isolation", "description": "One merchant's catalog, conversations, and quiz data are never reachable from another's workspace." },
+        { "tag": "Clean uninstall", "description": "Uninstalling FlatChat removes stored conversation and preference data — no lingering copy left behind." },
+        { "tag": "Certification roadmap", "description": "SOC 2 Type II targeted as the merchant base that requires it comes onboard — not claimed before it's earned." }
+      ],
+      "note": "This is the standard we're building to before asking a merchant to put us in front of their customers and their revenue — not a claim that every piece is certified today."
+    },
+    "visionHeading": "Chat is where we start. Not where we stop.",
+    "visionDescription": "Every feature we add — cart recovery, guided-discovery quizzes, replenishment reminders — is judged the same way: does it hold up as an honest answer to a real shopper, not just something that looks automated. The \"flat\" in FlatChat is a promise about honesty, not an unlimited claim — a fixed platform fee plus a component that only grows when it's tied to something you actually got, never a meter running quietly on raw message volume. Underneath, the Shopify-specific pieces sit on a support engine that isn't tied to one platform — Shopify is where we're proving it first, not where the product ends.",
+    "facts": [
+      { "tag": "In development", "description": "Actively onboarding early Shopify merchant design partners, not yet generally available." },
+      { "tag": "Founder-led", "description": "Built by a technical founder with production Shopify app and AI-agent experience." },
+      { "tag": "Shopify-first", "description": "Built for the Shopify Admin API and checkout flow specifically — not a generic widget retrofitted onto it." }
+    ],
+    "closingHeadline": "Building for Shopify merchants tired of paying twice for the same AI reply."
   }
 ]

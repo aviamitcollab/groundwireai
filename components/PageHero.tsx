@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import type { ReactNode } from "react";
 
 const container = {
   hidden: {},
@@ -18,7 +19,15 @@ const item = {
   },
 };
 
-export default function ProductsHero() {
+export default function PageHero({
+  eyebrow,
+  heading,
+  sub,
+}: {
+  eyebrow: string;
+  heading: ReactNode;
+  sub: string;
+}) {
   return (
     <section className="relative overflow-hidden px-5 pb-16 pt-32 sm:px-8 md:px-16 md:pt-40">
       <div className="pointer-events-none absolute inset-0 z-0" aria-hidden>
@@ -38,21 +47,19 @@ export default function ProductsHero() {
           variants={item}
           className="mb-5 inline-block rounded-full border border-line px-4 py-1.5 text-sm font-medium tracking-[0.02em] text-accent"
         >
-          AI Products
+          {eyebrow}
         </motion.p>
         <motion.h1
           variants={item}
           className="mb-6 font-head text-[clamp(2.2rem,5.2vw,3.8rem)] font-semibold leading-[1.05] tracking-[-0.03em]"
         >
-          AI-native products, built with <em>the same standards</em> we teach and consult on.
+          {heading}
         </motion.h1>
         <motion.p
           variants={item}
           className="max-w-[560px] text-[clamp(1rem,1.4vw,1.15rem)] text-ink-dim"
         >
-          Four products currently in development — a Shopify app suite for AI-powered
-          commerce, an AI clinical co-pilot for the Indian hospital visit, Solvent, AI
-          employees for Indian accounting, and FlatChat, AI support and sales for Shopify.
+          {sub}
         </motion.p>
       </motion.div>
     </section>

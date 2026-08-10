@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Enterprise AI Cohort — Builder Track",
+    "type": "Course",
+    "description": "Design, secure, evaluate, deploy, and monitor one real agentic AI system end to end.",
+    "href": "/bootcamp/enterprise-ai-cohort"
+  },
+  {
+    "title": "AI Forward Deployed Engineer — Field-Readiness Track",
+    "type": "Course",
+    "description": "Deploy agentic AI at a customer's door — discovery, integration, field-hardening, and live incident debugging.",
+    "href": "/bootcamp/ai-forward-deployed-engineer"
+  },
+  {
+    "title": "Core Playwright & Testing Frameworks",
+    "type": "Course",
+    "description": "From your first automated test to production-grade suite structure — Page Object Model, data-driven design, BDD, and parallel execution.",
+    "href": "/bootcamp/core-playwright-testing-frameworks"
+  },
+  {
+    "title": "Advanced Playwright & Production Automation",
+    "type": "Course",
+    "description": "Take a test suite from CI-ready to production-owned — API coverage, CI/CD, framework architecture, and AI-augmented QA.",
+    "href": "/bootcamp/advanced-playwright-production-automation"
+  },
+  {
+    "title": "Buddhi Health — AI clinical co-pilot",
+    "type": "Product",
+    "description": "An AI clinical co-pilot that drafts a differential grounded in India-first guidelines — the doctor still decides.",
+    "href": "/products/buddhi-health"
+  },
+  {
+    "title": "Solvent — AI employees for Indian accounting",
+    "type": "Product",
+    "description": "Reconciliation, exceptions, and filing packets prepared automatically — never filed without your sign-off.",
+    "href": "/products/solvent"
+  },
+  {
+    "title": "FlatChat — AI support & sales for Shopify",
+    "type": "Product",
+    "description": "Catalog-grounded answers and chat-assisted sales, priced on outcomes instead of raw AI replies.",
+    "href": "/products/flatchat"
+  },
+  {
+    "title": "AI Transformation Consulting",
+    "type": "Service",
+    "description": "Readiness assessment, governance, architecture, and production deployment for enterprises adopting AI.",
+    "href": "/consulting"
+  }
+]

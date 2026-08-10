@@ -1,6 +1,5 @@
-import { processSteps, stats } from "@/lib/data";
+import { processSteps } from "@/lib/data";
 import Reveal from "./Reveal";
-import AnimatedStat from "./AnimatedStat";
 
 export default function Process() {
   return (
@@ -21,7 +20,7 @@ export default function Process() {
         </p>
       </Reveal>
 
-      <div className="mb-20 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
         {processSteps.map((step, i) => (
           <Reveal key={step.num} delay={i * 0.08}>
             <div className="border-t border-line pt-7">
@@ -36,14 +35,6 @@ export default function Process() {
           </Reveal>
         ))}
       </div>
-
-      <Reveal>
-        <div className="grid grid-cols-2 gap-8 rounded-card border border-line bg-bg-soft px-6 py-12 sm:gap-6 md:grid-cols-4 md:px-12">
-          {stats.map((stat) => (
-            <AnimatedStat key={stat.label} {...stat} />
-          ))}
-        </div>
-      </Reveal>
     </section>
   );
 }

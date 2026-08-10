@@ -4,6 +4,7 @@ import "./globals.css";
 import CustomCursor from "@/components/CustomCursor";
 import ScrollProgress from "@/components/ScrollProgress";
 import ChatBubble from "@/components/ChatBubble";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 import { founders, siteUrl } from "@/lib/data";
 
 const spaceGrotesk = Space_Grotesk({
@@ -73,6 +74,7 @@ export default function RootLayout({
         />
       </head>
       <body className="bg-bg text-ink font-body antialiased">
+        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
         <CustomCursor />
         <ScrollProgress />
         {children}

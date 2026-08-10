@@ -1,0 +1,14 @@
+[
+  {
+    "title": "Production-first",
+    "description": "We judge every build the same way: does it hold up in production, not just in a demo."
+  },
+  {
+    "title": "A human signs off, always",
+    "description": "Every product we ship keeps a human in the loop — the AI drafts, a person decides."
+  },
+  {
+    "title": "Earn it before you claim it",
+    "description": "We don't claim a certification, a capability, or a result before it's actually true."
+  }
+]

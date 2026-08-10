@@ -3,7 +3,19 @@ import { Linkedin } from "lucide-react";
 import { founders } from "@/lib/data";
 import Reveal from "./Reveal";
 
-export default function Mentors() {
+export default function Mentors({
+  eyebrow = "Certification & Instructors",
+  heading = (
+    <>
+      Taught by the people who <em>build</em> this stuff.
+    </>
+  ),
+  description = "Certification is earned, not handed out — it requires passing module evaluations and presenting a working capstone project to program instructors.",
+}: {
+  eyebrow?: string;
+  heading?: React.ReactNode;
+  description?: string;
+} = {}) {
   return (
     <section
       id="mentors"
@@ -11,16 +23,12 @@ export default function Mentors() {
     >
       <Reveal className="mb-14 max-w-[680px]">
         <p className="mb-4 text-sm font-medium uppercase tracking-[0.14em] text-accent">
-          Certification & Instructors
+          {eyebrow}
         </p>
         <h2 className="mb-4 font-head text-[clamp(1.9rem,4vw,3rem)] font-semibold leading-[1.1] tracking-[-0.02em]">
-          Taught by the people who <em>build</em> this stuff.
+          {heading}
         </h2>
-        <p className="text-[0.95rem] text-ink-dim">
-          Certification is earned, not handed out — it requires passing
-          module evaluations and presenting a working capstone project to
-          program instructors.
-        </p>
+        <p className="text-[0.95rem] text-ink-dim">{description}</p>
       </Reveal>
 
       <div className="grid grid-cols-1 gap-8 sm:grid-cols-2">

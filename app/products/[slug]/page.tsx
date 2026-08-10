@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import ProductHero from "@/components/product/ProductHero";
 import ProductPain from "@/components/product/ProductPain";
 import ProductFeatures from "@/components/product/ProductFeatures";
+import ProductCompliance from "@/components/product/ProductCompliance";
 import ProductVision from "@/components/product/ProductVision";
 import ProductFacts from "@/components/product/ProductFacts";
 import { products, siteUrl } from "@/lib/data";
@@ -71,6 +72,7 @@ export default function ProductPage({ params }: { params: { slug: string } }) {
         <ProductHero product={product} />
         <ProductPain product={product} />
         <ProductFeatures product={product} />
+        <ProductCompliance product={product} />
         <ProductVision product={product} />
         <ProductFacts product={product} />
       </main>

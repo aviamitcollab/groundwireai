@@ -99,26 +99,14 @@ export default function Hero() {
                 </a>
               );
             }
-            if (cta.variant === "ghost") {
-              return (
-                <a
-                  key={cta.label}
-                  href={cta.href}
-                  data-cursor="hover"
-                  className="inline-flex items-center justify-center gap-2 rounded-full border border-line px-6 py-3.5 text-sm font-medium transition-all hover:-translate-y-0.5 hover:border-accent hover:text-accent"
-                >
-                  {cta.label}
-                </a>
-              );
-            }
             return (
               <a
                 key={cta.label}
                 href={cta.href}
                 data-cursor="hover"
-                className="inline-flex items-center gap-1.5 text-sm font-medium text-ink-dim transition-colors hover:text-accent"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-line px-6 py-3.5 text-sm font-medium transition-all hover:-translate-y-0.5 hover:border-accent hover:text-accent"
               >
-                {cta.label} <span aria-hidden>→</span>
+                {cta.label}
               </a>
             );
           })}

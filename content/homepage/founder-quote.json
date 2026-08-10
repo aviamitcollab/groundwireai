@@ -1,0 +1,6 @@
+{
+  "eyebrow": "Why we build this way",
+  "quote": "87% of AI projects stall between proof-of-concept and production — not because the model is wrong, but because nobody wired in the sign-off, the audit trail, the thing that fails safely. We've shipped SaaS and Agentic AI products before this, and built the teams that ran them. Buddhi never finalizes without a doctor. Solvent never files without your sign-off. That's not a limitation — it's the only way we know an AI product actually survives contact with production.",
+  "attribution": "Hands-on CTO & Architect",
+  "attributionSub": "GroundwireAI Founders"
+}
