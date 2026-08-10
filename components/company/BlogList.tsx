@@ -6,16 +6,7 @@ export default async function BlogList() {
   if (articles.length === 0) return null;
 
   return (
-    <section className="mx-auto max-w-content border-t border-line px-5 py-24 sm:px-8 md:px-16 md:py-32">
-      <Reveal className="mb-16 max-w-[680px]">
-        <p className="mb-4 text-sm font-medium uppercase tracking-[0.14em] text-accent">
-          From the blog
-        </p>
-        <h2 className="font-head text-[clamp(1.9rem,4vw,3rem)] font-semibold leading-[1.1] tracking-[-0.02em]">
-          Writing on <em>dev.to</em>, from our founders.
-        </h2>
-      </Reveal>
-
+    <section className="mx-auto max-w-content px-5 pb-24 sm:px-8 md:px-16 md:pb-32">
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {articles.map((article, i) => (
           <Reveal key={article.url} delay={i * 0.05}>

@@ -32,7 +32,7 @@ AI SaaS products and agent platforms built with the same production standards Gr
 
 - [Company](https://groundwireai.vercel.app/company): mission, values, and founders
 - [Careers](https://groundwireai.vercel.app/careers): open roles (currently none — GroundwireAI is a two-person founding team)
-- [Resources](https://groundwireai.vercel.app/resources): courses, products, and services in one place
+- [Resources](https://groundwireai.vercel.app/resources): writing from GroundwireAI's leaders, syndicated from dev.to
 
 ## Contact
 

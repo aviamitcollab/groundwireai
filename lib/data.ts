@@ -17,7 +17,6 @@ import productsData from "@/content/products/products.json";
 import companyAboutData from "@/content/company/about.json";
 import companyValuesData from "@/content/company/values.json";
 import careersData from "@/content/company/careers.json";
-import resourcesData from "@/content/company/resources.json";
 
 export const siteUrl = "https://groundwireai.vercel.app";
 
@@ -97,8 +96,6 @@ export const careers = {
   ...careersData,
   openRoles: careersData.openRoles as CareerRole[],
 };
-
-export const resources = resourcesData;
 
 export const navLinks = [
   { href: "/bootcamp", label: "Bootcamp" },
