@@ -18,14 +18,21 @@ Built with Next.js 14 (App Router) + TypeScript + Tailwind CSS + Framer Motion, 
 
 | Route | Purpose | Key sections |
 |---|---|---|
-| `/` | Homepage | Hero, Marquee ticker, Programs (3 pillars), Process ("How we work" + animated stats), Enterprise Projects showcase, Why Us, Technology Stack, Contact CTA |
-| `/bootcamp` | Bootcamp anchor page | Hero + quick facts, dynamic Cohort list (cards linking to each cohort's page), Capstone projects, Certification & Instructors (founder cards), Contact CTA |
+| `/` | Homepage | Hero, Marquee ticker, Programs (3 pillars), Process ("How we work" + animated stats), Enterprise Projects showcase, Why Us, Technology Stack, Founder quote, Contact CTA |
+| `/bootcamp` | Bootcamp anchor page | Hero + quick facts, dynamic Cohort list grouped by track (cards linking to each cohort's page), Capstone projects, Certification & Instructors (founder cards), Contact CTA |
 | `/bootcamp/[slug]` | Individual cohort page (one per entry in `cohorts.json`) | Hero, stats, "What you'll build" + program arc, fit check, why-us, format + closing CTA, shared Contact CTA |
 | `/consulting` | AI Transformation Consulting detail page | Hero + quick facts, 6 Services, 4-step Engagement Model, Contact CTA |
+| `/products` | AI Products index | Hero, dynamic Product list (cards linking to each product's page), Contact CTA |
+| `/products/[slug]` | Individual product page (one per entry in `products.json`) | Hero, pain/solution narrative, features, compliance/security section, facts, closing CTA |
+| `/company` | Company / About page | Hero, Company overview, Values grid, Founders (Mentors component), links out to Careers and Resources, Contact CTA |
+| `/careers` | Careers page | Hero, Values grid, open roles (currently none — see `content/company/careers.json`), Contact CTA |
+| `/resources` | Blog/resources index | Hero, live blog feed pulled from dev.to (`lib/devto.ts`), Contact CTA |
 
 Global, present on every page: **Nav** (with mobile menu), **Footer**, and a floating **chat bubble** ("Ada") with canned quick-replies and a free-text input that drafts a `mailto:` to the team.
 
-Not yet built (see `ENHANCEMENT_PLAN.md` for the full roadmap): dedicated `/products`, `/about`, `/community`, `/case-studies`, `/blog` pages, and a proper SEO pass.
+Also present: `app/sitemap.ts` and `app/robots.ts` for SEO, and `public/llms.txt` for AI-discoverability.
+
+Not yet built (see `ENHANCEMENT_PLAN.md` for the original roadmap, though it now predates most of the above): `/community`, `/case-studies`.
 
 ---
 
@@ -56,15 +63,22 @@ Most of the site's copy lives as JSON in **`/content`**, not hardcoded in compon
 content/
 ├── bootcamp/
 │   ├── cohorts.json           # one entry per cohort — hero copy, stats, program arc, fit check, why-us, format
+│   ├── tracks.json            # groups cohorts under a named track (e.g. "QA Track") on /bootcamp
 │   └── facts.json             # Bootcamp hero's "at a glance" strip
 ├── consulting/
 │   ├── services.json          # the 6 consulting offerings
 │   ├── engagement.json        # the 4-step engagement model
 │   └── facts.json             # Consulting hero's "at a glance" strip
+├── products/
+│   └── products.json          # one entry per product — hero copy, pain/solution, features, compliance, facts
+├── company/
+│   ├── about.json              # /company hero + overview copy
+│   ├── careers.json            # /careers hero copy + open roles list
+│   └── values.json             # shared Values grid used on /company and /careers
 ├── homepage/
 │   ├── pillars.json           # the 3 homepage cards (Bootcamp/Consulting/Products)
 │   ├── process-steps.json     # "How we work" 4 steps
-│   ├── stats.json             # the animated counter bar (Engineers trained, etc.)
+│   ├── founder-quote.json     # homepage founder quote block
 │   └── why-us.json            # "Why Choose Us" 7 points
 └── shared/
     ├── contact.json           # the single source of truth for the contact email
@@ -73,6 +87,8 @@ content/
     ├── founders.json             # founder bios, titles, LinkedIn URLs, photo paths
     └── marquee.json               # the looping ticker strip text
 ```
+
+`/resources` isn't content-driven — its blog feed is fetched live from dev.to at request time via `lib/devto.ts`, not stored as JSON.
 
 **Example — adding a new cohort:** open `content/bootcamp/cohorts.json`, add a new object to the array with a unique `slug` (see existing entries for the full field shape), commit, push. `generateStaticParams` in `app/bootcamp/[slug]/page.tsx` picks it up automatically — no component or route code needs to change, and it appears as a new card on `/bootcamp` and a new page at `/bootcamp/<slug>`.
 
