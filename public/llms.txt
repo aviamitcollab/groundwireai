@@ -25,7 +25,7 @@ AI SaaS products and agent platforms built with the same production standards Gr
 - [Products overview](https://groundwireai.vercel.app/products): all products, in one place
 - [Buddhi Health](https://groundwireai.vercel.app/products/buddhi-health): an AI clinical co-pilot that drafts a differential grounded in India-first guidelines — the doctor still decides. Currently an early concept.
 - [Solvent](https://groundwireai.vercel.app/products/solvent): AI employees for Indian accounting — reads GSTR-2A/2B, vendor invoices, and books, then prepares reconciliation, exceptions, and filing packets, never filed without sign-off. In development.
-- [FlatChat](https://groundwireai.vercel.app/products/flatchat): AI support and sales for Shopify, priced on outcomes (a fixed platform fee plus a component tied to resolved questions and recovered carts) instead of raw AI replies. In development.
+- [Nexara](https://groundwireai.vercel.app/products/nexara): AI support and sales for Shopify, priced on outcomes (a fixed platform fee plus a component tied to resolved questions and recovered carts) instead of raw AI replies. In development.
 
 ## Company
 

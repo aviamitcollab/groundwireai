@@ -90,54 +90,55 @@
     "closingHeadline": "Building for CA firms, finance teams, and business owners done reconciling by hand."
   },
   {
-    "slug": "flatchat",
+    "slug": "nexara",
     "category": "Customer Support",
     "statusLabel": "In development",
     "accent": "accent",
-    "eyebrow": "AI support & sales for Shopify",
+    "eyebrow": "Next-generation agentic AI for Shopify",
     "title": "Every question answered.",
     "titleEmphasis": "Never billed twice.",
-    "summary": "FlatChat answers shoppers from your real catalog and order data, handles the objections that stall a purchase, and lets them buy without leaving the chat — priced on a fixed fee plus outcomes, not raw AI replies.",
-    "description": "FlatChat reads your product catalog and order history, answers shoppers instantly, handles the objections that stall a purchase, and lets them buy without leaving the chat — then hands off anything it isn't sure about. Most AI support tools bill you for the AI reply, then bill you again for the ticket it creates, whether that reply helped or not. FlatChat prices differently: a small fixed platform fee, plus a component tied to outcomes you actually get.",
+    "summary": "Nexara closes the sale inside the conversation — recovering stalled carts and handling the objections that block a purchase, grounded in your real catalog and order data — priced on outcomes, not raw AI replies.",
+    "description": "Nexara doesn't just answer from your catalog — it closes. It recovers carts before they're gone, handles the objections that actually stall a purchase, and lets shoppers buy without leaving the conversation, grounded in your real product and order data the whole way through. Most AI support tools bill you for the reply, then bill you again for the ticket it creates, whether that reply helped or not. Nexara prices differently: a small fixed platform fee, plus a component tied to outcomes you actually get.",
     "ctas": [
-      { "label": "For merchants", "subject": "FlatChat - Merchant Interest" },
-      { "label": "For investors", "subject": "FlatChat - Investor Interest" }
+      { "label": "For merchants", "subject": "Nexara - Merchant Interest" },
+      { "label": "For investors", "subject": "Nexara - Investor Interest" }
     ],
     "painHeading": "You just found out \"1,000 AI resolutions\" can cost well over a thousand dollars a month on a typical per-resolution AI support plan — because every AI reply gets billed as an AI charge and a support ticket, on top of the plan you're already paying for.",
     "painDescription": "Most AI support pricing charges you per interaction, whether that interaction actually helped or not — a base helpdesk plan plus AI resolutions billed individually, often $0.90–$1.00 each, with every AI reply billed twice: once as an AI charge, once as a support ticket.",
-    "solutionHeading": "A question comes in. FlatChat answers it, handles the objection, closes the sale — and you're billed for what it actually got done.",
+    "solutionHeading": "A shopper stalls. Nexara handles the objection, closes the sale — and you're billed for what it actually got done.",
     "features": [
       { "num": "01", "title": "Connects to your catalog, not a config file", "description": "Product data, variants, inventory, and order history sync straight from the Shopify Admin API — no separate database to maintain, no re-tagging your catalog to make the bot work." },
-      { "num": "02", "title": "Answers only what's actually true", "description": "Every reply is grounded in your real product and order data — price, stock, variant availability, shipping status. If it isn't in your store's data, FlatChat says so instead of guessing." },
+      { "num": "02", "title": "Answers only what's actually true", "description": "Every reply is grounded in your real product and order data — price, stock, variant availability, shipping status. If it isn't in your store's data, Nexara says so instead of guessing." },
       { "num": "03", "title": "Recovers the sale before it's gone", "description": "Proactive nudges to shoppers who stall on a product page or leave items idle in cart — the same job most AI support tools charge separate add-ons for, included in the fixed platform fee here." },
       { "num": "04", "title": "Sells without leaving the conversation", "description": "Product cards, real prices, and an add-to-cart button live in the chat window — a shopper who's convinced doesn't have to go find the product page again to buy it." },
       { "num": "05", "title": "Handles the objection, not just the question", "description": "Shipping cost doubts, return-policy hesitation, fit uncertainty — the specific things that stall a purchase — get addressed directly and proactively, not just answered if asked." },
-      { "num": "06", "title": "Guides shoppers who don't know what they want yet", "description": "A short, conversational set of questions — skin type, occasion, budget, fit — routes a browsing shopper to the right product, the same job a separate quiz app does, built into the conversation instead of a second tool to configure." },
-      { "num": "07", "title": "Hands off the moment it should", "description": "Anything outside its confidence — a return dispute, a custom order, a frustrated customer — routes straight to your inbox or Slack with the full conversation attached. It never fakes a resolution to look useful." }
+      { "num": "06", "title": "Guides shoppers who don't know what they want yet", "description": "A short, conversational set of questions — skin type, occasion, budget, fit — routes a browsing shopper to the right product, weighted by what's actually trending in your catalog right now, not just what's alphabetically first. The same job a separate quiz app does, built into the conversation instead of a second tool to configure." },
+      { "num": "07", "title": "Hands off the moment it should", "description": "Anything outside its confidence — a return dispute, a custom order, a frustrated customer — routes straight to your inbox or Slack with the full conversation attached. It never fakes a resolution to look useful." },
+      { "num": "08", "title": "Reads intent, reports outcome", "description": "Every conversation becomes structured signal, not just a transcript — the objection that stalled a purchase, the question your catalog doesn't answer yet, the intent behind a browse that never became a search. Only three things ever get billed: a resolved question, a recovered cart, a completed order — everything else is signal, not spend." },
+      { "num": "09", "title": "Gets sharper with every conversation", "description": "Every resolved objection and every human correction updates your store's own knowledge base — not a shared model across stores, per the promise above. The next shopper gets a sharper answer; no other merchant's catalog benefits from what happened in yours." }
     ],
     "compliance": {
       "eyebrow": "Security & trust",
       "heading": "Built to be trusted with your storefront, not just installed on it",
-      "description": "This runs on live customer conversations, order data, and purchases made inside the chat — the standard is what a careful support lead and a careful finance lead would both expect to see, not just what a typical chat widget ships with.",
+      "description": "This runs on live customer conversations, order data, and purchases made inside the chat — the standard is what a careful support lead and a careful finance lead would both expect to see, not just what a typical support bot ships with.",
       "items": [
-        { "tag": "Encryption", "description": "AES-256 at rest, TLS 1.3 in transit — every conversation, order look-up, and quiz response encrypted end to end." },
-        { "tag": "Minimal scopes", "description": "Requests only the Shopify Admin API scopes it actually uses — read products, read orders, create draft orders — nothing broader." },
-        { "tag": "No payment data touches us", "description": "Checkout happens on Shopify's own secure, PCI-compliant checkout — FlatChat never sees, stores, or processes card numbers, even when the sale starts inside the chat." },
+        { "tag": "Trusted because it's yours", "description": "Shoppers trust a retailer's own on-site AI agent three times more than third-party AI shopping agents, per industry research — reason enough to own this relationship directly, not outsource it." },
+        { "tag": "No payment data touches us", "description": "Checkout happens on Shopify's own secure, PCI-compliant checkout — Nexara never sees, stores, or processes card numbers, even when the sale starts inside the chat." },
         { "tag": "No training on your data", "description": "Your catalog, conversations, and quiz responses are never used to train a shared model across stores." },
-        { "tag": "Audit log", "description": "Every AI reply, escalation, and handoff logged with a timestamp and the data it was grounded in." },
-        { "tag": "Every billed outcome, backed by evidence", "description": "Each outcome on your invoice — a resolved question, a recovered cart, a chat-assisted order — links back to the transcript that earned it. Nothing billed without a record you can open and check." },
-        { "tag": "Per-store isolation", "description": "One merchant's catalog, conversations, and quiz data are never reachable from another's workspace." },
-        { "tag": "Clean uninstall", "description": "Uninstalling FlatChat removes stored conversation and preference data — no lingering copy left behind." },
+        { "tag": "Every billed outcome, backed by evidence", "description": "Every AI reply, escalation, and handoff is logged with a timestamp and the data it was grounded in — and every outcome on your invoice links back to the exact transcript that earned it. Nothing billed without a record you can open and check." },
+        { "tag": "Per-store isolation", "description": "One merchant's catalog, conversations, and quiz data are never reachable from another's workspace — even though many stores run on the same platform underneath." },
+        { "tag": "Built for your busiest day", "description": "Architected for retail's actual traffic pattern from day one — a flash sale or a viral moment is exactly when a merchant needs it most, not when it should be catching up." },
         { "tag": "Certification roadmap", "description": "SOC 2 Type II targeted as the merchant base that requires it comes onboard — not claimed before it's earned." }
       ],
       "note": "This is the standard we're building to before asking a merchant to put us in front of their customers and their revenue — not a claim that every piece is certified today."
     },
-    "visionHeading": "Chat is where we start. Not where we stop.",
-    "visionDescription": "Every feature we add — cart recovery, guided-discovery quizzes, replenishment reminders — is judged the same way: does it hold up as an honest answer to a real shopper, not just something that looks automated. The \"flat\" in FlatChat is a promise about honesty, not an unlimited claim — a fixed platform fee plus a component that only grows when it's tied to something you actually got, never a meter running quietly on raw message volume. Underneath, the Shopify-specific pieces sit on a support engine that isn't tied to one platform — Shopify is where we're proving it first, not where the product ends.",
+    "visionHeading": "The sale is where we start. Not where we stop.",
+    "visionDescription": "Every feature we add — cart recovery, guided-discovery quizzes, shopper intelligence, replenishment reminders — is judged the same way: does it hold up as an honest answer to a real shopper, not just something that looks automated. The pricing is a promise about honesty, not an unlimited claim — a fixed platform fee plus a component that only grows when it's tied to something you actually got, never a meter running quietly on raw message volume or a surprise overage bill because traffic spiked for a day. Underneath, the Shopify-specific pieces sit on a commerce engine that isn't tied to one platform — Shopify is where we're proving it first, not where the product ends.",
     "facts": [
       { "tag": "In development", "description": "Actively onboarding early Shopify merchant design partners, not yet generally available." },
       { "tag": "Founder-led", "description": "Built by a technical founder with production Shopify app and AI-agent experience." },
-      { "tag": "Shopify-first", "description": "Built for the Shopify Admin API and checkout flow specifically — not a generic widget retrofitted onto it." }
+      { "tag": "Shopify-first", "description": "Built for the Shopify Admin API and checkout flow specifically — not a generic widget retrofitted onto it." },
+      { "tag": "Outcome-priced, not activity-priced", "description": "The bill tracks a resolved question, a recovered cart, a completed order — never raw message volume." }
     ],
     "closingHeadline": "Building for Shopify merchants tired of paying twice for the same AI reply."
   }

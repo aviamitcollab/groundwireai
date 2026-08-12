@@ -44,6 +44,12 @@ export default function ProductHero({ product }: { product: Product }) {
         >
           {product.statusLabel} · {product.category}
         </motion.p>
+        <motion.p
+          variants={item}
+          className={`mb-3 text-sm font-medium uppercase tracking-[0.08em] ${accentClass}`}
+        >
+          {product.eyebrow}
+        </motion.p>
         <motion.h1
           variants={item}
           className="mb-6 font-head text-[clamp(2.2rem,5.2vw,3.8rem)] font-semibold leading-[1.05] tracking-[-0.03em]"

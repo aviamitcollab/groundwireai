@@ -52,7 +52,7 @@ export default function ProductsHero() {
         >
           Three products — Buddhi Health, an AI clinical co-pilot for the Indian hospital
           visit, currently an early concept; Solvent, AI employees for Indian
-          accounting; and FlatChat, AI support and sales for Shopify.
+          accounting; and Nexara, AI support and sales for Shopify.
         </motion.p>
       </motion.div>
     </section>
